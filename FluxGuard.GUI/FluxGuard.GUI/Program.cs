@@ -1,4 +1,4 @@
-namespace FluxGuard.GUI
+﻿namespace FluxGuard.GUI
 {
     internal static class Program
     {

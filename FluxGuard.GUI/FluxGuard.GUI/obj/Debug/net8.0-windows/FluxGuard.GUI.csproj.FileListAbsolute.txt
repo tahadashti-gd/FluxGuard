@@ -1,9 +1,3 @@
-D:\C#\FluxGuard\FluxGuard.GUI\FluxGuard.GUI\bin\Debug\net8.0-windows\FluxGuard.GUI.exe
-D:\C#\FluxGuard\FluxGuard.GUI\FluxGuard.GUI\bin\Debug\net8.0-windows\FluxGuard.GUI.deps.json
-D:\C#\FluxGuard\FluxGuard.GUI\FluxGuard.GUI\bin\Debug\net8.0-windows\FluxGuard.GUI.runtimeconfig.json
-D:\C#\FluxGuard\FluxGuard.GUI\FluxGuard.GUI\bin\Debug\net8.0-windows\FluxGuard.GUI.dll
-D:\C#\FluxGuard\FluxGuard.GUI\FluxGuard.GUI\bin\Debug\net8.0-windows\FluxGuard.GUI.pdb
-D:\C#\FluxGuard\FluxGuard.GUI\FluxGuard.GUI\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
 D:\C#\FluxGuard\FluxGuard.GUI\FluxGuard.GUI\obj\Debug\net8.0-windows\FluxGuard.GUI.csproj.AssemblyReference.cache
 D:\C#\FluxGuard\FluxGuard.GUI\FluxGuard.GUI\obj\Debug\net8.0-windows\FluxGuard.GUI.Form1.resources
 D:\C#\FluxGuard\FluxGuard.GUI\FluxGuard.GUI\obj\Debug\net8.0-windows\FluxGuard.GUI.csproj.GenerateResource.cache
@@ -12,6 +6,12 @@ D:\C#\FluxGuard\FluxGuard.GUI\FluxGuard.GUI\obj\Debug\net8.0-windows\FluxGuard.G
 D:\C#\FluxGuard\FluxGuard.GUI\FluxGuard.GUI\obj\Debug\net8.0-windows\FluxGuard.GUI.AssemblyInfo.cs
 D:\C#\FluxGuard\FluxGuard.GUI\FluxGuard.GUI\obj\Debug\net8.0-windows\FluxGuard.GUI.csproj.CoreCompileInputs.cache
 D:\C#\FluxGuard\FluxGuard.GUI\FluxGuard.GUI\obj\Debug\net8.0-windows\FluxGuard.GUI.sourcelink.json
+D:\C#\FluxGuard\FluxGuard.GUI\FluxGuard.GUI\bin\Debug\net8.0-windows\FluxGuard.GUI.exe
+D:\C#\FluxGuard\FluxGuard.GUI\FluxGuard.GUI\bin\Debug\net8.0-windows\FluxGuard.GUI.deps.json
+D:\C#\FluxGuard\FluxGuard.GUI\FluxGuard.GUI\bin\Debug\net8.0-windows\FluxGuard.GUI.runtimeconfig.json
+D:\C#\FluxGuard\FluxGuard.GUI\FluxGuard.GUI\bin\Debug\net8.0-windows\FluxGuard.GUI.dll
+D:\C#\FluxGuard\FluxGuard.GUI\FluxGuard.GUI\bin\Debug\net8.0-windows\FluxGuard.GUI.pdb
+D:\C#\FluxGuard\FluxGuard.GUI\FluxGuard.GUI\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
 D:\C#\FluxGuard\FluxGuard.GUI\FluxGuard.GUI\obj\Debug\net8.0-windows\FluxGuar.5883899E.Up2Date
 D:\C#\FluxGuard\FluxGuard.GUI\FluxGuard.GUI\obj\Debug\net8.0-windows\FluxGuard.GUI.dll
 D:\C#\FluxGuard\FluxGuard.GUI\FluxGuard.GUI\obj\Debug\net8.0-windows\refint\FluxGuard.GUI.dll

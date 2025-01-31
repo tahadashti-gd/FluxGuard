@@ -1,0 +1,11 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\FluxGuard.Core",
+    "\\FluxGuard.Core\\FluxGuard.Core",
+    "\\FluxGuard.GUI",
+    "\\FluxGuard.GUI\\FluxGuard.GUI"
+  ],
+  "SelectedNode": "\\FluxGuard.GUI\\FluxGuard.GUI\\Form1.cs",
+  "PreviewInSolutionExplorer": false
+}

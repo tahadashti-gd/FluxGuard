@@ -1,0 +1,72 @@
+{
+  "keyboards": {
+    "power": {
+      "power": "Power",
+      "shutdown": "Shutdown",
+      "sleep": "Sleep",
+      "restart": "Restart"
+    },
+    "status": {
+      "status": "Status",
+      "resource_report": "Resource Report",
+      "uptime": "Uptime",
+      "driver_control": "Driver Management",
+      "webcam_and_microphone": "Webcam and Microphone Status"
+    },
+    "apps": {
+      "apps": "Apps",
+      "manage_apps": "Manage Running Apps",
+      "open_app": "Launch New App"
+    },
+    "send": {
+      "send": "Send",
+      "send_file": "Send File",
+      "send_voice": "Play Voice Message on System",
+      "send_media_and_show": "Display Media on System"
+    },
+    "file_explorer": {
+      "file_explorer": "File Explorer",
+      "drive": "Drive: ",
+      "desktop": "Desktop",
+      "download": "Downloads",
+      "document": "Documents",
+      "pictures": "Pictures",
+      "videos": "Videos"
+    },
+    "security": {
+      "security": "Security",
+      "monitoring_and_reporting": "Status Monitoring and Reporting",
+      "change_password": "Change Password"
+    },
+    "settings": {
+      "settings": "Settings"
+    },
+    "back": {
+      "back": "Back"
+    }
+  },
+  "answers": {
+    "welcome": {
+      "welcome": " 🎉 Awesome choice! You're all set! 🚀 FluxGuard is now fully charged and ready to roll! ⚡ Just tell me what you need, and I’ll handle it like a pro! 💼✨ Whether it’s shutting down your PC, sneaking a peek at your screen 👀, or zipping files like a ninja 🥷—I’m here to serve! 🙌 So, what’s the first mission, boss? 😎 "
+    },
+    "power": {
+      "power": "💡 The Power Dashboard is open! Ready to shut down, restart, or put your system to sleep. Whatever you command, boss! 😎"
+    },
+    "status": {
+      "status": "📊 The Status Dashboard is here! Time to check the health of your system. I promise to keep it honest and straightforward! 🤓"
+    },
+    "apps": {
+      "apps": "📂 The Apps Dashboard is ready! Tell me which app to manage or launch a new one. Just don’t make me too hard on them! 😜"
+    },
+    "send": {
+      "send": "📤 The Send Dashboard is locked and loaded! Wanna send a file, play a funny voice on your system, or even display some media? I can handle it all! 🎯"
+    },
+    "file_explorer": {
+      "file_explorer": "📁 The File Explorer Dashboard is open! Let’s explore your folders like pro detectives. Maybe we’ll even find some treasure! 🕵️‍"
+    },
+    "security": {
+      "security": "🛡️ The Security Dashboard is now active! I’m ready to keep an eye on everything and report any threats. Like a ninja in the shadows! 🥷"
+    }
+  }
+
+}

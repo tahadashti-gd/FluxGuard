@@ -2,6 +2,7 @@
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Text.Json;
+using FluxGuard.GUI;
 
 namespace Service
 {
@@ -100,6 +101,7 @@ namespace Service
         {
             File.WriteAllText("Window.txt", $"{Window}");
             Process.Start("FluxGuard-GUI", "FluxGuard-GUI.exe");
+            Form1.Screenshot(Window);
         }
         public static string GetCpuAndRamUsage()
         {

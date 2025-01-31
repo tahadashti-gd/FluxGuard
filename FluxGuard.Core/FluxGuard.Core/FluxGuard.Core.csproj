@@ -2,9 +2,10 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net8.0</TargetFramework>
+    <TargetFramework>net8.0-windows</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <StartupObject>Program</StartupObject>
   </PropertyGroup>
 
   <ItemGroup>
@@ -12,6 +13,10 @@
     <PackageReference Include="System.Diagnostics.PerformanceCounter" Version="9.0.1" />
     <PackageReference Include="System.Management" Version="9.0.1" />
     <PackageReference Include="Telegram.Bot" Version="22.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\FluxGuard.GUI\FluxGuard.GUI\FluxGuard.GUI.csproj" />
   </ItemGroup>
 
 </Project>

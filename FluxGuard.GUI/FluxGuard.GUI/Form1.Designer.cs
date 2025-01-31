@@ -40,6 +40,7 @@
             label1.Size = new Size(433, 81);
             label1.TabIndex = 0;
             label1.Text = "Flux Guard GUI";
+            label1.Click += label1_Click;
             // 
             // Form1
             // 

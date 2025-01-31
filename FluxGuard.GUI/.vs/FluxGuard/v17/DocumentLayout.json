@@ -3,10 +3,21 @@
   "WorkspaceRootPath": "D:\\C#\\FluxGuard\\FluxGuard.GUI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9A3EB61B-E2D1-4DE7-9411-46B272F5A0E7}|..\\FluxGuard.Core\\FluxGuard.Core\\FluxGuard.Core.csproj|d:\\c#\\fluxguard\\fluxguard.core\\fluxguard.core\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9A3EB61B-E2D1-4DE7-9411-46B272F5A0E7}|..\\FluxGuard.Core\\FluxGuard.Core\\FluxGuard.Core.csproj|d:\\c#\\fluxguard\\fluxguard.core\\fluxguard.core\\maincore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9A3EB61B-E2D1-4DE7-9411-46B272F5A0E7}|..\\FluxGuard.Core\\FluxGuard.Core\\FluxGuard.Core.csproj|d:\\c#\\fluxguard\\fluxguard.core\\fluxguard.core\\ui_manager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{404EF058-EBFA-40BB-A0E8-995E7D09A8FE}|FluxGuard.GUI\\FluxGuard.GUI.csproj|d:\\c#\\fluxguard\\fluxguard.gui\\fluxguard.gui\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{404EF058-EBFA-40BB-A0E8-995E7D09A8FE}|FluxGuard.GUI\\FluxGuard.GUI.csproj|solutionrelative:fluxguard.gui\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{404EF058-EBFA-40BB-A0E8-995E7D09A8FE}|FluxGuard.GUI\\FluxGuard.GUI.csproj|d:\\c#\\fluxguard\\fluxguard.gui\\fluxguard.gui\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{404EF058-EBFA-40BB-A0E8-995E7D09A8FE}|FluxGuard.GUI\\FluxGuard.GUI.csproj|solutionrelative:fluxguard.gui\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A3EB61B-E2D1-4DE7-9411-46B272F5A0E7}|..\\FluxGuard.Core\\FluxGuard.Core\\FluxGuard.Core.csproj|d:\\c#\\fluxguard\\fluxguard.core\\fluxguard.core\\services.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A3EB61B-E2D1-4DE7-9411-46B272F5A0E7}|..\\FluxGuard.Core\\FluxGuard.Core\\FluxGuard.Core.csproj|d:\\c#\\fluxguard\\fluxguard.core\\fluxguard.core\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -16,30 +27,68 @@
       "DocumentGroups": [
         {
           "DockedWidth": 180,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "UI_Manager.cs",
-              "DocumentMoniker": "D:\\C#\\FluxGuard\\FluxGuard.Core\\FluxGuard.Core\\UI_Manager.cs",
-              "RelativeDocumentMoniker": "..\\FluxGuard.Core\\FluxGuard.Core\\UI_Manager.cs",
-              "ToolTip": "D:\\C#\\FluxGuard\\FluxGuard.Core\\FluxGuard.Core\\UI_Manager.cs",
-              "RelativeToolTip": "..\\FluxGuard.Core\\FluxGuard.Core\\UI_Manager.cs",
-              "ViewState": "AQIAACcAAAAAAAAAAAAAAF8AAAA1AAAA",
+              "DocumentIndex": 2,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "D:\\C#\\FluxGuard\\FluxGuard.GUI\\FluxGuard.GUI\\Form1.cs",
+              "RelativeDocumentMoniker": "FluxGuard.GUI\\Form1.cs",
+              "ToolTip": "D:\\C#\\FluxGuard\\FluxGuard.GUI\\FluxGuard.GUI\\Form1.cs",
+              "RelativeToolTip": "FluxGuard.GUI\\Form1.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAABEAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-24T09:55:33.401Z",
+              "WhenOpened": "2025-01-31T10:29:09.127Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Services.cs",
+              "DocumentMoniker": "D:\\C#\\FluxGuard\\FluxGuard.Core\\FluxGuard.Core\\Services.cs",
+              "RelativeDocumentMoniker": "..\\FluxGuard.Core\\FluxGuard.Core\\Services.cs",
+              "ToolTip": "D:\\C#\\FluxGuard\\FluxGuard.Core\\FluxGuard.Core\\Services.cs",
+              "RelativeToolTip": "..\\FluxGuard.Core\\FluxGuard.Core\\Services.cs",
+              "ViewState": "AQIAAFcAAAAAAAAAAAAzwGcAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-31T10:22:22.149Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "MainCore.cs",
+              "DocumentMoniker": "D:\\C#\\FluxGuard\\FluxGuard.Core\\FluxGuard.Core\\MainCore.cs",
+              "RelativeDocumentMoniker": "..\\FluxGuard.Core\\FluxGuard.Core\\MainCore.cs",
+              "ToolTip": "D:\\C#\\FluxGuard\\FluxGuard.Core\\FluxGuard.Core\\MainCore.cs",
+              "RelativeToolTip": "..\\FluxGuard.Core\\FluxGuard.Core\\MainCore.cs",
+              "ViewState": "AQIAACcAAAAAAAAAAAAAAAkAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-31T10:16:38.681Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "D:\\C#\\FluxGuard\\FluxGuard.GUI\\FluxGuard.GUI\\Form1.cs",
+              "RelativeDocumentMoniker": "FluxGuard.GUI\\Form1.cs",
+              "ToolTip": "D:\\C#\\FluxGuard\\FluxGuard.GUI\\FluxGuard.GUI\\Form1.cs [Design]",
+              "RelativeToolTip": "FluxGuard.GUI\\Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-29T17:58:59.86Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\C#\\FluxGuard\\FluxGuard.Core\\FluxGuard.Core\\Program.cs",
               "RelativeDocumentMoniker": "..\\FluxGuard.Core\\FluxGuard.Core\\Program.cs",
               "ToolTip": "D:\\C#\\FluxGuard\\FluxGuard.Core\\FluxGuard.Core\\Program.cs",
               "RelativeToolTip": "..\\FluxGuard.Core\\FluxGuard.Core\\Program.cs",
-              "ViewState": "AQIAAAoAAAAAAAAAAAAwwCsAAAAhAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAUAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-24T05:39:34.859Z",
               "EditorCaption": ""

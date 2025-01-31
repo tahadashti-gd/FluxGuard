@@ -1,7 +1,7 @@
 {
   "version": 3,
   "targets": {
-    "net8.0": {
+    "net8.0-windows7.0": {
       "Microsoft.Extensions.Configuration.Abstractions/8.0.0": {
         "type": "package",
         "dependencies": {
@@ -290,6 +290,22 @@
         },
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
+        ]
+      },
+      "FluxGuard.GUI/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.3"
+        },
+        "compile": {
+          "bin/placeholder/FluxGuard.GUI.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/FluxGuard.GUI.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WindowsForms"
         ]
       }
     }
@@ -811,10 +827,16 @@
         "telegram.bot.22.3.0.nupkg.sha512",
         "telegram.bot.nuspec"
       ]
+    },
+    "FluxGuard.GUI/1.0.0": {
+      "type": "project",
+      "path": "../../FluxGuard.GUI/FluxGuard.GUI/FluxGuard.GUI.csproj",
+      "msbuildProject": "../../FluxGuard.GUI/FluxGuard.GUI/FluxGuard.GUI.csproj"
     }
   },
   "projectFileDependencyGroups": {
-    "net8.0": [
+    "net8.0-windows7.0": [
+      "FluxGuard.GUI >= 1.0.0",
       "Newtonsoft.Json >= 13.0.3",
       "System.Diagnostics.PerformanceCounter >= 9.0.1",
       "System.Management >= 9.0.1",
@@ -838,16 +860,20 @@
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net8.0"
+        "net8.0-windows"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
-          "projectReferences": {}
+        "net8.0-windows7.0": {
+          "targetAlias": "net8.0-windows",
+          "projectReferences": {
+            "D:\\C#\\FluxGuard\\FluxGuard.GUI\\FluxGuard.GUI\\FluxGuard.GUI.csproj": {
+              "projectPath": "D:\\C#\\FluxGuard\\FluxGuard.GUI\\FluxGuard.GUI\\FluxGuard.GUI.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -862,8 +888,8 @@
       }
     },
     "frameworks": {
-      "net8.0": {
-        "targetAlias": "net8.0",
+      "net8.0-windows7.0": {
+        "targetAlias": "net8.0-windows",
         "dependencies": {
           "Newtonsoft.Json": {
             "target": "Package",

@@ -2,7 +2,7 @@
 using Service;
 using Languages;
 
-namespace UI
+namespace FluxGuard.Core
 {
     public class UI_Manager
     {
