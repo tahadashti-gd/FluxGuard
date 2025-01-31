@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "JbLHqTSTRTU=",
+  "dgSpecHash": "U+S68faE3jk=",
   "success": true,
-  "projectFilePath": "D:\\C#\\FluxGuard\\FluxGuard.GUI\\FluxGuard.GUI\\FluxGuard.GUI.csproj",
+  "projectFilePath": "E:\\C#\\FluxGuard\\FluxGuard.GUI\\FluxGuard.GUI\\FluxGuard.GUI.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\moham\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+    "C:\\Users\\TahaDashti\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
   ],
   "logs": []
 }

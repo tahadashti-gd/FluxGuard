@@ -15,8 +15,13 @@
     <PackageReference Include="Telegram.Bot" Version="22.3.0" />
   </ItemGroup>
 
-  <ItemGroup>
+	<ItemGroup>
     <ProjectReference Include="..\..\FluxGuard.GUI\FluxGuard.GUI\FluxGuard.GUI.csproj" />
   </ItemGroup>
+
+
+	<Target Name="PostBuild" AfterTargets="PostBuildEvent">
+	  <Exec Command="xcopy &quot;$(ProjectDir)lan&quot; &quot;$(TargetDir)lan&quot; /E /I /Y" />
+	</Target>
 
 </Project>

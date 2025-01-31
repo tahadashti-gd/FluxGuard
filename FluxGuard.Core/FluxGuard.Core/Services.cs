@@ -1,8 +1,10 @@
 ﻿using System.Diagnostics;
+using System.Management;
+using System.Net.NetworkInformation;
 using System.Runtime.InteropServices;
 using System.Text;
-using System.Text.Json;
 using FluxGuard.GUI;
+using Languages;
 
 namespace Service
 {
@@ -83,8 +85,10 @@ namespace Service
             IntPtr lpOverlapped);
 
         #endregion 
+
         private static string RootPath = AppContext.BaseDirectory;
 
+        #region Power
         public static void ShutDown()
         {
             Process.Start("shutdown", "/s /t 0");
@@ -97,10 +101,10 @@ namespace Service
         {
             SetSuspendState(false, true, true);
         }
+        #endregion
+
         public static async void TakeScreenShot(string Window)
         {
-            File.WriteAllText("Window.txt", $"{Window}");
-            Process.Start("FluxGuard-GUI", "FluxGuard-GUI.exe");
             Form1.Screenshot(Window);
         }
         public static string GetCpuAndRamUsage()
@@ -121,48 +125,6 @@ namespace Service
             var result = $"مصرف پردازنده : {cpuUsage} , مصرف رم : {availableRam}";
             return result;
         }
-
-        //public static List<string> GetAllWindowHandleNames()
-        //{
-        //    List<string> windowHandleNames = new();
-
-        //    // دریافت لیست تمام فرآیندها
-        //    foreach (Process process in Process.GetProcesses())
-        //    {
-        //        try
-        //        {
-        //            // به‌روزرسانی اطلاعات فرآیند
-        //            process.Refresh();
-
-        //            // بررسی وجود پنجره اصلی و عنوان آن
-        //            if (process.MainWindowHandle != IntPtr.Zero &&
-        //                !string.IsNullOrWhiteSpace(process.MainWindowTitle))
-        //            {
-        //                string processName = process.ProcessName;
-        //                string windowTitle = process.MainWindowTitle;
-
-        //                // ترکیب نام فرآیند و عنوان پنجره
-        //                string combinedInfo = $"{processName}-{windowTitle}";
-
-        //                // اگر طول ترکیب بیشتر از 40 کاراکتر است، کوتاه کردن آن
-        //                if (combinedInfo.Length > 30)
-        //                {
-        //                    combinedInfo = combinedInfo.Substring(0, 27) + "...";
-        //                }
-
-        //                // افزودن به لیست
-        //                windowHandleNames.Add(combinedInfo);
-        //            }
-        //        }
-        //        catch (Exception ex)
-        //        {
-        //            // اگر مشکلی در دسترسی به فرآیند ایجاد شد، صرف نظر می‌کنیم
-        //            Console.WriteLine($"Error accessing process {process.ProcessName}: {ex.Message}");
-        //        }
-        //    }
-
-        //    return windowHandleNames;
-        //}
         public static List<string> GetAllWindowHandleNames()
         {
             List<string> windowHandleNames = new();
@@ -218,5 +180,84 @@ namespace Service
                 return "Unknown";
             }
         }
+
+
+        #region Resource report
+        public static string GetSystemUsageReport()
+        {
+            StringBuilder report = new StringBuilder();
+
+            report.AppendLine(Lang.Translate("answers", "resource", "report"));
+            report.AppendLine(Lang.Translate("answers", "resource", "cpu") + GetCpuUsage() + "%");
+            report.AppendLine(Lang.Translate("answers", "resource", "ram") + GetRamUsage() + "%");
+            report.AppendLine(Lang.Translate("answers", "resource", "gpu") + GetGpuUsage() + "%");
+            report.AppendLine(Lang.Translate("answers", "resource", "net") + GetInternetSpeed() + "Mb/s");
+
+            return report.ToString();
+        }
+        private static float GetCpuUsage()
+        {
+            var cpuCounter = new PerformanceCounter("Processor", "% Processor Time", "_Total");
+            cpuCounter.NextValue();
+            Thread.Sleep(500); // صبر برای نمونه‌گیری
+            return (float)Math.Round(cpuCounter.NextValue(), 2);
+        }
+        private static float GetRamUsage()
+        {
+            var ramCounter = new PerformanceCounter("Memory", "% Committed Bytes In Use");
+            return (float)Math.Round(ramCounter.NextValue(), 2);
+        }
+        private static float GetGpuUsage()
+        {
+            try
+            {
+                using (var searcher = new ManagementObjectSearcher("select * from Win32_VideoController"))
+                {
+                    foreach (ManagementObject obj in searcher.Get())
+                    {
+                        if (obj["AdapterRAM"] != null)
+                        {
+                            return (float)Math.Round(Convert.ToDouble(obj["AdapterRAM"]) / 1073741824, 2); // تبدیل به گیگابایت
+                        }
+                    }
+                }
+            }
+            catch (Exception) { }
+            return 0; // اگر اطلاعات GPU پیدا نشد
+        }
+        private static double GetInternetSpeed()
+        {
+            NetworkInterface[] interfaces = NetworkInterface.GetAllNetworkInterfaces();
+            long totalBytesReceived1 = 0;
+
+            foreach (NetworkInterface ni in interfaces)
+            {
+                if (ni.OperationalStatus == OperationalStatus.Up)
+                {
+                    totalBytesReceived1 += ni.GetIPv4Statistics().BytesReceived;
+                }
+            }
+
+            Thread.Sleep(1000); // یک ثانیه صبر کن تا مقدار جدید دریافت شود
+
+            long totalBytesReceived2 = 0;
+            foreach (NetworkInterface ni in interfaces)
+            {
+                if (ni.OperationalStatus == OperationalStatus.Up)
+                {
+                    totalBytesReceived2 += ni.GetIPv4Statistics().BytesReceived;
+                }
+            }
+
+            // محاسبه میزان دانلود در یک ثانیه (بایت)
+            long bytesReceivedPerSecond = totalBytesReceived2 - totalBytesReceived1;
+
+            // تبدیل به MB/s (مگابایت بر ثانیه)
+            double speedMBps = bytesReceivedPerSecond / (1024.0 * 1024.0);
+
+            return Math.Round(speedMBps, 2);
+        }
+        #endregion
+
     }
 }

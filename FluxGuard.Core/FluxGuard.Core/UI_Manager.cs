@@ -1,6 +1,10 @@
 ﻿using Telegram.Bot.Types.ReplyMarkups;
 using Service;
 using Languages;
+using System.Diagnostics;
+using System.Management;
+using System.Net.NetworkInformation;
+using System.Text;
 
 namespace FluxGuard.Core
 {
@@ -12,7 +16,7 @@ namespace FluxGuard.Core
         public static ReplyKeyboardMarkup App_Dahsboard;
         public static InlineKeyboardMarkup App_List;
         public static InlineKeyboardMarkup Power_Keyboard;
-        public static ReplyKeyboardMarkup Information_Keyboard;
+        public static ReplyKeyboardMarkup Status_Keyboard;
         public static ReplyKeyboardMarkup Drive_Keyboard;
         public static ReplyKeyboardMarkup MainFolder_Keyboard;
         public static InlineKeyboardMarkup inline_Keyboard;
@@ -66,9 +70,9 @@ namespace FluxGuard.Core
                  row0,row1,row2
             };
         }
-        public static void InfoKeyboard()
+        public static void StatusDashboard()
         {
-            Information_Keyboard = new ReplyKeyboardMarkup("");
+            Status_Keyboard = new ReplyKeyboardMarkup("");
             KeyboardButton[] row0 =
             {
                  new KeyboardButton(Lang.Translate("replykeyboards","status","resource_report")),new KeyboardButton(Lang.Translate("replykeyboards","status","driver_control"))
@@ -81,12 +85,12 @@ namespace FluxGuard.Core
             {
                  new KeyboardButton(Lang.Translate("replykeyboards","back","back"))
             };
-            Information_Keyboard.Keyboard = new KeyboardButton[][]
+            Status_Keyboard.Keyboard = new KeyboardButton[][]
             {
                   row0,row1,row2
             };
         }
-        public static void PowerKeyboard()
+        public static void PowerDashbord()
         {
 
             var inlineMarkup = new InlineKeyboardMarkup()
@@ -108,7 +112,6 @@ namespace FluxGuard.Core
             }
             App_List = inlineMarkup;
         }
-
         public void GetDashboard()
         {
             Get_Keyboard = new ReplyKeyboardMarkup("");

@@ -1,13 +1,12 @@
-﻿using Languages;
+﻿using System.Text;
+using Languages;
 using Newtonsoft.Json.Linq;
 using Service;
-using System.Text;
 using Telegram.Bot;
 using Telegram.Bot.Polling;
 using Telegram.Bot.Types;
 using Telegram.Bot.Types.Enums;
 using Telegram.Bot.Types.ReplyMarkups;
-using FluxGuard.GUI;
 
 namespace FluxGuard.Core
 {
@@ -36,39 +35,44 @@ namespace FluxGuard.Core
             {
                 //Start
                 case 0:
-                    {
-                        sb.AppendLine("Welcome to FluxGuard! 🌟\r\nHey there! I'm FluxGuard, your ultimate tool for controlling your computer from anywhere, anytime! 😎 Whether you need to shut down your system, take a screenshot, or keep an eye on your files, I’m here to make it super easy for you! 💻✨\r\n\r\nTo get started, choose your preferred language:\r\n1️⃣ English\r\n2️⃣ Persian-فارسی\r\n\r\nLet me know which one you’d prefer, and I’ll be ready to assist you! 🌍🚀");
-                        var inlineMarkup = new InlineKeyboardMarkup();
-                        inlineMarkup.AddButton("English", "lan*en");
-                        inlineMarkup.AddNewRow();
-                        inlineMarkup.AddButton("فارسی", "lan*fa");
-                        await bot.SendMessage(msg.Chat, sb.ToString(),
-                        replyMarkup: inlineMarkup);
-                        sb.Clear();
-                        MessageId = msg.MessageId;
-                    }
+                    sb.AppendLine("Welcome to FluxGuard! 🌟\r\nHey there! I'm FluxGuard, your ultimate tool for controlling your computer from anywhere, anytime! 😎 Whether you need to shut down your system, take a screenshot, or keep an eye on your files, I’m here to make it super easy for you! 💻✨\r\n\r\nTo get started, choose your preferred language:\r\n1️⃣ English\r\n2️⃣ Persian-فارسی\r\n\r\nLet me know which one you’d prefer, and I’ll be ready to assist you! 🌍🚀");
+                    var inlineMarkup = new InlineKeyboardMarkup();
+                    inlineMarkup.AddButton("English", "lan*en");
+                    inlineMarkup.AddNewRow();
+                    inlineMarkup.AddButton("فارسی", "lan*fa");
+                    await bot.SendMessage(msg.Chat, sb.ToString(),
+                    replyMarkup: inlineMarkup);
+                    sb.Clear();
+                    MessageId = msg.MessageId;
                     break;
-                //Back
+                //back
                 case 1:
-                    {
-                        UI_Manager.MainDashboard();
-                        await bot.SendMessage(msg.Chat, Lang.Translate("answers", "back", "back"),
-                        replyMarkup: UI_Manager.Main_Keyboard);
-                        break; ;
-                    }
-                //Power
+                    UI_Manager.MainDashboard();
+                    await bot.SendMessage(msg.Chat, Lang.Translate("answers", "back", "back"),
+                    replyMarkup: UI_Manager.Main_Keyboard);
+                    break;
+                //power
                 case 2:
-                    {
-                        Services.TakeScreenShot("Screen");
-                        Thread.Sleep(500);
-                        FileStream stremfile = new FileStream("Screenshot.png", FileMode.Open);
-                        UI_Manager.PowerKeyboard();
-                        await bot.SendPhoto(msg.Chat, stremfile, replyMarkup: UI_Manager.Power_Keyboard);
-                        Thread.Sleep(3000);
-                        File.Delete("Screenshot.png");
-                        MessageId = msg.MessageId;
-                        break;
-                    }
+                    Services.TakeScreenShot("Screen");
+                    Thread.Sleep(500);
+                    FileStream stremfile = new FileStream("Screenshot.png", FileMode.Open);
+                    UI_Manager.PowerDashbord();
+                    await bot.SendPhoto(msg.Chat, stremfile, replyMarkup: UI_Manager.Power_Keyboard);
+                    Thread.Sleep(3000);
+                    File.Delete("Screenshot.png");
+                    MessageId = msg.MessageId;
+                    break;
+                //status
+                case 3:
+                    UI_Manager.StatusDashboard();
+                    await bot.SendMessage(msg.Chat, Lang.Translate("answers", "status", "status"),
+                    replyMarkup: UI_Manager.Status_Keyboard);
+                    break;
+                //resource_report
+                case 4:
+                    await bot.SendMessage(msg.Chat, Services.GetSystemUsageReport());
+                    break;
+
             }
         }
         async Task OnUpdate(Update update)
