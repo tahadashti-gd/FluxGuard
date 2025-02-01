@@ -1,10 +1,6 @@
 ﻿using Telegram.Bot.Types.ReplyMarkups;
 using Service;
 using Languages;
-using System.Diagnostics;
-using System.Management;
-using System.Net.NetworkInformation;
-using System.Text;
 
 namespace FluxGuard.Core
 {

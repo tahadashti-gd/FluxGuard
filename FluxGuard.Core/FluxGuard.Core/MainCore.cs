@@ -198,9 +198,4 @@ namespace FluxGuard.Core
             }
         }
     }
-    public static class CoreEvents
-    {
-        public static Action ShowGUI;
-    }
-
 }

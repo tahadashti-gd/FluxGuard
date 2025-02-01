@@ -107,24 +107,6 @@ namespace Service
         {
             Form1.Screenshot(Window);
         }
-        public static string GetCpuAndRamUsage()
-        {
-            var ramCounter = new PerformanceCounter("Memory", "Available MBytes");
-            var availableRam = ramCounter.NextValue() + "MB";
-
-            var cpuCounter = new PerformanceCounter
-            {
-                CategoryName = "Processor",
-                CounterName = "% Processor Time",
-                InstanceName = "_Total"
-            };
-            cpuCounter.NextValue();
-            Thread.Sleep(1000);
-            var cpuUsage = cpuCounter.NextValue() + "%";
-
-            var result = $"مصرف پردازنده : {cpuUsage} , مصرف رم : {availableRam}";
-            return result;
-        }
         public static List<string> GetAllWindowHandleNames()
         {
             List<string> windowHandleNames = new();
@@ -161,26 +143,6 @@ namespace Service
             int DTIndex = DT.LastIndexOf(':');
             return DT.Substring(0, DTIndex);
         }
-        public static string GetActiveWindowTitle()
-        {
-            string CurrentActiveWindowTitle;
-            try
-            {
-                IntPtr hwnd = GetForegroundWindow();
-                GetWindowThreadProcessId(hwnd, out uint pid);
-                Process p = Process.GetProcessById((int)pid);
-                string title = p.MainWindowTitle;
-                if (string.IsNullOrWhiteSpace(title))
-                    title = p.ProcessName;
-                CurrentActiveWindowTitle = title;
-                return title;
-            }
-            catch (Exception)
-            {
-                return "Unknown";
-            }
-        }
-
 
         #region Resource report
         public static string GetSystemUsageReport()
