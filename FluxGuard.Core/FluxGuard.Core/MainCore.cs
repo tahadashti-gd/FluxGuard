@@ -1,7 +1,7 @@
-﻿using System.Text;
-using Languages;
+﻿using Languages;
 using Newtonsoft.Json.Linq;
 using Service;
+using System.Text;
 using Telegram.Bot;
 using Telegram.Bot.Polling;
 using Telegram.Bot.Types;
@@ -30,47 +30,67 @@ namespace FluxGuard.Core
         }
         async Task OnMessage(Message msg, UpdateType type)
         {
-            var sb = new StringBuilder();
+            long UserID = msg.Chat.Id;
+            string UserName = msg.Chat.Username;
+            MessageId = msg.MessageId;
+
+            var stringBuilder = new StringBuilder();
             switch (CommandID(msg.Text))
             {
-                //Start
+                //start
                 case 0:
-                    sb.AppendLine("Welcome to FluxGuard! 🌟\r\nHey there! I'm FluxGuard, your ultimate tool for controlling your computer from anywhere, anytime! 😎 Whether you need to shut down your system, take a screenshot, or keep an eye on your files, I’m here to make it super easy for you! 💻✨\r\n\r\nTo get started, choose your preferred language:\r\n1️⃣ English\r\n2️⃣ Persian-فارسی\r\n\r\nLet me know which one you’d prefer, and I’ll be ready to assist you! 🌍🚀");
+                    LoggerService.LogCommand(UserID, UserName, "start");
+                    stringBuilder.AppendLine("Welcome to FluxGuard! 🌟\r\nHey there! I'm FluxGuard, your ultimate tool for controlling your computer from anywhere, anytime! 😎 Whether you need to shut down your system, take a screenshot, or keep an eye on your files, I’m here to make it super easy for you! 💻✨\r\n\r\nTo get started, choose your preferred language:\r\n1️⃣ English\r\n2️⃣ Persian-فارسی\r\n\r\nLet me know which one you’d prefer, and I’ll be ready to assist you! 🌍🚀");
                     var inlineMarkup = new InlineKeyboardMarkup();
                     inlineMarkup.AddButton("English", "lan*en");
                     inlineMarkup.AddNewRow();
                     inlineMarkup.AddButton("فارسی", "lan*fa");
-                    await bot.SendMessage(msg.Chat, sb.ToString(),
+                    await bot.SendMessage(UserID, stringBuilder.ToString(),
                     replyMarkup: inlineMarkup);
-                    sb.Clear();
-                    MessageId = msg.MessageId;
+                    stringBuilder.Clear();
+                    //MessageId = msg.MessageId;
                     break;
                 //back
                 case 1:
+                    LoggerService.LogCommand(UserID, UserName, "back");
                     UI_Manager.MainDashboard();
-                    await bot.SendMessage(msg.Chat, Lang.Translate("answers", "back", "back"),
+                    await bot.SendMessage(UserID, Lang.Translate("answers", "back", "back"),
                     replyMarkup: UI_Manager.Main_Keyboard);
                     break;
                 //power
                 case 2:
+                    LoggerService.LogCommand(UserID, UserName, "power");
                     Services.TakeScreenShot("Screen");
-                    Thread.Sleep(500);
+                    Task.Delay(500);
                     FileStream stremfile = new FileStream("Screenshot.png", FileMode.Open);
                     UI_Manager.PowerDashbord();
-                    await bot.SendPhoto(msg.Chat, stremfile, replyMarkup: UI_Manager.Power_Keyboard);
-                    Thread.Sleep(3000);
+                    await bot.SendPhoto(UserID, stremfile, replyMarkup: UI_Manager.Power_Keyboard);
+                    Task.Delay(3000);
                     File.Delete("Screenshot.png");
-                    MessageId = msg.MessageId;
+                    //MessageId = msg.MessageId;
                     break;
                 //status
                 case 3:
+                    LoggerService.LogCommand(UserID, UserName, "status");
                     UI_Manager.StatusDashboard();
-                    await bot.SendMessage(msg.Chat, Lang.Translate("answers", "status", "status"),
+                    await bot.SendMessage(UserID, Lang.Translate("answers", "status", "status"),
                     replyMarkup: UI_Manager.Status_Keyboard);
                     break;
                 //resource_report
                 case 4:
-                    await bot.SendMessage(msg.Chat, Services.GetSystemUsageReport());
+                    LoggerService.LogCommand(UserID, UserName, "resource_report");
+                    await bot.SendMessage(UserID, Services.GetSystemUsageReport());
+                    break;
+                //uptime
+                case 5:
+                    LoggerService.LogCommand(UserID, UserName, "uptime");
+                    await bot.SendMessage(UserID, Services.GetUpTime());
+                    break;
+                //driver_control
+                case 6:
+                    break;
+                //webcam_and_microphone
+                case 7:
                     break;
 
             }

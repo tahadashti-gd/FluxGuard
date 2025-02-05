@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using Serilog;
 
 namespace Languages
 {
@@ -15,11 +16,12 @@ namespace Languages
                     throw new FileNotFoundException($"Language file not found: {filePath}");
 
                 string jsonContent = File.ReadAllText(filePath);
+                Log.Information($"{langCode} language was successfully loaded.");
                 return JsonConvert.DeserializeObject<Dictionary<string, dynamic>>(jsonContent);
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error loading language file: {ex.Message}");
+                Log.Error($"Error loading language file: {ex.Message}");
                 return null;
             }
         }
@@ -37,7 +39,8 @@ namespace Languages
             }
             else
             {
-                return "error";
+                Log.Error("Error in text translation");
+                return "Error";
             }
         }
     }

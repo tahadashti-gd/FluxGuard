@@ -3,8 +3,10 @@ using System.Management;
 using System.Net.NetworkInformation;
 using System.Runtime.InteropServices;
 using System.Text;
+using FluxGuard.Core;
 using FluxGuard.GUI;
 using Languages;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Service
 {
@@ -106,6 +108,7 @@ namespace Service
         public static async void TakeScreenShot(string Window)
         {
             Form1.Screenshot(Window);
+            LoggerService.LogService($"TakeScreenShot:{Window}");
         }
         public static List<string> GetAllWindowHandleNames()
         {
@@ -137,6 +140,7 @@ namespace Service
         }
         public static string GetUpTime()
         {
+            LoggerService.LogService("GetUpTime");
             using var upTime = new PerformanceCounter("System", "System Up Time");
             upTime.NextValue();
             string DT = TimeSpan.FromSeconds(upTime.NextValue()).ToString();
@@ -148,7 +152,7 @@ namespace Service
         public static string GetSystemUsageReport()
         {
             StringBuilder report = new StringBuilder();
-
+            LoggerService.LogService($"GetSystemUsageReport");
             report.AppendLine(Lang.Translate("answers", "resource", "report"));
             report.AppendLine(Lang.Translate("answers", "resource", "cpu") + GetCpuUsage() + "%");
             report.AppendLine(Lang.Translate("answers", "resource", "ram") + GetRamUsage() + "%");

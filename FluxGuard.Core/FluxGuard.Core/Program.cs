@@ -1,33 +1,28 @@
 ﻿using System.Diagnostics;
 using System.Runtime.InteropServices;
 using FluxGuard.Core;
+using Serilog;
 using FluxGuard.GUI;
 
 class Program
 {
-    [DllImport("kernel32.dll")]
-    static extern IntPtr GetConsoleWindow();
-
-    [DllImport("user32.dll")]
-    static extern bool ShowWindow(IntPtr hWnd, int nCmdShow);
-
-    const int SW_HIDE = 0;
     static void Main(string[] args)
     {
-        var handle = GetConsoleWindow();
-        AppDomain.CurrentDomain.ProcessExit += OnProcessExit;
+        Logger.Initialize();
         MainCore botCore = new MainCore();
-        botCore.StartBot();
-        Process.Start("FluxGuard-GUI", "FluxGuard-GUI.exe");
+        try
+        {
+            botCore.StartBot();
+            Process.Start("FluxGuard-GUI", "FluxGuard-GUI.exe");
+            Log.Information("FluxGuard started at {Time}", DateTime.UtcNow);
+        }
+        catch (Exception ex)
+        {
+
+        }
+        
+        Log.Information("FluxGuard.GUI started successfully.");
         Console.WriteLine("Bot is running...");
-        Console.WriteLine("pres any key to hide console...");
         Console.ReadKey();
-        ShowWindow(handle, 0);
-        Console.ReadKey();
-    }
-    static void OnProcessExit(object sender, EventArgs e)
-    {
-        Form1.CloseGUI();
-        // اینجا هر کاری که لازم داری انجام بده، مثل ذخیره اطلاعات
     }
 }

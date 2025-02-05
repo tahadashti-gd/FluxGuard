@@ -45,6 +45,8 @@ namespace FluxGuard.Core
             {
                 row1 , row2 , row3 , row4 , row5
             };
+            LoggerService.LogUI("MainDashboard Loaded.");
+            
         }
         public static void AppDashboard()
         {
@@ -85,6 +87,8 @@ namespace FluxGuard.Core
             {
                   row0,row1,row2
             };
+            LoggerService.LogUI("StatusDashboard Loaded.");
+
         }
         public static void PowerDashbord()
         {
