@@ -82,3 +82,4 @@ D:\C#\FluxGuard\FluxGuard.Core\FluxGuard.Core\bin\Debug\net8.0-windows\runtimes\
 D:\C#\FluxGuard\FluxGuard.Core\FluxGuard.Core\bin\Debug\net8.0-windows\runtimes\osx-x64\native\SQLite.Interop.dll
 D:\C#\FluxGuard\FluxGuard.Core\FluxGuard.Core\bin\Debug\net8.0-windows\runtimes\win-x64\native\SQLite.Interop.dll
 D:\C#\FluxGuard\FluxGuard.Core\FluxGuard.Core\bin\Debug\net8.0-windows\runtimes\win-x86\native\SQLite.Interop.dll
+D:\C#\FluxGuard\FluxGuard.Core\FluxGuard.Core\bin\Debug\net8.0-windows\Spectre.Console.dll

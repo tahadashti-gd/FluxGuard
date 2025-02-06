@@ -1,0 +1,109 @@
+2025-02-06 12:01:11.411 +03:30 [INF] FluxGuard started at "2025-02-06T08:31:11.4092837Z"
+2025-02-06 12:01:11.629 +03:30 [INF] FluxGuard.GUI started successfully.
+2025-02-06 12:01:22.087 +03:30 [INF] Command received: start from TahaDashti_GD:5062451231
+2025-02-06 12:12:12.135 +03:30 [INF] FluxGuard started at "2025-02-06T08:42:12.1345567Z"
+2025-02-06 12:12:12.227 +03:30 [INF] FluxGuard.GUI started successfully.
+2025-02-06 12:13:55.268 +03:30 [INF] FluxGuard started at "2025-02-06T08:43:55.2676977Z"
+2025-02-06 12:13:55.328 +03:30 [INF] FluxGuard.GUI started successfully.
+2025-02-06 12:15:08.406 +03:30 [INF] FluxGuard started at "2025-02-06T08:45:08.4057578Z"
+2025-02-06 12:15:08.476 +03:30 [INF] FluxGuard.GUI started successfully.
+2025-02-06 12:15:11.798 +03:30 [INF] FluxGuard started at "2025-02-06T08:45:11.7979491Z"
+2025-02-06 12:15:11.865 +03:30 [INF] FluxGuard.GUI started successfully.
+2025-02-06 12:15:33.386 +03:30 [INF] FluxGuard started at "2025-02-06T08:45:33.3856788Z"
+2025-02-06 12:15:33.469 +03:30 [INF] FluxGuard.GUI started successfully.
+2025-02-06 12:16:35.301 +03:30 [INF] FluxGuard started at "2025-02-06T08:46:35.3003088Z"
+2025-02-06 12:16:35.418 +03:30 [INF] FluxGuard.GUI started successfully.
+2025-02-06 12:18:24.707 +03:30 [INF] FluxGuard started at "2025-02-06T08:48:24.7061809Z"
+2025-02-06 12:18:24.773 +03:30 [INF] FluxGuard.GUI started successfully.
+2025-02-06 12:18:42.569 +03:30 [INF] FluxGuard started at "2025-02-06T08:48:42.5686903Z"
+2025-02-06 12:18:42.640 +03:30 [INF] FluxGuard.GUI started successfully.
+2025-02-06 12:20:35.137 +03:30 [INF] FluxGuard started at "2025-02-06T08:50:35.1367034Z"
+2025-02-06 12:20:35.200 +03:30 [INF] FluxGuard.GUI started successfully.
+2025-02-06 12:22:44.092 +03:30 [INF] FluxGuard started at "2025-02-06T08:52:44.0915080Z"
+2025-02-06 12:22:44.163 +03:30 [INF] FluxGuard.GUI started successfully.
+2025-02-06 12:22:50.928 +03:30 [INF] Command received: start from TahaDashti_GD:5062451231
+2025-02-06 12:22:53.141 +03:30 [INF] en language was successfully loaded.
+2025-02-06 12:22:53.348 +03:30 [INF] en language was successfully loaded.
+2025-02-06 12:22:53.348 +03:30 [INF] en language was successfully loaded.
+2025-02-06 12:22:53.348 +03:30 [INF] en language was successfully loaded.
+2025-02-06 12:22:53.349 +03:30 [INF] en language was successfully loaded.
+2025-02-06 12:22:53.349 +03:30 [INF] en language was successfully loaded.
+2025-02-06 12:22:53.349 +03:30 [INF] en language was successfully loaded.
+2025-02-06 12:22:53.349 +03:30 [INF] [UI Manager] MainDashboard Loaded.
+2025-02-06 12:22:53.349 +03:30 [INF] en language was successfully loaded.
+2025-02-06 12:22:54.542 +03:30 [INF] en language was successfully loaded.
+2025-02-06 12:22:54.929 +03:30 [INF] Command received: status from TahaDashti_GD:5062451231
+2025-02-06 12:22:54.931 +03:30 [INF] en language was successfully loaded.
+2025-02-06 12:22:54.932 +03:30 [INF] en language was successfully loaded.
+2025-02-06 12:22:54.933 +03:30 [INF] en language was successfully loaded.
+2025-02-06 12:22:54.933 +03:30 [INF] en language was successfully loaded.
+2025-02-06 12:22:54.934 +03:30 [INF] en language was successfully loaded.
+2025-02-06 12:22:54.934 +03:30 [INF] [UI Manager] StatusDashboard Loaded.
+2025-02-06 12:22:54.934 +03:30 [INF] en language was successfully loaded.
+2025-02-06 12:22:56.404 +03:30 [INF] Command received: resource_report from TahaDashti_GD:5062451231
+2025-02-06 12:22:56.405 +03:30 [INF] [Service] GetSystemUsageReport
+2025-02-06 12:22:56.406 +03:30 [INF] en language was successfully loaded.
+2025-02-06 12:22:56.407 +03:30 [INF] en language was successfully loaded.
+2025-02-06 12:22:59.832 +03:30 [INF] en language was successfully loaded.
+2025-02-06 12:22:59.836 +03:30 [INF] en language was successfully loaded.
+2025-02-06 12:23:00.084 +03:30 [INF] en language was successfully loaded.
+2025-02-06 12:23:02.610 +03:30 [INF] Command received: uptime from TahaDashti_GD:5062451231
+2025-02-06 12:23:02.611 +03:30 [INF] [Service] GetUpTime
+2025-02-06 12:23:04.324 +03:30 [INF] Command received: back from TahaDashti_GD:5062451231
+2025-02-06 12:23:04.325 +03:30 [INF] en language was successfully loaded.
+2025-02-06 12:23:04.326 +03:30 [INF] en language was successfully loaded.
+2025-02-06 12:23:04.327 +03:30 [INF] en language was successfully loaded.
+2025-02-06 12:23:04.328 +03:30 [INF] en language was successfully loaded.
+2025-02-06 12:23:04.328 +03:30 [INF] en language was successfully loaded.
+2025-02-06 12:23:04.329 +03:30 [INF] en language was successfully loaded.
+2025-02-06 12:23:04.329 +03:30 [INF] en language was successfully loaded.
+2025-02-06 12:23:04.329 +03:30 [INF] [UI Manager] MainDashboard Loaded.
+2025-02-06 12:23:04.330 +03:30 [INF] en language was successfully loaded.
+2025-02-06 12:23:06.340 +03:30 [INF] Command received: power from TahaDashti_GD:5062451231
+2025-02-06 12:23:06.491 +03:30 [INF] [Service] TakeScreenShot:Screen
+2025-02-06 12:23:06.498 +03:30 [INF] en language was successfully loaded.
+2025-02-06 12:23:06.498 +03:30 [INF] en language was successfully loaded.
+2025-02-06 12:23:06.498 +03:30 [INF] en language was successfully loaded.
+2025-02-06 12:23:33.838 +03:30 [INF] FluxGuard started at "2025-02-06T08:53:33.8371753Z"
+2025-02-06 12:23:33.902 +03:30 [INF] FluxGuard.GUI started successfully.
+2025-02-06 12:29:17.348 +03:30 [INF] FluxGuard started at "2025-02-06T08:59:17.3477064Z"
+2025-02-06 12:29:17.407 +03:30 [INF] FluxGuard.GUI started successfully.
+2025-02-06 12:29:29.193 +03:30 [INF] Command received: start from TahaDashti_GD:5062451231
+2025-02-06 12:29:30.893 +03:30 [INF] en language was successfully loaded.
+2025-02-06 12:29:31.024 +03:30 [INF] en language was successfully loaded.
+2025-02-06 12:29:31.024 +03:30 [INF] en language was successfully loaded.
+2025-02-06 12:29:31.025 +03:30 [INF] en language was successfully loaded.
+2025-02-06 12:29:31.025 +03:30 [INF] en language was successfully loaded.
+2025-02-06 12:29:31.025 +03:30 [INF] en language was successfully loaded.
+2025-02-06 12:29:31.025 +03:30 [INF] en language was successfully loaded.
+2025-02-06 12:29:31.026 +03:30 [INF] [UI Manager] MainDashboard Loaded.
+2025-02-06 12:29:31.026 +03:30 [INF] en language was successfully loaded.
+2025-02-06 12:29:32.313 +03:30 [INF] en language was successfully loaded.
+2025-02-06 12:29:33.036 +03:30 [INF] Command received: status from TahaDashti_GD:5062451231
+2025-02-06 12:29:33.037 +03:30 [INF] en language was successfully loaded.
+2025-02-06 12:29:33.039 +03:30 [INF] en language was successfully loaded.
+2025-02-06 12:29:33.040 +03:30 [INF] en language was successfully loaded.
+2025-02-06 12:29:33.042 +03:30 [INF] en language was successfully loaded.
+2025-02-06 12:29:33.043 +03:30 [INF] en language was successfully loaded.
+2025-02-06 12:29:33.044 +03:30 [INF] [UI Manager] StatusDashboard Loaded.
+2025-02-06 12:29:33.044 +03:30 [INF] en language was successfully loaded.
+2025-02-06 12:29:40.347 +03:30 [INF] Command received: back from TahaDashti_GD:5062451231
+2025-02-06 12:29:40.348 +03:30 [INF] en language was successfully loaded.
+2025-02-06 12:29:40.349 +03:30 [INF] en language was successfully loaded.
+2025-02-06 12:29:40.349 +03:30 [INF] en language was successfully loaded.
+2025-02-06 12:29:40.350 +03:30 [INF] en language was successfully loaded.
+2025-02-06 12:29:40.350 +03:30 [INF] en language was successfully loaded.
+2025-02-06 12:29:40.350 +03:30 [INF] en language was successfully loaded.
+2025-02-06 12:29:40.350 +03:30 [INF] en language was successfully loaded.
+2025-02-06 12:29:40.350 +03:30 [INF] [UI Manager] MainDashboard Loaded.
+2025-02-06 12:29:40.350 +03:30 [INF] en language was successfully loaded.
+2025-02-06 12:31:58.625 +03:30 [INF] FluxGuard started at "2025-02-06T09:01:58.6247062Z"
+2025-02-06 12:31:58.682 +03:30 [INF] FluxGuard.GUI started successfully.
+2025-02-06 12:32:26.066 +03:30 [INF] FluxGuard started at "2025-02-06T09:02:26.0660339Z"
+2025-02-06 12:32:26.130 +03:30 [INF] FluxGuard.GUI started successfully.
+2025-02-06 12:33:08.752 +03:30 [INF] FluxGuard started at "2025-02-06T09:03:08.7518145Z"
+2025-02-06 12:33:08.818 +03:30 [INF] FluxGuard.GUI started successfully.
+2025-02-06 12:35:32.630 +03:30 [INF] FluxGuard started at "2025-02-06T09:05:32.6293508Z"
+2025-02-06 12:35:32.704 +03:30 [INF] FluxGuard.GUI started successfully.
+2025-02-06 12:42:17.136 +03:30 [INF] FluxGuard started at "2025-02-06T09:12:17.1358788Z"
+2025-02-06 12:42:17.217 +03:30 [INF] FluxGuard.GUI started successfully.

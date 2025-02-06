@@ -194,7 +194,6 @@ namespace FluxGuard.Core
             else
             {
                 int command = commands[msg];
-                Console.WriteLine(command);
                 return command;
             }
         }

@@ -22,7 +22,7 @@ class Program
         }
         
         Log.Information("FluxGuard.GUI started successfully.");
-        Console.WriteLine("Bot is running...");
-        Console.ReadKey();
+        CLI.StartCLI();
+
     }
 }

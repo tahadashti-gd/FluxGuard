@@ -69,6 +69,10 @@
               "target": "Package",
               "version": "[6.0.0, )"
             },
+            "Spectre.Console": {
+              "target": "Package",
+              "version": "[0.49.1, )"
+            },
             "System.Diagnostics.PerformanceCounter": {
               "target": "Package",
               "version": "[9.0.1, )"
