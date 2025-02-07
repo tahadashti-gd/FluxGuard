@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "i0O1Ephnfac=",
+  "dgSpecHash": "Oi/PpnfLKAU=",
   "success": true,
   "projectFilePath": "D:\\C#\\FluxGuard\\FluxGuard.Core\\FluxGuard.Core\\FluxGuard.Core.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\moham\\.nuget\\packages\\figgle\\0.5.1\\figgle.0.5.1.nupkg.sha512",
     "C:\\Users\\moham\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\moham\\.nuget\\packages\\microsoft.data.sqlite.core\\7.0.5\\microsoft.data.sqlite.core.7.0.5.nupkg.sha512",
     "C:\\Users\\moham\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\8.0.0\\microsoft.extensions.configuration.abstractions.8.0.0.nupkg.sha512",

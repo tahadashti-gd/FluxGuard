@@ -12,14 +12,17 @@ namespace FluxGuard.Core
 {
     public class MainCore
     {
-        int MessageId = 0;
-        string RootPath = AppContext.BaseDirectory;
-        public static string BotLang = "";
+        private int MessageId;
+        private readonly string RootPath = AppContext.BaseDirectory;
+        public static string BotLang;
+        public static string BotToken;
+        public static string userChatID;
         Dictionary<string, int> commands = new Dictionary<string, int>();
-        TelegramBotClient bot = new TelegramBotClient("7675770029:AAFDkAiTQbHbCXx6rbk5xJ1aVfNukbpSa4A");
+        private TelegramBotClient bot;
 
         public void StartBot()
         {
+            bot = new TelegramBotClient(BotToken);
             bot.OnError += OnError;
             bot.OnMessage += OnMessage;
             bot.OnUpdate += OnUpdate;
