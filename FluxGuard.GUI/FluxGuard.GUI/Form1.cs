@@ -22,6 +22,7 @@ namespace FluxGuard.GUI
         }
         private void Form1_Shown(object sender, EventArgs e)
         {
+
         }
 
 
@@ -34,6 +35,7 @@ namespace FluxGuard.GUI
                 graphics.CopyFromScreen(0, 0, 0, 0, Screen.PrimaryScreen.Bounds.Size);
                 var fileName = "Screenshot.png";
                 bitmap.Save(fileName, ImageFormat.Png);
+                bitmap.Dispose();
 
             }
             else

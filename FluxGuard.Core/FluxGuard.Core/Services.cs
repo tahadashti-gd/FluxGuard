@@ -5,7 +5,6 @@ using System.Runtime.InteropServices;
 using System.Text;
 using FluxGuard.Core;
 using FluxGuard.GUI;
-using Languages;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Service
@@ -88,20 +87,21 @@ namespace Service
 
         #endregion 
 
-        private static string RootPath = AppContext.BaseDirectory;
-
         #region Power
         public static void ShutDown()
         {
             Process.Start("shutdown", "/s /t 0");
+            LoggerService.LogService("SystemShutDowned");
         }
         public static void Restart()
         {
             Process.Start("shutdown", "/r /t 0");
+            LoggerService.LogService("SystemRestarted");
         }
         public static void Sleep()
         {
             SetSuspendState(false, true, true);
+            LoggerService.LogService("SystemSlipped");
         }
         #endregion
 
@@ -131,7 +131,10 @@ namespace Service
                 {
                     if (p.Id != me.Id && p.ProcessName == NameWindow)
                         p.Kill();
+
                 }
+                LoggerService.LogService($"CloseApp:{NameWindow}");
+
             }
             catch
             {
@@ -140,11 +143,12 @@ namespace Service
         }
         public static string GetUpTime()
         {
-            LoggerService.LogService("GetUpTime");
             using var upTime = new PerformanceCounter("System", "System Up Time");
             upTime.NextValue();
             string DT = TimeSpan.FromSeconds(upTime.NextValue()).ToString();
             int DTIndex = DT.LastIndexOf(':');
+            LoggerService.LogService("GetUpTime");
+
             return DT.Substring(0, DTIndex);
         }
 
@@ -153,11 +157,12 @@ namespace Service
         {
             StringBuilder report = new StringBuilder();
             LoggerService.LogService($"GetSystemUsageReport");
-            report.AppendLine(Lang.Translate("answers", "resource", "report"));
-            report.AppendLine(Lang.Translate("answers", "resource", "cpu") + GetCpuUsage() + "%");
-            report.AppendLine(Lang.Translate("answers", "resource", "ram") + GetRamUsage() + "%");
-            report.AppendLine(Lang.Translate("answers", "resource", "gpu") + GetGpuUsage() + "%");
-            report.AppendLine(Lang.Translate("answers", "resource", "net") + GetInternetSpeed() + "Mb/s");
+            report.AppendLine(Languages.Translate("answers", "resource", "report"));
+            report.AppendLine(Languages.Translate("answers", "resource", "cpu") + GetCpuUsage() + "%");
+            report.AppendLine(Languages.Translate("answers", "resource", "ram") + GetRamUsage() + "%");
+            report.AppendLine(Languages.Translate("answers", "resource", "gpu") + GetGpuUsage() + "%");
+            report.AppendLine(Languages.Translate("answers", "resource", "net") + GetInternetSpeed() + "Mb/s");
+            LoggerService.LogService($"GetSystemUsageReport");
 
             return report.ToString();
         }

@@ -1,13 +1,27 @@
-﻿using Newtonsoft.Json;
+﻿using FluxGuard.Core;
+using Newtonsoft.Json;
 using Serilog;
+using Spectre.Console;
 
-namespace Languages
+namespace FluxGuard.Core
 {
-    public class Lang
+    public class Languages
     {
-        public static string langCode = "en";
+        public static string languageCode;
+        public static Dictionary<string, dynamic> language = new Dictionary<string, dynamic>();
 
-        public static Dictionary<string, dynamic> LoadLanguage(string langCode)
+        public static void Initialize()
+        {
+            try
+            {
+                LoadLanguage(DataManager.Setting.TelegramBotLanguage);
+            }
+            catch(Exception ex) 
+            {
+                LoggerService.LogError(ex, "Initializing language");
+            }
+        }
+        public static void LoadLanguage(string langCode)
         {
             try
             {
@@ -16,31 +30,30 @@ namespace Languages
                     throw new FileNotFoundException($"Language file not found: {filePath}");
 
                 string jsonContent = File.ReadAllText(filePath);
-                Log.Information($"{langCode} language was successfully loaded.");
-                return JsonConvert.DeserializeObject<Dictionary<string, dynamic>>(jsonContent);
+                LoggerService.LogInformation($"{langCode} Language was successfully loaded.");
+                language = JsonConvert.DeserializeObject<Dictionary<string, dynamic>>(jsonContent);
+                languageCode = langCode;
+                MainCore.LoadLanguagesCommand();
             }
             catch (Exception ex)
             {
-                Log.Error($"Error loading language file: {ex.Message}");
-                return null;
+                LoggerService.LogError(ex, "Load language");
             }
         }
-
         public static string Translate(string Category, string MainKey, string SubsetKey)
         {
             string result;
 
-            var translations = LoadLanguage(langCode);
-
-            if (translations != null)
+            if (language != null)
             {
-                result = translations[Category][MainKey][SubsetKey];
+                result = language[Category][MainKey][SubsetKey];
                 return result;
             }
             else
             {
-                Log.Error("Error in text translation");
-                return "Error";
+                Log.Error("Error in translating language");
+                AnsiConsole.MarkupLine("Error in translating language");
+                return "???";
             }
         }
     }

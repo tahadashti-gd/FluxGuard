@@ -1,6 +1,5 @@
 ﻿using Telegram.Bot.Types.ReplyMarkups;
 using Service;
-using Languages;
 
 namespace FluxGuard.Core
 {
@@ -23,23 +22,23 @@ namespace FluxGuard.Core
             Main_Keyboard = new ReplyKeyboardMarkup("");
             KeyboardButton[] row1 =
             {
-                new KeyboardButton(Lang.Translate("replykeyboards","status","status")),new KeyboardButton(Lang.Translate("replykeyboards","power","power"))
+                new KeyboardButton(Languages.Translate("replykeyboards","status","status")),new KeyboardButton(Languages.Translate("replykeyboards","power","power"))
             };
             KeyboardButton[] row2 =
             {
-                new KeyboardButton(Lang.Translate("replykeyboards","apps","apps")),new KeyboardButton(Lang.Translate("replykeyboards","send","send"))
+                new KeyboardButton(Languages.Translate("replykeyboards","apps","apps")),new KeyboardButton(Languages.Translate("replykeyboards","send","send"))
             };
             KeyboardButton[] row3 =
             {
-                new KeyboardButton(Lang.Translate("replykeyboards","file_explorer","file_explorer"))
+                new KeyboardButton(Languages.Translate("replykeyboards","file_explorer","file_explorer"))
             };
             KeyboardButton[] row4 =
             {
-                new KeyboardButton(Lang.Translate("replykeyboards","security","security"))
+                new KeyboardButton(Languages.Translate("replykeyboards","security","security"))
             };
             KeyboardButton[] row5 =
             {
-                new KeyboardButton(Lang.Translate("replykeyboards","settings","settings"))
+                new KeyboardButton(Languages.Translate("replykeyboards","settings","settings"))
             };
             Main_Keyboard.Keyboard = new KeyboardButton[][]
             {
@@ -53,15 +52,15 @@ namespace FluxGuard.Core
             App_Dahsboard = new ReplyKeyboardMarkup("");
             KeyboardButton[] row0 =
             {
-                 new KeyboardButton(Lang.Translate("replykeyboards","apps","manage_apps"))
+                 new KeyboardButton(Languages.Translate("replykeyboards","apps","manage_apps"))
             };
             KeyboardButton[] row1 =
             {
-                 new KeyboardButton(Lang.Translate("replykeyboards","apps","open_app"))
+                 new KeyboardButton(Languages.Translate("replykeyboards","apps","open_app"))
             };
             KeyboardButton[] row2 =
             {
-                 new KeyboardButton(Lang.Translate("replykeyboards","back","back"))
+                 new KeyboardButton(Languages.Translate("replykeyboards","back","back"))
             };
             App_Dahsboard.Keyboard = new KeyboardButton[][]
             {
@@ -73,15 +72,15 @@ namespace FluxGuard.Core
             Status_Keyboard = new ReplyKeyboardMarkup("");
             KeyboardButton[] row0 =
             {
-                 new KeyboardButton(Lang.Translate("replykeyboards","status","resource_report")),new KeyboardButton(Lang.Translate("replykeyboards","status","driver_control"))
+                 new KeyboardButton(Languages.Translate("replykeyboards","status","resource_report")),new KeyboardButton(Languages.Translate("replykeyboards","status","driver_control"))
             };
             KeyboardButton[] row1 =
             {
-                 new KeyboardButton(Lang.Translate("replykeyboards","status","uptime")),new KeyboardButton(Lang.Translate("replykeyboards","status","webcam_and_microphone"))
+                 new KeyboardButton(Languages.Translate("replykeyboards","status","uptime")),new KeyboardButton(Languages.Translate("replykeyboards","status","webcam_and_microphone"))
             };
             KeyboardButton[] row2 =
             {
-                 new KeyboardButton(Lang.Translate("replykeyboards","back","back"))
+                 new KeyboardButton(Languages.Translate("replykeyboards","back","back"))
             };
             Status_Keyboard.Keyboard = new KeyboardButton[][]
             {
@@ -94,10 +93,10 @@ namespace FluxGuard.Core
         {
 
             var inlineMarkup = new InlineKeyboardMarkup()
-            .AddButton("⭕"+Lang.Translate("inlinekeyboards","power","shutdown"),"shutdown") // first row, first button
+            .AddButton("⭕"+Languages.Translate("inlinekeyboards","power","shutdown"),"shutdown") // first row, first button
             .AddNewRow()
-            .AddButton("💤"+ Lang.Translate("inlinekeyboards", "power", "sleep"), "sleep") // second row, first button
-            .AddButton("🔄️"+ Lang.Translate("inlinekeyboards", "power", "restart"), "restart");// second row, second button
+            .AddButton("💤"+ Languages.Translate("inlinekeyboards", "power", "sleep"), "sleep") // second row, first button
+            .AddButton("🔄️"+ Languages.Translate("inlinekeyboards", "power", "restart"), "restart");// second row, second button
 
             Power_Keyboard = inlineMarkup;
 

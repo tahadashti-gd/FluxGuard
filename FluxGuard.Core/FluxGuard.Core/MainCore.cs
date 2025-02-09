@@ -1,6 +1,7 @@
-﻿using Languages;
-using Newtonsoft.Json.Linq;
+﻿using Newtonsoft.Json.Linq;
 using Service;
+using Spectre.Console;
+using System;
 using System.Text;
 using Telegram.Bot;
 using Telegram.Bot.Polling;
@@ -14,27 +15,43 @@ namespace FluxGuard.Core
     {
         private int MessageId;
         private readonly string RootPath = AppContext.BaseDirectory;
-        public static string BotLang;
+        public static string BotLanguages;
         public static string BotToken;
-        public static string userChatID;
-        Dictionary<string, int> commands = new Dictionary<string, int>();
+        public static long userChatID;
+        private static Dictionary<string, int> commands = new Dictionary<string, int>();
         private TelegramBotClient bot;
 
-        public void StartBot()
+        public static void Initialize()
         {
-            bot = new TelegramBotClient(BotToken);
-            bot.OnError += OnError;
-            bot.OnMessage += OnMessage;
-            bot.OnUpdate += OnUpdate;
+            BotToken = DataManager.Config.TelegramBotToken;
+            userChatID = long.Parse(DataManager.Config.UserChatId);
+            BotLanguages = DataManager.Setting.TelegramBotLanguage;
+            Languages.Initialize();
+        }
+        public bool StartBot()
+        {
+            try
+            {
+                bot = new TelegramBotClient(BotToken);
+                bot.OnError += OnError;
+                bot.OnMessage += OnMessage;
+                bot.OnUpdate += OnUpdate;
+                LoggerService.LogInformation("MainCore Started");
+                return true;
+            }
+            catch (Exception ex)
+            {
+                LoggerService.LogError(ex, "StartBot function");
+                return false;
+            }
         }
         async Task OnError(Exception exception, HandleErrorSource source)
         {
-            Console.WriteLine(exception);
+            LoggerService.LogError(exception, "OnError functino");
         }
         async Task OnMessage(Message msg, UpdateType type)
         {
-            long UserID = msg.Chat.Id;
-            string UserName = msg.Chat.Username;
+            string? UserName = msg.Chat.Username;
             MessageId = msg.MessageId;
 
             var stringBuilder = new StringBuilder();
@@ -42,52 +59,27 @@ namespace FluxGuard.Core
             {
                 //start
                 case 0:
-                    LoggerService.LogCommand(UserID, UserName, "start");
-                    stringBuilder.AppendLine("Welcome to FluxGuard! 🌟\r\nHey there! I'm FluxGuard, your ultimate tool for controlling your computer from anywhere, anytime! 😎 Whether you need to shut down your system, take a screenshot, or keep an eye on your files, I’m here to make it super easy for you! 💻✨\r\n\r\nTo get started, choose your preferred language:\r\n1️⃣ English\r\n2️⃣ Persian-فارسی\r\n\r\nLet me know which one you’d prefer, and I’ll be ready to assist you! 🌍🚀");
-                    var inlineMarkup = new InlineKeyboardMarkup();
-                    inlineMarkup.AddButton("English", "lan*en");
-                    inlineMarkup.AddNewRow();
-                    inlineMarkup.AddButton("فارسی", "lan*fa");
-                    await bot.SendMessage(UserID, stringBuilder.ToString(),
-                    replyMarkup: inlineMarkup);
-                    stringBuilder.Clear();
-                    //MessageId = msg.MessageId;
+                    await StartCommand(userChatID, UserName, stringBuilder);
                     break;
                 //back
                 case 1:
-                    LoggerService.LogCommand(UserID, UserName, "back");
-                    UI_Manager.MainDashboard();
-                    await bot.SendMessage(UserID, Lang.Translate("answers", "back", "back"),
-                    replyMarkup: UI_Manager.Main_Keyboard);
+                    await BackCommand(userChatID, UserName);
                     break;
                 //power
                 case 2:
-                    LoggerService.LogCommand(UserID, UserName, "power");
-                    Services.TakeScreenShot("Screen");
-                    Task.Delay(500);
-                    FileStream stremfile = new FileStream("Screenshot.png", FileMode.Open);
-                    UI_Manager.PowerDashbord();
-                    await bot.SendPhoto(UserID, stremfile, replyMarkup: UI_Manager.Power_Keyboard);
-                    Task.Delay(3000);
-                    File.Delete("Screenshot.png");
-                    //MessageId = msg.MessageId;
+                    await PowerCommand(userChatID, UserName);
                     break;
                 //status
                 case 3:
-                    LoggerService.LogCommand(UserID, UserName, "status");
-                    UI_Manager.StatusDashboard();
-                    await bot.SendMessage(UserID, Lang.Translate("answers", "status", "status"),
-                    replyMarkup: UI_Manager.Status_Keyboard);
+                    await StatusCommand(userChatID, UserName);
                     break;
                 //resource_report
                 case 4:
-                    LoggerService.LogCommand(UserID, UserName, "resource_report");
-                    await bot.SendMessage(UserID, Services.GetSystemUsageReport());
+                    await ResourceReportCommand(userChatID, UserName);
                     break;
                 //uptime
                 case 5:
-                    LoggerService.LogCommand(UserID, UserName, "uptime");
-                    await bot.SendMessage(UserID, Services.GetUpTime());
+                    await UpTimeCommand(userChatID, UserName);
                     break;
                 //driver_control
                 case 6:
@@ -98,6 +90,60 @@ namespace FluxGuard.Core
 
             }
         }
+
+        private async Task UpTimeCommand(long UserID, string UserName)
+        {
+            LoggerService.LogCommand(UserID, UserName, "uptime");
+            await bot.SendMessage(UserID, Services.GetUpTime());
+        }
+
+        private async Task ResourceReportCommand(long UserID, string UserName)
+        {
+            LoggerService.LogCommand(UserID, UserName, "resource_report");
+            await bot.SendMessage(UserID, Services.GetSystemUsageReport());
+        }
+
+        private async Task StatusCommand(long UserID, string UserName)
+        {
+            LoggerService.LogCommand(UserID, UserName, "status");
+            UI_Manager.StatusDashboard();
+            await bot.SendMessage(UserID, Languages.Translate("answers", "status", "status"),
+            replyMarkup: UI_Manager.Status_Keyboard);
+        }
+
+        private async Task PowerCommand(long UserID, string UserName)
+        {
+            LoggerService.LogCommand(UserID, UserName, "power");
+            Services.TakeScreenShot("Screen");
+            Task.Delay(500);
+            FileStream stremfile = new FileStream("Screenshot.png", FileMode.Open);
+            UI_Manager.PowerDashbord();
+            await bot.SendPhoto(UserID, stremfile, replyMarkup: UI_Manager.Power_Keyboard);
+            Task.Delay(3000);
+            File.Delete("Screenshot.png");
+        }
+
+        private async Task BackCommand(long UserID, string UserName)
+        {
+            LoggerService.LogCommand(UserID, UserName, "back");
+            UI_Manager.MainDashboard();
+            await bot.SendMessage(UserID, Languages.Translate("answers", "back", "back"),
+            replyMarkup: UI_Manager.Main_Keyboard);
+        }
+
+        private async Task StartCommand(long UserID, string UserName, StringBuilder stringBuilder)
+        {
+            LoggerService.LogCommand(UserID, UserName, "start");
+            stringBuilder.AppendLine("Welcome to FluxGuard! 🌟\r\nHey there! I'm FluxGuard, your ultimate tool for controlling your computer from anywhere, anytime! 😎 Whether you need to shut down your system, take a screenshot, or keep an eye on your files, I’m here to make it super easy for you! 💻✨\r\n\r\nTo get started, choose your preferred Languagesuage:\r\n1️⃣ English\r\n2️⃣ Persian-فارسی\r\n\r\nLet me know which one you’d prefer, and I’ll be ready to assist you! 🌍🚀");
+            var inlineMarkup = new InlineKeyboardMarkup();
+            inlineMarkup.AddButton("English", "lan*en");
+            inlineMarkup.AddNewRow();
+            inlineMarkup.AddButton("فارسی", "lan*fa");
+            await bot.SendMessage(UserID, stringBuilder.ToString(),
+            replyMarkup: inlineMarkup);
+            stringBuilder.Clear();
+        }
+
         async Task OnUpdate(Update update)
         {
             if (update is { CallbackQuery: { } query }) // non-null CallbackQuery
@@ -176,15 +222,15 @@ namespace FluxGuard.Core
                 {
                     await bot.AnswerCallbackQuery(query.Id);
                     string[] lan = query.Data.Split("*");
-                    BotLang = lan[1];
-                    Lang.langCode = BotLang;
+                    BotLanguages = lan[1];
+                    Languages.languageCode = BotLanguages;
+                    DataManager.SetSettingValue("telegram_bot_language", BotLanguages);
                     await bot.DeleteMessage(query.Message!.Chat, MessageId + 1);
                     UI_Manager.MainDashboard();
-                    var mes = await bot.SendMessage(query.Message!.Chat, Lang.Translate("answers", "welcome", "welcome"),
+                    var mes = await bot.SendMessage(query.Message!.Chat, Languages.Translate("answers", "welcome", "welcome"),
                     replyMarkup: UI_Manager.Main_Keyboard);
-                    Thread.Sleep(1000);
                     MessageId = MessageId + 1;
-                    LoadLangCommand();
+                    LoadLanguagesCommand();
                 }
             }
         }
@@ -200,11 +246,11 @@ namespace FluxGuard.Core
                 return command;
             }
         }
-        void LoadLangCommand()
+        public static void LoadLanguagesCommand()
         {
-            var commandJson = Lang.LoadLanguage(BotLang);
+            var commandJson = Languages.language;
             int codeCounter = 1;
-            string filePath = $"lan/{BotLang}.json";
+            string filePath = $"lan/{BotLanguages}.json";
 
             string json = File.ReadAllText(filePath);
 

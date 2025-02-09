@@ -1,0 +1,34 @@
+2025-02-07 15:52:50.378 +03:30 [INF] Command received: start from TahaDashti_GD:5062451231
+2025-02-07 15:52:52.841 +03:30 [INF] en language was successfully loaded.
+2025-02-07 15:52:53.234 +03:30 [INF] en language was successfully loaded.
+2025-02-07 15:52:53.235 +03:30 [INF] en language was successfully loaded.
+2025-02-07 15:52:53.235 +03:30 [INF] en language was successfully loaded.
+2025-02-07 15:52:53.236 +03:30 [INF] en language was successfully loaded.
+2025-02-07 15:52:53.236 +03:30 [INF] en language was successfully loaded.
+2025-02-07 15:52:53.237 +03:30 [INF] en language was successfully loaded.
+2025-02-07 15:52:53.238 +03:30 [INF] [UI Manager] MainDashboard Loaded.
+2025-02-07 15:52:53.238 +03:30 [INF] en language was successfully loaded.
+2025-02-07 15:52:54.487 +03:30 [INF] en language was successfully loaded.
+2025-02-07 15:52:58.711 +03:30 [INF] Command received: status from TahaDashti_GD:5062451231
+2025-02-07 15:52:58.746 +03:30 [INF] en language was successfully loaded.
+2025-02-07 15:52:58.748 +03:30 [INF] en language was successfully loaded.
+2025-02-07 15:52:58.748 +03:30 [INF] en language was successfully loaded.
+2025-02-07 15:52:58.749 +03:30 [INF] en language was successfully loaded.
+2025-02-07 15:52:58.750 +03:30 [INF] en language was successfully loaded.
+2025-02-07 15:52:58.750 +03:30 [INF] [UI Manager] StatusDashboard Loaded.
+2025-02-07 15:52:58.750 +03:30 [INF] en language was successfully loaded.
+2025-02-07 15:53:00.209 +03:30 [INF] Command received: resource_report from TahaDashti_GD:5062451231
+2025-02-07 15:53:00.210 +03:30 [INF] [Service] GetSystemUsageReport
+2025-02-07 15:53:00.211 +03:30 [INF] en language was successfully loaded.
+2025-02-07 15:53:00.213 +03:30 [INF] en language was successfully loaded.
+2025-02-07 15:53:06.419 +03:30 [INF] en language was successfully loaded.
+2025-02-07 15:53:06.421 +03:30 [INF] en language was successfully loaded.
+2025-02-07 15:53:07.384 +03:30 [INF] en language was successfully loaded.
+2025-02-07 15:53:13.786 +03:30 [INF] Command received: uptime from TahaDashti_GD:5062451231
+2025-02-07 15:53:13.787 +03:30 [INF] [Service] GetUpTime
+2025-02-07 17:11:31.773 +03:30 [WRN] Security alert: The value of 5062451231 was set in the user_chat_id key in the config file.
+2025-02-07 17:13:29.784 +03:30 [WRN] [Security] The value of 5062451231 was set in the user_chat_id key in the config file.
+2025-02-07 17:13:37.204 +03:30 [ERR] ❌ Exception in Error in bot connection.: Value cannot be null. (Parameter 'token')
+2025-02-07 17:13:37.356 +03:30 [WRN] [Information] FluxGuard started at 19/11/1403 01:43:37 PM
+2025-02-07 17:14:30.320 +03:30 [WRN] [Security] The value of 5062451231 was set in the user_chat_id key in the config file.
+2025-02-07 17:14:43.025 +03:30 [WRN] [Security] The value of 7675770029:AAFDkAiTQbHbCXx6rbk5xJ1aVfNukbpSa4A was set in the telegram_bot_token key in the config file.
