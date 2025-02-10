@@ -1,7 +1,7 @@
-﻿using Newtonsoft.Json.Linq;
+﻿using Microsoft.Extensions.DependencyInjection;
+using Newtonsoft.Json.Linq;
 using Service;
 using Spectre.Console;
-using System;
 using System.Text;
 using Telegram.Bot;
 using Telegram.Bot.Polling;
@@ -15,18 +15,26 @@ namespace FluxGuard.Core
     {
         private int MessageId;
         private readonly string RootPath = AppContext.BaseDirectory;
-        public static string BotLanguages;
-        public static string BotToken;
+        public static string? BotLanguages;
+        public static string? BotToken;
         public static long userChatID;
         private static Dictionary<string, int> commands = new Dictionary<string, int>();
         private TelegramBotClient bot;
 
         public static void Initialize()
         {
-            BotToken = DataManager.Config.TelegramBotToken;
-            userChatID = long.Parse(DataManager.Config.UserChatId);
-            BotLanguages = DataManager.Setting.TelegramBotLanguage;
-            Languages.Initialize();
+            try
+            {
+                BotToken = DataManager.Config.TelegramBotToken;
+                userChatID = long.Parse(DataManager.Config.UserChatId);
+                BotLanguages = DataManager.Setting.TelegramBotLanguage;
+                LoggerService.LogInformation("MainCore Initialize");
+                Languages.Initialize();
+            }
+            catch(Exception ex)
+            {
+                LoggerService.LogError(ex, "MainCore initializing");
+            }
         }
         public bool StartBot()
         {
@@ -87,6 +95,36 @@ namespace FluxGuard.Core
                 //webcam_and_microphone
                 case 7:
                     break;
+                //apps
+                case 8:
+                    await AppsCommand(userChatID, UserName);
+                    break;
+                //manage_apps
+                case 9:
+                    await ManageApps(userChatID,UserName);
+                    break;
+                //open_app
+                case 10:
+                    break;
+                //send
+                case 11:
+                    break;
+                //send_file
+                case 12:
+                    break;
+                //send_voice
+                case 13:
+                    break;
+                //send_voice
+                case 14:
+                    break;
+                //file_explorer
+                case 15:
+                    break;
+                //drive
+                case 16:
+                    break;
+
 
             }
         }
@@ -96,13 +134,17 @@ namespace FluxGuard.Core
             LoggerService.LogCommand(UserID, UserName, "uptime");
             await bot.SendMessage(UserID, Services.GetUpTime());
         }
-
         private async Task ResourceReportCommand(long UserID, string UserName)
         {
             LoggerService.LogCommand(UserID, UserName, "resource_report");
             await bot.SendMessage(UserID, Services.GetSystemUsageReport());
         }
-
+        private async Task ManageApps(long UserID, string UserName)
+        {
+            LoggerService.LogCommand(UserID, UserName, "manage_apps");
+            UI_Manager.AppList();
+            await bot.SendMessage(UserID,Languages.Translate("replykeyboards","apps", "manage_apps"),replyMarkup:UI_Manager.App_List);
+        }
         private async Task StatusCommand(long UserID, string UserName)
         {
             LoggerService.LogCommand(UserID, UserName, "status");
@@ -110,7 +152,13 @@ namespace FluxGuard.Core
             await bot.SendMessage(UserID, Languages.Translate("answers", "status", "status"),
             replyMarkup: UI_Manager.Status_Keyboard);
         }
-
+        private async Task AppsCommand(long UserID, string UserName)
+        {
+            LoggerService.LogCommand(UserID, UserName, "apps");
+            UI_Manager.AppDashboard();
+            await bot.SendMessage(UserID, Languages.Translate("answers", "apps", "apps"),
+            replyMarkup: UI_Manager.App_Dahsboard);
+        }
         private async Task PowerCommand(long UserID, string UserName)
         {
             LoggerService.LogCommand(UserID, UserName, "power");
@@ -122,7 +170,6 @@ namespace FluxGuard.Core
             Task.Delay(3000);
             File.Delete("Screenshot.png");
         }
-
         private async Task BackCommand(long UserID, string UserName)
         {
             LoggerService.LogCommand(UserID, UserName, "back");
@@ -130,7 +177,6 @@ namespace FluxGuard.Core
             await bot.SendMessage(UserID, Languages.Translate("answers", "back", "back"),
             replyMarkup: UI_Manager.Main_Keyboard);
         }
-
         private async Task StartCommand(long UserID, string UserName, StringBuilder stringBuilder)
         {
             LoggerService.LogCommand(UserID, UserName, "start");
@@ -193,7 +239,7 @@ namespace FluxGuard.Core
                         }
 
                 }
-                if (query.Data.StartsWith("app*"))
+                if (query.Data.StartsWith("Mapp*"))
                 {
                     await bot.AnswerCallbackQuery(query.Id);
                     string[] nameApp = query.Data.Split("*");

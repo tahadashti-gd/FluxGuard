@@ -117,7 +117,7 @@ namespace FluxGuard.Core
                     break;
                 case "user chatid":
                     string chatIDValue = AnsiConsole.Ask<string>("[bold blue]Enter new User ChatID[/]:");
-                    MainCore.userChatID = chatIDValue;
+                    MainCore.userChatID = long.Parse(chatIDValue);
                     DataManager.SetConfigValue("user_chat_id", chatIDValue);
                     AnsiConsole.MarkupLine($"[green]User Chat ID has been updated to:[/] [bold]{DataManager.Config.UserChatId}[/]");
                     break;

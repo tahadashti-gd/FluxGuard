@@ -262,3 +262,402 @@
 2025-02-09 19:25:33.928 +03:30 [INF] [Information] en Language was successfully loaded.
 2025-02-09 19:25:34.267 +03:30 [INF] [Information] MainCore Started
 2025-02-09 19:25:34.327 +03:30 [INF] [Information] FluxGuard started at 21/11/1403 03:55:34 PM
+2025-02-09 19:49:24.203 +03:30 [INF] [Information] Config loaded.
+2025-02-09 19:49:24.699 +03:30 [INF] [Information] Settings loaded.
+2025-02-09 19:49:24.701 +03:30 [INF] [Information] MainCore Initialize
+2025-02-09 19:49:24.725 +03:30 [INF] [Information] en Language was successfully loaded.
+2025-02-09 19:49:25.125 +03:30 [INF] [Information] MainCore Started
+2025-02-09 19:49:25.161 +03:30 [INF] [Information] FluxGuard started at 21/11/1403 04:19:25 PM
+2025-02-09 19:49:31.185 +03:30 [INF] [Command]:[status] from TahaDashti_GD:5062451231
+2025-02-09 19:49:31.434 +03:30 [INF] [UI Manager] StatusDashboard Loaded.
+2025-02-09 19:49:33.563 +03:30 [INF] [Command]:[back] from TahaDashti_GD:5062451231
+2025-02-09 19:49:33.564 +03:30 [INF] [UI Manager] MainDashboard Loaded.
+2025-02-09 19:50:44.013 +03:30 [INF] [Information] Config loaded.
+2025-02-09 19:50:44.094 +03:30 [INF] [Information] Settings loaded.
+2025-02-09 19:50:44.097 +03:30 [INF] [Information] MainCore Initialize
+2025-02-09 19:50:44.129 +03:30 [INF] [Information] en Language was successfully loaded.
+2025-02-09 19:50:44.470 +03:30 [INF] [Information] MainCore Started
+2025-02-09 19:50:44.492 +03:30 [INF] [Information] FluxGuard started at 21/11/1403 04:20:44 PM
+2025-02-09 19:50:47.193 +03:30 [INF] [Command]:[apps] from TahaDashti_GD:5062451231
+2025-02-09 19:50:51.722 +03:30 [INF] [Command]:[back] from TahaDashti_GD:5062451231
+2025-02-09 19:50:51.724 +03:30 [INF] [UI Manager] MainDashboard Loaded.
+2025-02-09 19:50:58.947 +03:30 [WRN] [Security] Set telegram_bot_language to fa in setting.
+2025-02-09 19:50:58.947 +03:30 [INF] [Information] Config loaded.
+2025-02-09 19:50:58.963 +03:30 [INF] [Information] Settings loaded.
+2025-02-09 19:50:58.963 +03:30 [INF] [Information] MainCore Initialize
+2025-02-09 19:50:58.974 +03:30 [INF] [Information] fa Language was successfully loaded.
+2025-02-09 19:51:07.910 +03:30 [INF] [Command]:[back] from TahaDashti_GD:5062451231
+2025-02-09 19:51:07.910 +03:30 [INF] [UI Manager] MainDashboard Loaded.
+2025-02-09 19:51:11.163 +03:30 [INF] [Command]:[apps] from TahaDashti_GD:5062451231
+2025-02-09 19:51:20.311 +03:30 [INF] [Command]:[back] from TahaDashti_GD:5062451231
+2025-02-09 19:51:20.312 +03:30 [INF] [UI Manager] MainDashboard Loaded.
+2025-02-09 19:51:21.512 +03:30 [INF] [Command]:[status] from TahaDashti_GD:5062451231
+2025-02-09 19:51:21.513 +03:30 [INF] [UI Manager] StatusDashboard Loaded.
+2025-02-09 19:51:23.097 +03:30 [INF] [Command]:[resource_report] from TahaDashti_GD:5062451231
+2025-02-09 19:51:23.099 +03:30 [INF] [Service] GetSystemUsageReport
+2025-02-09 19:51:28.726 +03:30 [INF] [Service] GetSystemUsageReport
+2025-02-09 19:51:31.064 +03:30 [INF] [Command]:[uptime] from TahaDashti_GD:5062451231
+2025-02-09 19:51:31.105 +03:30 [INF] [Service] GetUpTime
+2025-02-09 19:51:32.567 +03:30 [INF] [Command]:[back] from TahaDashti_GD:5062451231
+2025-02-09 19:51:32.567 +03:30 [INF] [UI Manager] MainDashboard Loaded.
+2025-02-09 19:51:34.430 +03:30 [INF] [Command]:[power] from TahaDashti_GD:5062451231
+2025-02-09 19:51:34.747 +03:30 [INF] [Service] TakeScreenShot:Screen
+2025-02-09 19:55:38.383 +03:30 [INF] [Information] Config loaded.
+2025-02-09 19:55:38.513 +03:30 [INF] [Information] Settings loaded.
+2025-02-09 19:55:38.517 +03:30 [INF] [Information] MainCore Initialize
+2025-02-09 19:55:38.557 +03:30 [INF] [Information] fa Language was successfully loaded.
+2025-02-09 19:55:38.797 +03:30 [INF] [Information] MainCore Started
+2025-02-09 19:55:38.818 +03:30 [INF] [Information] FluxGuard started at 21/11/1403 04:25:38 PM
+2025-02-09 19:55:40.904 +03:30 [INF] [Command]:[apps] from TahaDashti_GD:5062451231
+2025-02-09 19:55:43.145 +03:30 [INF] [Command]:[manage_apps] from TahaDashti_GD:5062451231
+2025-02-09 19:55:52.812 +03:30 [INF] [Service] TakeScreenShot:Telegram
+2025-02-09 19:56:07.953 +03:30 [INF] [Service] TakeScreenShot:ChatGPT
+2025-02-09 19:56:16.485 +03:30 [INF] [Service] CloseApp:ChatGPT
+2025-02-09 19:56:20.268 +03:30 [INF] [Command]:[manage_apps] from TahaDashti_GD:5062451231
+2025-02-09 19:56:33.722 +03:30 [INF] [Service] TakeScreenShot:GitHubDesktop
+2025-02-09 19:56:47.624 +03:30 [INF] [Service] CloseApp:GitHubDesktop
+2025-02-09 19:56:52.341 +03:30 [INF] [Command]:[manage_apps] from TahaDashti_GD:5062451231
+2025-02-09 19:56:56.841 +03:30 [INF] [Service] TakeScreenShot:TextInputHost
+2025-02-09 19:57:12.523 +03:30 [INF] [Service] TakeScreenShot:Hiddify
+2025-02-09 19:57:37.255 +03:30 [INF] [Service] TakeScreenShot:WindowsTerminal
+2025-02-09 19:57:47.045 +03:30 [INF] [Service] CloseApp:WindowsTerminal
+2025-02-09 19:57:51.887 +03:30 [INF] [Information] Config loaded.
+2025-02-09 19:57:51.977 +03:30 [INF] [Information] Settings loaded.
+2025-02-09 19:57:51.979 +03:30 [INF] [Information] MainCore Initialize
+2025-02-09 19:57:52.021 +03:30 [INF] [Information] fa Language was successfully loaded.
+2025-02-09 19:57:52.255 +03:30 [INF] [Information] MainCore Started
+2025-02-09 19:57:52.277 +03:30 [INF] [Information] FluxGuard started at 21/11/1403 04:27:52 PM
+2025-02-09 19:57:55.919 +03:30 [INF] [Service] CloseApp:WindowsTerminal
+2025-02-09 19:58:00.778 +03:30 [INF] [Information] Config loaded.
+2025-02-09 19:58:00.864 +03:30 [INF] [Information] Settings loaded.
+2025-02-09 19:58:00.866 +03:30 [INF] [Information] MainCore Initialize
+2025-02-09 19:58:00.875 +03:30 [INF] [Information] fa Language was successfully loaded.
+2025-02-09 19:58:01.074 +03:30 [INF] [Information] MainCore Started
+2025-02-09 19:58:01.099 +03:30 [INF] [Information] FluxGuard started at 21/11/1403 04:28:01 PM
+2025-02-09 19:58:03.520 +03:30 [ERR] Exception in OnError functino: Bad Request: query is too old and response timeout expired or query ID is invalid
+2025-02-09 19:58:19.149 +03:30 [INF] [Information] Config loaded.
+2025-02-09 19:58:19.231 +03:30 [INF] [Information] Settings loaded.
+2025-02-09 19:58:19.235 +03:30 [INF] [Information] MainCore Initialize
+2025-02-09 19:58:19.249 +03:30 [INF] [Information] fa Language was successfully loaded.
+2025-02-09 19:58:19.539 +03:30 [INF] [Information] MainCore Started
+2025-02-09 19:58:19.569 +03:30 [INF] [Information] FluxGuard started at 21/11/1403 04:28:19 PM
+2025-02-09 22:36:31.316 +03:30 [INF] [Information] Config loaded.
+2025-02-09 22:36:31.391 +03:30 [INF] [Information] Settings loaded.
+2025-02-09 22:36:31.393 +03:30 [INF] [Information] MainCore Initialize
+2025-02-09 22:36:31.407 +03:30 [INF] [Information] fa Language was successfully loaded.
+2025-02-09 22:36:32.470 +03:30 [INF] [Information] MainCore Started
+2025-02-09 22:36:32.649 +03:30 [INF] [Information] FluxGuard started at 21/11/1403 07:06:32 PM
+2025-02-09 22:36:53.710 +03:30 [INF] [Command]:[back] from TahaDashti_GD:5062451231
+2025-02-09 22:36:53.867 +03:30 [INF] [UI Manager] MainDashboard Loaded.
+2025-02-09 22:36:57.406 +03:30 [INF] [Command]:[status] from TahaDashti_GD:5062451231
+2025-02-09 22:36:57.407 +03:30 [INF] [UI Manager] StatusDashboard Loaded.
+2025-02-09 22:37:01.483 +03:30 [INF] [Command]:[back] from TahaDashti_GD:5062451231
+2025-02-09 22:37:01.483 +03:30 [INF] [UI Manager] MainDashboard Loaded.
+2025-02-09 22:37:07.034 +03:30 [INF] [Command]:[power] from TahaDashti_GD:5062451231
+2025-02-09 22:37:07.417 +03:30 [INF] [Service] TakeScreenShot:Screen
+2025-02-09 22:37:20.344 +03:30 [INF] [Command]:[apps] from TahaDashti_GD:5062451231
+2025-02-09 22:37:29.558 +03:30 [INF] [Command]:[manage_apps] from TahaDashti_GD:5062451231
+2025-02-09 22:37:42.277 +03:30 [INF] [Service] TakeScreenShot:ShellExperienceHost
+2025-02-09 22:37:43.938 +03:30 [ERR] Exception in OnError functino: Could not find file 'E:\C#\FluxGuard\FluxGuard.Core\FluxGuard.Core\bin\Debug\net8.0-windows\Screenshot.png'.
+2025-02-09 22:37:47.014 +03:30 [INF] [Service] TakeScreenShot:Eitaa
+2025-02-09 22:38:05.154 +03:30 [INF] [Service] TakeScreenShot:Eitaa
+2025-02-09 22:38:26.097 +03:30 [INF] [Service] CloseApp:Eitaa
+2025-02-09 22:44:56.283 +03:30 [INF] [Information] Config loaded.
+2025-02-09 22:44:56.398 +03:30 [INF] [Information] Settings loaded.
+2025-02-09 22:44:56.400 +03:30 [INF] [Information] MainCore Initialize
+2025-02-09 22:44:56.437 +03:30 [INF] [Information] fa Language was successfully loaded.
+2025-02-09 22:44:56.951 +03:30 [INF] [Information] MainCore Started
+2025-02-09 22:44:56.983 +03:30 [INF] [Information] FluxGuard started at 21/11/1403 07:14:56 PM
+2025-02-09 22:45:09.622 +03:30 [ERR] Exception in OnError functino: Exception during making request
+2025-02-09 22:45:21.700 +03:30 [ERR] Exception in OnError functino: Exception during making request
+2025-02-09 22:45:33.749 +03:30 [ERR] Exception in OnError functino: Exception during making request
+2025-02-09 22:45:43.032 +03:30 [INF] [Information] Config loaded.
+2025-02-09 22:45:43.100 +03:30 [INF] [Information] Settings loaded.
+2025-02-09 22:45:43.102 +03:30 [INF] [Information] MainCore Initialize
+2025-02-09 22:45:43.117 +03:30 [INF] [Information] fa Language was successfully loaded.
+2025-02-09 22:45:43.450 +03:30 [INF] [Information] MainCore Started
+2025-02-09 22:45:43.474 +03:30 [INF] [Information] FluxGuard started at 21/11/1403 07:15:43 PM
+2025-02-09 22:45:45.917 +03:30 [ERR] Exception in OnError functino: Exception during making request
+2025-02-09 22:45:57.986 +03:30 [ERR] Exception in OnError functino: Exception during making request
+2025-02-09 22:46:23.282 +03:30 [INF] [Information] Config loaded.
+2025-02-09 22:46:23.345 +03:30 [INF] [Information] Settings loaded.
+2025-02-09 22:46:23.348 +03:30 [INF] [Information] MainCore Initialize
+2025-02-09 22:46:23.358 +03:30 [INF] [Information] fa Language was successfully loaded.
+2025-02-09 22:46:23.616 +03:30 [INF] [Information] MainCore Started
+2025-02-09 22:46:23.640 +03:30 [INF] [Information] FluxGuard started at 21/11/1403 07:16:23 PM
+2025-02-09 22:46:35.993 +03:30 [ERR] Exception in OnError functino: Exception during making request
+2025-02-09 22:46:57.668 +03:30 [INF] [Information] Config loaded.
+2025-02-09 22:46:57.754 +03:30 [INF] [Information] Settings loaded.
+2025-02-09 22:46:57.756 +03:30 [INF] [Information] MainCore Initialize
+2025-02-09 22:46:57.765 +03:30 [INF] [Information] fa Language was successfully loaded.
+2025-02-09 22:46:58.010 +03:30 [INF] [Information] MainCore Started
+2025-02-09 22:46:58.035 +03:30 [INF] [Information] FluxGuard started at 21/11/1403 07:16:58 PM
+2025-02-09 22:47:10.422 +03:30 [ERR] Exception in OnError functino: Exception during making request
+2025-02-09 22:52:03.025 +03:30 [INF] [Information] Config loaded.
+2025-02-09 22:52:03.092 +03:30 [INF] [Information] Settings loaded.
+2025-02-09 22:52:03.095 +03:30 [INF] [Information] MainCore Initialize
+2025-02-09 22:52:03.111 +03:30 [INF] [Information] fa Language was successfully loaded.
+2025-02-09 22:52:03.363 +03:30 [INF] [Information] MainCore Started
+2025-02-09 22:52:03.388 +03:30 [INF] [Information] FluxGuard started at 21/11/1403 07:22:03 PM
+2025-02-09 22:52:11.182 +03:30 [INF] [Command]:[manage_apps] from TahaDashti_GD:5062451231
+2025-02-09 22:52:12.001 +03:30 [INF] [Command]:[manage_apps] from TahaDashti_GD:5062451231
+2025-02-09 22:52:12.517 +03:30 [INF] [Command]:[back] from TahaDashti_GD:5062451231
+2025-02-09 22:52:12.519 +03:30 [INF] [UI Manager] MainDashboard Loaded.
+2025-02-09 22:52:12.957 +03:30 [INF] [Command]:[back] from TahaDashti_GD:5062451231
+2025-02-09 22:52:12.957 +03:30 [INF] [UI Manager] MainDashboard Loaded.
+2025-02-09 22:52:13.501 +03:30 [INF] [Command]:[start] from TahaDashti_GD:5062451231
+2025-02-09 22:52:17.458 +03:30 [WRN] [Security] Set telegram_bot_language to en in setting.
+2025-02-09 22:52:17.458 +03:30 [INF] [Information] Config loaded.
+2025-02-09 22:52:17.479 +03:30 [INF] [Information] Settings loaded.
+2025-02-09 22:52:17.480 +03:30 [INF] [Information] MainCore Initialize
+2025-02-09 22:52:17.483 +03:30 [INF] [Information] en Language was successfully loaded.
+2025-02-09 22:52:18.181 +03:30 [INF] [UI Manager] MainDashboard Loaded.
+2025-02-09 22:52:18.919 +03:30 [ERR] Exception in OnError functino: An item with the same key has already been added. Key: Back
+2025-02-09 22:52:20.540 +03:30 [INF] [Command]:[apps] from TahaDashti_GD:5062451231
+2025-02-09 22:57:38.144 +03:30 [INF] [Information] Config loaded.
+2025-02-09 22:57:38.239 +03:30 [INF] [Information] Settings loaded.
+2025-02-09 22:57:38.241 +03:30 [INF] [Information] MainCore Initialize
+2025-02-09 22:57:38.258 +03:30 [INF] [Information] en Language was successfully loaded.
+2025-02-09 22:57:38.632 +03:30 [INF] [Information] MainCore Started
+2025-02-09 22:57:38.660 +03:30 [INF] [Information] FluxGuard started at 21/11/1403 07:27:38 PM
+2025-02-09 23:01:27.586 +03:30 [INF] [Information] Config loaded.
+2025-02-09 23:01:27.643 +03:30 [INF] [Information] Settings loaded.
+2025-02-09 23:01:27.644 +03:30 [INF] [Information] MainCore Initialize
+2025-02-09 23:01:27.652 +03:30 [INF] [Information] en Language was successfully loaded.
+2025-02-09 23:01:27.961 +03:30 [INF] [Information] MainCore Started
+2025-02-09 23:01:27.996 +03:30 [INF] [Information] FluxGuard started at 21/11/1403 07:31:27 PM
+2025-02-09 23:01:41.471 +03:30 [INF] [Information] Config loaded.
+2025-02-09 23:01:41.556 +03:30 [INF] [Information] Settings loaded.
+2025-02-09 23:01:41.558 +03:30 [INF] [Information] MainCore Initialize
+2025-02-09 23:01:41.567 +03:30 [INF] [Information] en Language was successfully loaded.
+2025-02-09 23:01:41.882 +03:30 [INF] [Information] MainCore Started
+2025-02-09 23:01:41.915 +03:30 [INF] [Information] FluxGuard started at 21/11/1403 07:31:41 PM
+2025-02-09 23:02:24.699 +03:30 [INF] [Information] Config loaded.
+2025-02-09 23:02:24.743 +03:30 [INF] [Information] Settings loaded.
+2025-02-09 23:02:24.744 +03:30 [INF] [Information] MainCore Initialize
+2025-02-09 23:02:24.750 +03:30 [INF] [Information] en Language was successfully loaded.
+2025-02-09 23:02:24.976 +03:30 [INF] [Information] MainCore Started
+2025-02-09 23:02:25.005 +03:30 [INF] [Information] FluxGuard started at 21/11/1403 07:32:24 PM
+2025-02-09 23:03:21.507 +03:30 [INF] [Information] Config loaded.
+2025-02-09 23:03:21.581 +03:30 [INF] [Information] Settings loaded.
+2025-02-09 23:03:21.583 +03:30 [INF] [Information] MainCore Initialize
+2025-02-09 23:03:21.599 +03:30 [INF] [Information] en Language was successfully loaded.
+2025-02-09 23:03:21.853 +03:30 [INF] [Information] MainCore Started
+2025-02-09 23:03:21.874 +03:30 [INF] [Information] FluxGuard started at 21/11/1403 07:33:21 PM
+2025-02-09 23:03:34.206 +03:30 [ERR] Exception in OnError functino: Exception during making request
+2025-02-09 23:03:46.293 +03:30 [ERR] Exception in OnError functino: Exception during making request
+2025-02-09 23:03:52.371 +03:30 [INF] [Information] Config loaded.
+2025-02-09 23:03:52.462 +03:30 [INF] [Information] Settings loaded.
+2025-02-09 23:03:52.465 +03:30 [INF] [Information] MainCore Initialize
+2025-02-09 23:03:52.480 +03:30 [INF] [Information] en Language was successfully loaded.
+2025-02-09 23:03:52.784 +03:30 [INF] [Information] MainCore Started
+2025-02-09 23:03:52.810 +03:30 [INF] [Information] FluxGuard started at 21/11/1403 07:33:52 PM
+2025-02-09 23:03:58.431 +03:30 [ERR] Exception in OnError functino: Exception during making request
+2025-02-09 23:04:10.513 +03:30 [ERR] Exception in OnError functino: Exception during making request
+2025-02-09 23:15:34.739 +03:30 [INF] [Information] Config loaded.
+2025-02-09 23:15:34.796 +03:30 [INF] [Information] Settings loaded.
+2025-02-09 23:15:34.798 +03:30 [INF] [Information] MainCore Initialize
+2025-02-09 23:15:34.808 +03:30 [INF] [Information] en Language was successfully loaded.
+2025-02-09 23:15:35.025 +03:30 [INF] [Information] MainCore Started
+2025-02-09 23:15:35.056 +03:30 [INF] [Information] FluxGuard started at 21/11/1403 07:45:35 PM
+2025-02-09 23:15:47.891 +03:30 [ERR] Exception in OnError functino: Exception during making request
+2025-02-09 23:16:02.486 +03:30 [INF] [Information] Config loaded.
+2025-02-09 23:16:02.551 +03:30 [INF] [Information] Settings loaded.
+2025-02-09 23:16:02.553 +03:30 [INF] [Information] MainCore Initialize
+2025-02-09 23:16:02.562 +03:30 [INF] [Information] en Language was successfully loaded.
+2025-02-09 23:16:02.782 +03:30 [INF] [Information] MainCore Started
+2025-02-09 23:16:02.809 +03:30 [INF] [Information] FluxGuard started at 21/11/1403 07:46:02 PM
+2025-02-09 23:16:16.336 +03:30 [INF] [Command]:[open_app] from TahaDashti_GD:5062451231
+2025-02-09 23:16:17.140 +03:30 [INF] [Command]:[open_app] from TahaDashti_GD:5062451231
+2025-02-09 23:17:40.909 +03:30 [INF] [Information] Config loaded.
+2025-02-09 23:17:40.961 +03:30 [INF] [Information] Settings loaded.
+2025-02-09 23:17:40.963 +03:30 [INF] [Information] MainCore Initialize
+2025-02-09 23:17:40.978 +03:30 [INF] [Information] en Language was successfully loaded.
+2025-02-09 23:17:41.226 +03:30 [INF] [Information] MainCore Started
+2025-02-09 23:17:41.245 +03:30 [INF] [Information] FluxGuard started at 21/11/1403 07:47:41 PM
+2025-02-09 23:17:45.329 +03:30 [INF] [Command]:[manage_apps] from TahaDashti_GD:5062451231
+2025-02-09 23:17:46.410 +03:30 [INF] [Command]:[open_app] from TahaDashti_GD:5062451231
+2025-02-09 23:17:47.218 +03:30 [ERR] Exception in OnError functino: Bad Request: BUTTON_DATA_INVALID
+2025-02-09 23:17:47.220 +03:30 [INF] [Command]:[open_app] from TahaDashti_GD:5062451231
+2025-02-09 23:17:47.896 +03:30 [ERR] Exception in OnError functino: Bad Request: BUTTON_DATA_INVALID
+2025-02-09 23:17:47.898 +03:30 [INF] [Command]:[back] from TahaDashti_GD:5062451231
+2025-02-09 23:17:47.901 +03:30 [INF] [UI Manager] MainDashboard Loaded.
+2025-02-09 23:17:48.749 +03:30 [INF] [Command]:[open_app] from TahaDashti_GD:5062451231
+2025-02-09 23:17:49.458 +03:30 [ERR] Exception in OnError functino: Bad Request: BUTTON_DATA_INVALID
+2025-02-09 23:17:49.459 +03:30 [INF] [Command]:[back] from TahaDashti_GD:5062451231
+2025-02-09 23:17:49.459 +03:30 [INF] [UI Manager] MainDashboard Loaded.
+2025-02-09 23:17:50.095 +03:30 [INF] [Command]:[open_app] from TahaDashti_GD:5062451231
+2025-02-09 23:17:50.882 +03:30 [ERR] Exception in OnError functino: Bad Request: BUTTON_DATA_INVALID
+2025-02-09 23:17:50.883 +03:30 [INF] [Command]:[open_app] from TahaDashti_GD:5062451231
+2025-02-09 23:17:51.634 +03:30 [ERR] Exception in OnError functino: Bad Request: BUTTON_DATA_INVALID
+2025-02-09 23:17:51.637 +03:30 [INF] [Command]:[back] from TahaDashti_GD:5062451231
+2025-02-09 23:17:51.637 +03:30 [INF] [UI Manager] MainDashboard Loaded.
+2025-02-09 23:17:52.537 +03:30 [INF] [Command]:[open_app] from TahaDashti_GD:5062451231
+2025-02-09 23:17:53.296 +03:30 [ERR] Exception in OnError functino: Bad Request: BUTTON_DATA_INVALID
+2025-02-09 23:17:53.296 +03:30 [INF] [Command]:[open_app] from TahaDashti_GD:5062451231
+2025-02-09 23:17:54.096 +03:30 [ERR] Exception in OnError functino: Bad Request: BUTTON_DATA_INVALID
+2025-02-09 23:18:00.947 +03:30 [INF] [Command]:[status] from TahaDashti_GD:5062451231
+2025-02-09 23:18:00.948 +03:30 [INF] [UI Manager] StatusDashboard Loaded.
+2025-02-09 23:18:02.836 +03:30 [INF] [Command]:[back] from TahaDashti_GD:5062451231
+2025-02-09 23:18:02.836 +03:30 [INF] [UI Manager] MainDashboard Loaded.
+2025-02-09 23:18:06.463 +03:30 [INF] [Command]:[apps] from TahaDashti_GD:5062451231
+2025-02-09 23:18:10.411 +03:30 [INF] [Command]:[manage_apps] from TahaDashti_GD:5062451231
+2025-02-09 23:18:10.995 +03:30 [ERR] Exception in OnError functino: Bad Request: BUTTON_DATA_INVALID
+2025-02-09 23:18:16.497 +03:30 [INF] [Command]:[manage_apps] from TahaDashti_GD:5062451231
+2025-02-09 23:18:17.188 +03:30 [ERR] Exception in OnError functino: Bad Request: BUTTON_DATA_INVALID
+2025-02-09 23:18:32.342 +03:30 [INF] [Command]:[manage_apps] from TahaDashti_GD:5062451231
+2025-02-09 23:18:33.989 +03:30 [ERR] Exception in OnError functino: Bad Request: BUTTON_DATA_INVALID
+2025-02-09 23:18:37.615 +03:30 [INF] [Command]:[manage_apps] from TahaDashti_GD:5062451231
+2025-02-09 23:18:38.183 +03:30 [ERR] Exception in OnError functino: Bad Request: BUTTON_DATA_INVALID
+2025-02-09 23:18:50.652 +03:30 [INF] [Command]:[open_app] from TahaDashti_GD:5062451231
+2025-02-09 23:18:51.402 +03:30 [ERR] Exception in OnError functino: Bad Request: BUTTON_DATA_INVALID
+2025-02-09 23:19:13.900 +03:30 [INF] [Information] Config loaded.
+2025-02-09 23:19:14.001 +03:30 [INF] [Information] Settings loaded.
+2025-02-09 23:19:14.004 +03:30 [INF] [Information] MainCore Initialize
+2025-02-09 23:19:14.021 +03:30 [INF] [Information] en Language was successfully loaded.
+2025-02-09 23:19:14.323 +03:30 [INF] [Information] MainCore Started
+2025-02-09 23:19:14.351 +03:30 [INF] [Information] FluxGuard started at 21/11/1403 07:49:14 PM
+2025-02-09 23:19:19.246 +03:30 [INF] [Command]:[manage_apps] from TahaDashti_GD:5062451231
+2025-02-09 23:20:01.973 +03:30 [INF] [Information] Config loaded.
+2025-02-09 23:20:02.032 +03:30 [INF] [Information] Settings loaded.
+2025-02-09 23:20:02.034 +03:30 [INF] [Information] MainCore Initialize
+2025-02-09 23:20:02.044 +03:30 [INF] [Information] en Language was successfully loaded.
+2025-02-09 23:20:02.232 +03:30 [INF] [Information] MainCore Started
+2025-02-09 23:20:02.265 +03:30 [INF] [Information] FluxGuard started at 21/11/1403 07:50:02 PM
+2025-02-09 23:20:05.881 +03:30 [INF] [Command]:[manage_apps] from TahaDashti_GD:5062451231
+2025-02-09 23:20:10.633 +03:30 [INF] [Command]:[open_app] from TahaDashti_GD:5062451231
+2025-02-09 23:20:11.673 +03:30 [ERR] Exception in OnError functino: Bad Request: BUTTON_DATA_INVALID
+2025-02-09 23:20:24.006 +03:30 [INF] [Command]:[open_app] from TahaDashti_GD:5062451231
+2025-02-09 23:25:08.341 +03:30 [INF] [Information] Config loaded.
+2025-02-09 23:25:08.440 +03:30 [INF] [Information] Settings loaded.
+2025-02-09 23:25:08.442 +03:30 [INF] [Information] MainCore Initialize
+2025-02-09 23:25:08.456 +03:30 [INF] [Information] en Language was successfully loaded.
+2025-02-09 23:25:08.759 +03:30 [INF] [Information] MainCore Started
+2025-02-09 23:25:08.783 +03:30 [INF] [Information] FluxGuard started at 21/11/1403 07:55:08 PM
+2025-02-09 23:25:14.305 +03:30 [INF] [Command]:[open_app] from TahaDashti_GD:5062451231
+2025-02-09 23:25:20.154 +03:30 [ERR] Exception in OnError functino: Bad Request: BUTTON_DATA_INVALID
+2025-02-09 23:26:35.028 +03:30 [INF] [Information] Config loaded.
+2025-02-09 23:26:35.079 +03:30 [INF] [Information] Settings loaded.
+2025-02-09 23:26:35.080 +03:30 [INF] [Information] MainCore Initialize
+2025-02-09 23:26:35.088 +03:30 [INF] [Information] en Language was successfully loaded.
+2025-02-09 23:26:35.358 +03:30 [INF] [Information] MainCore Started
+2025-02-09 23:26:35.375 +03:30 [INF] [Information] FluxGuard started at 21/11/1403 07:56:35 PM
+2025-02-09 23:26:52.667 +03:30 [INF] [Command]:[open_app] from TahaDashti_GD:5062451231
+2025-02-09 23:26:53.923 +03:30 [ERR] Exception in OnError functino: Bad Request: BUTTON_DATA_INVALID
+2025-02-09 23:27:20.252 +03:30 [INF] [Information] Config loaded.
+2025-02-09 23:27:20.304 +03:30 [INF] [Information] Settings loaded.
+2025-02-09 23:27:20.306 +03:30 [INF] [Information] MainCore Initialize
+2025-02-09 23:27:20.316 +03:30 [INF] [Information] en Language was successfully loaded.
+2025-02-09 23:27:20.561 +03:30 [INF] [Information] MainCore Started
+2025-02-09 23:27:20.591 +03:30 [INF] [Information] FluxGuard started at 21/11/1403 07:57:20 PM
+2025-02-09 23:27:26.704 +03:30 [INF] [Command]:[back] from TahaDashti_GD:5062451231
+2025-02-09 23:27:26.855 +03:30 [INF] [UI Manager] MainDashboard Loaded.
+2025-02-09 23:27:29.458 +03:30 [INF] [Command]:[apps] from TahaDashti_GD:5062451231
+2025-02-09 23:27:32.733 +03:30 [INF] [Command]:[open_app] from TahaDashti_GD:5062451231
+2025-02-09 23:27:33.624 +03:30 [ERR] Exception in OnError functino: Bad Request: BUTTON_DATA_INVALID
+2025-02-09 23:27:47.845 +03:30 [INF] [Information] Config loaded.
+2025-02-09 23:27:47.955 +03:30 [INF] [Information] Settings loaded.
+2025-02-09 23:27:47.957 +03:30 [INF] [Information] MainCore Initialize
+2025-02-09 23:27:47.972 +03:30 [INF] [Information] en Language was successfully loaded.
+2025-02-09 23:27:48.151 +03:30 [INF] [Information] MainCore Started
+2025-02-09 23:27:48.175 +03:30 [INF] [Information] FluxGuard started at 21/11/1403 07:57:48 PM
+2025-02-09 23:27:50.201 +03:30 [INF] [Command]:[open_app] from TahaDashti_GD:5062451231
+2025-02-09 23:27:51.705 +03:30 [ERR] Exception in OnError functino: Bad Request: BUTTON_DATA_INVALID
+2025-02-09 23:29:02.597 +03:30 [INF] [Information] Config loaded.
+2025-02-09 23:29:02.653 +03:30 [INF] [Information] Settings loaded.
+2025-02-09 23:29:02.655 +03:30 [INF] [Information] MainCore Initialize
+2025-02-09 23:29:02.670 +03:30 [INF] [Information] en Language was successfully loaded.
+2025-02-09 23:29:03.038 +03:30 [INF] [Information] MainCore Started
+2025-02-09 23:29:03.057 +03:30 [INF] [Information] FluxGuard started at 21/11/1403 07:59:03 PM
+2025-02-09 23:29:45.257 +03:30 [INF] [Information] Config loaded.
+2025-02-09 23:29:45.325 +03:30 [INF] [Information] Settings loaded.
+2025-02-09 23:29:45.327 +03:30 [INF] [Information] MainCore Initialize
+2025-02-09 23:29:45.338 +03:30 [INF] [Information] en Language was successfully loaded.
+2025-02-09 23:29:45.610 +03:30 [INF] [Information] MainCore Started
+2025-02-09 23:29:45.634 +03:30 [INF] [Information] FluxGuard started at 21/11/1403 07:59:45 PM
+2025-02-09 23:30:34.430 +03:30 [INF] [Information] Config loaded.
+2025-02-09 23:30:34.493 +03:30 [INF] [Information] Settings loaded.
+2025-02-09 23:30:34.494 +03:30 [INF] [Information] MainCore Initialize
+2025-02-09 23:30:34.502 +03:30 [INF] [Information] en Language was successfully loaded.
+2025-02-09 23:30:34.674 +03:30 [INF] [Information] MainCore Started
+2025-02-09 23:30:34.696 +03:30 [INF] [Information] FluxGuard started at 21/11/1403 08:00:34 PM
+2025-02-09 23:31:11.919 +03:30 [INF] [Information] Config loaded.
+2025-02-09 23:31:11.962 +03:30 [INF] [Information] Settings loaded.
+2025-02-09 23:31:11.963 +03:30 [INF] [Information] MainCore Initialize
+2025-02-09 23:31:11.971 +03:30 [INF] [Information] en Language was successfully loaded.
+2025-02-09 23:31:12.218 +03:30 [INF] [Information] MainCore Started
+2025-02-09 23:31:12.237 +03:30 [INF] [Information] FluxGuard started at 21/11/1403 08:01:12 PM
+2025-02-09 23:31:14.551 +03:30 [INF] [Command]:[open_app] from TahaDashti_GD:5062451231
+2025-02-09 23:31:15.452 +03:30 [ERR] Exception in OnError functino: Bad Request: BUTTON_DATA_INVALID
+2025-02-09 23:31:46.422 +03:30 [INF] [Information] Config loaded.
+2025-02-09 23:31:46.490 +03:30 [INF] [Information] Settings loaded.
+2025-02-09 23:31:46.491 +03:30 [INF] [Information] MainCore Initialize
+2025-02-09 23:31:46.501 +03:30 [INF] [Information] en Language was successfully loaded.
+2025-02-09 23:31:46.706 +03:30 [INF] [Information] MainCore Started
+2025-02-09 23:31:46.723 +03:30 [INF] [Information] FluxGuard started at 21/11/1403 08:01:46 PM
+2025-02-09 23:31:51.861 +03:30 [INF] [Command]:[open_app] from TahaDashti_GD:5062451231
+2025-02-09 23:31:53.022 +03:30 [ERR] Exception in OnError functino: Bad Request: BUTTON_DATA_INVALID
+2025-02-09 23:32:10.521 +03:30 [INF] [Information] Config loaded.
+2025-02-09 23:32:10.579 +03:30 [INF] [Information] Settings loaded.
+2025-02-09 23:32:10.580 +03:30 [INF] [Information] MainCore Initialize
+2025-02-09 23:32:10.590 +03:30 [INF] [Information] en Language was successfully loaded.
+2025-02-09 23:32:10.789 +03:30 [INF] [Information] MainCore Started
+2025-02-09 23:32:10.809 +03:30 [INF] [Information] FluxGuard started at 21/11/1403 08:02:10 PM
+2025-02-09 23:32:19.785 +03:30 [INF] [Command]:[open_app] from TahaDashti_GD:5062451231
+2025-02-09 23:32:25.064 +03:30 [ERR] Exception in OnError functino: Bad Request: BUTTON_DATA_INVALID
+2025-02-09 23:32:50.804 +03:30 [INF] [Information] Config loaded.
+2025-02-09 23:32:50.851 +03:30 [INF] [Information] Settings loaded.
+2025-02-09 23:32:50.852 +03:30 [INF] [Information] MainCore Initialize
+2025-02-09 23:32:50.860 +03:30 [INF] [Information] en Language was successfully loaded.
+2025-02-09 23:32:51.066 +03:30 [INF] [Information] MainCore Started
+2025-02-09 23:32:51.088 +03:30 [INF] [Information] FluxGuard started at 21/11/1403 08:02:51 PM
+2025-02-09 23:33:39.117 +03:30 [INF] [Information] Config loaded.
+2025-02-09 23:33:39.172 +03:30 [INF] [Information] Settings loaded.
+2025-02-09 23:33:39.173 +03:30 [INF] [Information] MainCore Initialize
+2025-02-09 23:33:39.181 +03:30 [INF] [Information] en Language was successfully loaded.
+2025-02-09 23:33:39.446 +03:30 [INF] [Information] MainCore Started
+2025-02-09 23:33:39.469 +03:30 [INF] [Information] FluxGuard started at 21/11/1403 08:03:39 PM
+2025-02-09 23:34:41.522 +03:30 [INF] [Information] Config loaded.
+2025-02-09 23:34:41.567 +03:30 [INF] [Information] Settings loaded.
+2025-02-09 23:34:41.568 +03:30 [INF] [Information] MainCore Initialize
+2025-02-09 23:34:41.578 +03:30 [INF] [Information] en Language was successfully loaded.
+2025-02-09 23:34:41.778 +03:30 [INF] [Information] MainCore Started
+2025-02-09 23:34:41.801 +03:30 [INF] [Information] FluxGuard started at 21/11/1403 08:04:41 PM
+2025-02-09 23:34:51.122 +03:30 [INF] [Command]:[open_app] from TahaDashti_GD:5062451231
+2025-02-09 23:35:22.230 +03:30 [INF] [Information] Config loaded.
+2025-02-09 23:35:22.323 +03:30 [INF] [Information] Settings loaded.
+2025-02-09 23:35:22.325 +03:30 [INF] [Information] MainCore Initialize
+2025-02-09 23:35:22.335 +03:30 [INF] [Information] en Language was successfully loaded.
+2025-02-09 23:35:22.610 +03:30 [INF] [Information] MainCore Started
+2025-02-09 23:35:22.631 +03:30 [INF] [Information] FluxGuard started at 21/11/1403 08:05:22 PM
+2025-02-09 23:35:26.485 +03:30 [INF] [Command]:[open_app] from TahaDashti_GD:5062451231
+2025-02-09 23:36:35.826 +03:30 [INF] [Information] Config loaded.
+2025-02-09 23:36:35.896 +03:30 [INF] [Information] Settings loaded.
+2025-02-09 23:36:35.898 +03:30 [INF] [Information] MainCore Initialize
+2025-02-09 23:36:35.909 +03:30 [INF] [Information] en Language was successfully loaded.
+2025-02-09 23:36:36.226 +03:30 [INF] [Information] MainCore Started
+2025-02-09 23:36:36.255 +03:30 [INF] [Information] FluxGuard started at 21/11/1403 08:06:36 PM
+2025-02-09 23:36:42.663 +03:30 [INF] [Command]:[open_app] from TahaDashti_GD:5062451231
+2025-02-09 23:37:34.475 +03:30 [INF] [Information] Config loaded.
+2025-02-09 23:37:34.578 +03:30 [INF] [Information] Settings loaded.
+2025-02-09 23:37:34.581 +03:30 [INF] [Information] MainCore Initialize
+2025-02-09 23:37:34.596 +03:30 [INF] [Information] en Language was successfully loaded.
+2025-02-09 23:37:34.992 +03:30 [INF] [Information] MainCore Started
+2025-02-09 23:37:35.018 +03:30 [INF] [Information] FluxGuard started at 21/11/1403 08:07:34 PM
+2025-02-09 23:37:42.018 +03:30 [INF] [Command]:[open_app] from TahaDashti_GD:5062451231
+2025-02-09 23:39:51.000 +03:30 [INF] [Information] Config loaded.
+2025-02-09 23:39:51.062 +03:30 [INF] [Information] Settings loaded.
+2025-02-09 23:39:51.064 +03:30 [INF] [Information] MainCore Initialize
+2025-02-09 23:39:51.074 +03:30 [INF] [Information] en Language was successfully loaded.
+2025-02-09 23:39:51.262 +03:30 [INF] [Information] MainCore Started
+2025-02-09 23:39:51.284 +03:30 [INF] [Information] FluxGuard started at 21/11/1403 08:09:51 PM
+2025-02-09 23:40:02.902 +03:30 [INF] [Command]:[open_app] from TahaDashti_GD:5062451231
+2025-02-09 23:42:45.792 +03:30 [INF] [Information] Config loaded.
+2025-02-09 23:42:45.860 +03:30 [INF] [Information] Settings loaded.
+2025-02-09 23:42:45.862 +03:30 [INF] [Information] MainCore Initialize
+2025-02-09 23:42:45.870 +03:30 [INF] [Information] en Language was successfully loaded.
+2025-02-09 23:42:46.112 +03:30 [INF] [Information] MainCore Started
+2025-02-09 23:42:46.137 +03:30 [INF] [Information] FluxGuard started at 21/11/1403 08:12:46 PM
+2025-02-09 23:42:49.974 +03:30 [INF] [Command]:[open_app] from TahaDashti_GD:5062451231
+2025-02-09 23:43:15.314 +03:30 [INF] [Command]:[open_app] from TahaDashti_GD:5062451231
+2025-02-09 23:43:42.439 +03:30 [INF] [Command]:[open_app] from TahaDashti_GD:5062451231

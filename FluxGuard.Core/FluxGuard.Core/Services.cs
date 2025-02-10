@@ -5,6 +5,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using FluxGuard.Core;
 using FluxGuard.GUI;
+using Microsoft.Win32;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Service
@@ -151,7 +152,14 @@ namespace Service
 
             return DT.Substring(0, DTIndex);
         }
-
+        public static string ShortenName(string name)
+        {
+            if (name.Length > 43)
+            {
+                return name.Substring(0, 40) + "...";
+            }
+            return name;
+        }
         #region Resource report
         public static string GetSystemUsageReport()
         {

@@ -106,11 +106,13 @@ namespace FluxGuard.Core
             var inlineMarkup = new InlineKeyboardMarkup();
             foreach (var apps in Services.GetAllWindowHandleNames())
             {
-                inlineMarkup.AddButton(apps,"app*"+apps);
+                inlineMarkup.AddButton(apps,"Mapp*"+apps);
                 inlineMarkup.AddNewRow();
             }
             App_List = inlineMarkup;
         }
+
+
         public void GetDashboard()
         {
             Get_Keyboard = new ReplyKeyboardMarkup("");

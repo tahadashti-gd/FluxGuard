@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FluxGuard.Core")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7c6bde0aad96b4ed1873345fce7fa0cd6dec509d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c71e587a794ae36fa5029af1eae7b984757214c9")]
 [assembly: System.Reflection.AssemblyProductAttribute("FluxGuard.Core")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FluxGuard.Core")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
