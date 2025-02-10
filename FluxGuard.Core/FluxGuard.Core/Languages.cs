@@ -43,18 +43,26 @@ namespace FluxGuard.Core
         public static string Translate(string Category, string MainKey, string SubsetKey)
         {
             string result;
-
-            if (language != null)
+            try
             {
-                result = language[Category][MainKey][SubsetKey];
-                return result;
+                if (language != null)
+                {
+                    result = language[Category][MainKey][SubsetKey];
+                    return result;
+                }
+                else
+                {
+                    Log.Error("Error in translating language");
+                    AnsiConsole.MarkupLine("Error in translating language");
+                    return "???";
+                }
             }
-            else
+            catch( Exception ex )
             {
-                Log.Error("Error in translating language");
-                AnsiConsole.MarkupLine("Error in translating language");
+                LoggerService.LogError(ex, "Translate");
                 return "???";
             }
+            
         }
     }
 }

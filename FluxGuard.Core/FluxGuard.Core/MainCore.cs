@@ -2,12 +2,14 @@
 using Newtonsoft.Json.Linq;
 using Service;
 using Spectre.Console;
+using System.IO;
 using System.Text;
 using Telegram.Bot;
 using Telegram.Bot.Polling;
 using Telegram.Bot.Types;
 using Telegram.Bot.Types.Enums;
 using Telegram.Bot.Types.ReplyMarkups;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace FluxGuard.Core
 {
@@ -15,6 +17,8 @@ namespace FluxGuard.Core
     {
         private int MessageId;
         private readonly string RootPath = AppContext.BaseDirectory;
+        private static string? LivePath;
+        string systemUserName = Environment.UserName;
         public static string? BotLanguages;
         public static string? BotToken;
         public static long userChatID;
@@ -118,11 +122,46 @@ namespace FluxGuard.Core
                 //send_voice
                 case 14:
                     break;
+                #region file_explorer
                 //file_explorer
                 case 15:
+                    await FileExplorerCommand(userChatID,UserName);
                     break;
                 //drive
                 case 16:
+                    await Drive(userChatID,UserName);
+                    MessageId = msg.MessageId;
+                    break;
+                //desktop
+                case 17:
+                    LivePath = $@"C:\Users\{systemUserName}\Desktop";
+                    await MainFolder(userChatID,UserName, LivePath);
+                    MessageId = msg.MessageId;
+
+                    break;
+                //download
+                case 18:
+                    await MainFolder(userChatID, UserName, $@"C:\Users\{systemUserName}\downloads");
+                    break;
+                //document
+                case 19:
+                    await MainFolder(userChatID, UserName, $@"C:\Users\{systemUserName}\documents");
+                    break;
+                //pictures
+                case 20:
+                    await MainFolder(userChatID, UserName, $@"C:\Users\{systemUserName}\pictures");
+                    break;
+                //videos
+                case 21:
+                    await MainFolder(userChatID, UserName, $@"C:\Users\{systemUserName}\videos");
+                    break;
+                //musics
+                case 22:
+                    await MainFolder(userChatID, UserName, $@"C:\Users\{systemUserName}\music");
+                    break;
+                #endregion
+                //security
+                case 23:
                     break;
 
 
@@ -151,6 +190,38 @@ namespace FluxGuard.Core
             UI_Manager.StatusDashboard();
             await bot.SendMessage(UserID, Languages.Translate("answers", "status", "status"),
             replyMarkup: UI_Manager.Status_Keyboard);
+        }
+        private async Task FileExplorerCommand(long UserID, string UserName)
+        {
+            LoggerService.LogCommand(UserID, UserName, "file_explorer");
+            UI_Manager.FileExplorerKeyboard();
+            await bot.SendMessage(UserID, Languages.Translate("answers", "file_explorer", "file_explorer"),
+            replyMarkup: UI_Manager.FileExplorer_Keyboard);
+        }
+        private async Task MainFolder(long UserID, string UserName,string path)
+        {
+            string lastFolder = Path.GetFileName(path);
+            LoggerService.LogCommand(UserID, UserName, lastFolder);
+            UI_Manager.ShowDirectoryContents(path);
+            await bot.SendMessage(UserID, Languages.Translate("replykeyboards", "file_explorer", lastFolder.ToLower()),
+            replyMarkup: UI_Manager.Dir_List);
+        }
+        private async Task LoadDir(long UserID, string UserName, string path)
+        {
+            string lastFolder = Path.GetFileName(path);
+            if (lastFolder == "")
+                lastFolder = path;
+            LoggerService.LogCommand(UserID, UserName, lastFolder);
+            UI_Manager.ShowDirectoryContents(path);
+            await bot.EditMessageText(UserID,MessageId+1, lastFolder,
+            replyMarkup: UI_Manager.Dir_List);
+        }
+        private async Task Drive(long UserID, string UserName)
+        {
+            MessageId = MessageId + 1;
+            LoggerService.LogCommand(UserID, UserName, "drive");
+            UI_Manager.DriveList();
+            await bot.SendMessage(UserID, Languages.Translate("replykeyboards", "file_explorer", "drive"), replyMarkup: UI_Manager.Drive_List);
         }
         private async Task AppsCommand(long UserID, string UserName)
         {
@@ -237,6 +308,21 @@ namespace FluxGuard.Core
                             MessageId = MessageId + 1;
                             break;
                         }
+                    case "backDir":
+                        await bot.AnswerCallbackQuery(query.Id);
+                        DirectoryInfo dirInfo = new DirectoryInfo(LivePath);
+                        DirectoryInfo parentDir = dirInfo.Parent;
+                        LivePath = parentDir.FullName;
+                        LoadDir(userChatID, "", LivePath);
+                        break;
+                    case "backDrive":
+                        await bot.AnswerCallbackQuery(query.Id);
+                        await bot.DeleteMessage(userChatID, MessageId + 1);
+                        await Drive(userChatID, "UserName");
+                        break;
+                    case "back_file":
+                        LoadDir(userChatID, "", LivePath);
+                        break;
 
                 }
                 if (query.Data.StartsWith("Mapp*"))
@@ -248,10 +334,10 @@ namespace FluxGuard.Core
                     FileStream streamfile = new FileStream("Screenshot.png", FileMode.Open);
                     InputMediaPhoto AppScreen = new InputMediaPhoto(streamfile);
                     var inlineMarkup = new InlineKeyboardMarkup();
-                    inlineMarkup.AddButton("بستن❌", $"Close*{nameApp[1]}");
+                    inlineMarkup.AddButton("❌"+Languages.Translate("inlinekeyboards","apps","close"), $"Close*{nameApp[1]}");
                     inlineMarkup.AddNewRow();
-                    inlineMarkup.AddButton("بازگشت", "AppsList");
-                    await bot.EditMessageMediaAsync(query.Message!.Chat, MessageId + 1, AppScreen, replyMarkup: inlineMarkup);
+                    inlineMarkup.AddButton(Languages.Translate("replykeyboards", "back","back"), "AppsList");
+                    await bot.EditMessageMedia(query.Message!.Chat, MessageId + 1, AppScreen, replyMarkup: inlineMarkup);
                     Thread.Sleep(4000);
                     File.Delete("Screenshot.png");
                 }
@@ -277,6 +363,63 @@ namespace FluxGuard.Core
                     replyMarkup: UI_Manager.Main_Keyboard);
                     MessageId = MessageId + 1;
                     LoadLanguagesCommand();
+                }
+                if (query.Data.StartsWith("dir*"))
+                {
+                    await bot.AnswerCallbackQuery(query.Id);
+                    string[] lan = query.Data.Split("*");
+                    LivePath = @$"{LivePath}\{lan[1]}";
+                    await LoadDir(userChatID, "hgjhg", LivePath);
+                }
+                if (query.Data.StartsWith("drive*"))
+                {
+                    await bot.AnswerCallbackQuery(query.Id);
+                    string[] lan = query.Data.Split("*");
+                    LivePath = lan[1];
+                    await LoadDir(userChatID, "hgjhg", LivePath);
+                }
+                if (query.Data.StartsWith("file*"))
+                {
+                    await bot.AnswerCallbackQuery(query.Id);
+                    string[] lan = query.Data.Split("*");
+                    string filePath = @$"{LivePath}\{lan[1]}";
+                    FileInfo fileInfo = new FileInfo(filePath);
+
+                    StringBuilder sb = new StringBuilder();
+                    sb.AppendLine($"📝 {Languages.Translate("inlinekeyboards", "file_explorer","name")}: {fileInfo.Name}");
+                    sb.AppendLine($"📂 {Languages.Translate("inlinekeyboards", "file_explorer", "path")}:");
+                    sb.AppendLine(fileInfo.FullName);
+                    sb.AppendLine($"📏 {Languages.Translate("inlinekeyboards", "file_explorer", "length")}: {fileInfo.Length / (1024.0 * 1024.0):F2} MB"); // تبدیل به مگابایت
+                    sb.AppendLine($"⏳ {Languages.Translate("inlinekeyboards", "file_explorer", "last_edit")}: {fileInfo.LastWriteTime}");
+
+                    var inlineMarkup = new InlineKeyboardMarkup();
+                    inlineMarkup.AddButton("📤 "+ Languages.Translate("inlinekeyboards", "file_explorer", "send"), $"send*{lan[1]}");
+                    inlineMarkup.AddNewRow();
+                    inlineMarkup.AddButton("🗑️ "+ Languages.Translate("inlinekeyboards", "file_explorer","delete"), $"del*{lan[1]}");
+                    inlineMarkup.AddNewRow();
+                    inlineMarkup.AddButton("⬅️ " + Languages.Translate("replykeyboards", "back", "back"), $"back_file");
+                    await bot.EditMessageText(userChatID,MessageId+1,sb.ToString(),replyMarkup:inlineMarkup);
+
+                }
+                if (query.Data.StartsWith("send*"))
+                {
+                    await bot.AnswerCallbackQuery(query.Id);
+                    string[] lan = query.Data.Split("*");
+                    string filePath = @$"{LivePath}\{lan[1]}";
+                    FileStream stremfile = new FileStream(filePath, FileMode.Open);
+                    var inlineMarkup = new InlineKeyboardMarkup();
+                    await bot.SendDocument(userChatID, stremfile, replyMarkup: inlineMarkup);
+                    await bot.DeleteMessage(userChatID,MessageId + 1);
+
+                }
+                if (query.Data.StartsWith("del*"))
+                {
+                    await bot.AnswerCallbackQuery(query.Id);
+                    string[] lan = query.Data.Split("*");
+                    string filePath = @$"{LivePath}\{lan[1]}";
+                    File.Delete(filePath);
+                    await bot.DeleteMessage(userChatID, MessageId + 1);
+                    await bot.SendMessage(query.Message!.Chat, lan[1] +Languages.Translate("answers", "file_explorer", "delete"));
                 }
             }
         }

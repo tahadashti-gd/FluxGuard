@@ -154,12 +154,90 @@ namespace Service
         }
         public static string ShortenName(string name)
         {
-            if (name.Length > 43)
+            if (name.Length > 30)
             {
-                return name.Substring(0, 40) + "...";
+                return name.Substring(0, 27) + "...";
             }
             return name;
         }
+
+
+        public static List<DirectoryInfo> GetDirectories(string path)
+        {
+            List<DirectoryInfo> folders = new List<DirectoryInfo>();
+
+            if (Directory.Exists(path))
+            {
+                try
+                {
+                    foreach (string folder in Directory.GetDirectories(path))
+                    {
+                        folders.Add(new DirectoryInfo(folder));
+                    }
+                    LoggerService.LogService("GetDirectories"); ;
+                }
+                catch (Exception ex)
+                {
+                    LoggerService.LogError(ex, "GetDirectories");
+                }
+            }
+            else
+            {
+                LoggerService.LogWarning("GetDirectories", "Cant find path");
+            }
+
+            return folders;
+        }
+        public static List<FileInfo> GetFiles(string path)
+        {
+            List<FileInfo> files = new List<FileInfo>();
+
+            if (Directory.Exists(path))
+            {
+                try
+                {
+                    foreach (var file in Directory.GetFiles(path))
+                    {
+                        files.Add(new FileInfo(file));
+                    }
+                    LoggerService.LogService("Getfiles");
+                }
+                catch (Exception ex)
+                {
+                    LoggerService.LogError(ex, "GetFiles");
+                }
+            }
+            else
+            {
+                LoggerService.LogInformation("Cant find path");
+            }
+
+            return files;
+        }
+        public static FileInfo DeitateFile(string path)
+        {
+
+            return null;
+        }
+        public static List<string> GetDrives()
+        {
+            List<string> drives = new List<string>();
+            try
+            {
+                foreach (var drive in DriveInfo.GetDrives())
+                {
+                    drives.Add(drive.Name);
+                }
+                LoggerService.LogService("GetDrives");
+            }
+            catch (Exception ex)
+            {
+                LoggerService.LogError(ex,"GetDrives");
+            }
+            return drives;
+        }
+
+
         #region Resource report
         public static string GetSystemUsageReport()
         {

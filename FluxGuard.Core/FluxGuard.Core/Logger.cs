@@ -87,12 +87,17 @@ namespace FluxGuard.Core
         {
             Log.Information("[Information] {Message}", message);
         }
+        public static void LogWarning(string context, string message)
+        {
+            Log.Warning("Warning in {Context}: {Message}", context, message);
+            AnsiConsole.MarkupLine($"[yellow]Warning in {context}: {message}[/]");
+        }
 
         // Log errors with context
         public static void LogError(Exception ex, string context)
         {
             Log.Error("Exception in {Context}: {Message}", context, ex.Message);
-            AnsiConsole.MarkupLine($"Exception in {context}: {ex.Message}");
+            AnsiConsole.MarkupLine($"[red]Exception in {context}: {ex.Message}[/]");
         }
 
         // Log service-related messages

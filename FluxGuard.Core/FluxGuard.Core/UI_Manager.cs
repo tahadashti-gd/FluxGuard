@@ -1,5 +1,6 @@
-﻿using Telegram.Bot.Types.ReplyMarkups;
-using Service;
+﻿using Service;
+using Spectre.Console;
+using Telegram.Bot.Types.ReplyMarkups;
 
 namespace FluxGuard.Core
 {
@@ -10,9 +11,11 @@ namespace FluxGuard.Core
         public static ReplyKeyboardMarkup Get_Keyboard;
         public static ReplyKeyboardMarkup App_Dahsboard;
         public static InlineKeyboardMarkup App_List;
+        public static InlineKeyboardMarkup Drive_List;
+        public static InlineKeyboardMarkup Dir_List;
         public static InlineKeyboardMarkup Power_Keyboard;
         public static ReplyKeyboardMarkup Status_Keyboard;
-        public static ReplyKeyboardMarkup Drive_Keyboard;
+        public static ReplyKeyboardMarkup FileExplorer_Keyboard;
         public static ReplyKeyboardMarkup MainFolder_Keyboard;
         public static InlineKeyboardMarkup inline_Keyboard;
         //private ReplyKeyboardMarkup rkm;
@@ -45,7 +48,7 @@ namespace FluxGuard.Core
                 row1 , row2 , row3 , row4 , row5
             };
             LoggerService.LogUI("MainDashboard Loaded.");
-            
+
         }
         public static void AppDashboard()
         {
@@ -93,10 +96,10 @@ namespace FluxGuard.Core
         {
 
             var inlineMarkup = new InlineKeyboardMarkup()
-            .AddButton("⭕"+Languages.Translate("inlinekeyboards","power","shutdown"),"shutdown") // first row, first button
+            .AddButton("⭕" + Languages.Translate("inlinekeyboards", "power", "shutdown"), "shutdown") // first row, first button
             .AddNewRow()
-            .AddButton("💤"+ Languages.Translate("inlinekeyboards", "power", "sleep"), "sleep") // second row, first button
-            .AddButton("🔄️"+ Languages.Translate("inlinekeyboards", "power", "restart"), "restart");// second row, second button
+            .AddButton("💤" + Languages.Translate("inlinekeyboards", "power", "sleep"), "sleep") // second row, first button
+            .AddButton("🔄️" + Languages.Translate("inlinekeyboards", "power", "restart"), "restart");// second row, second button
 
             Power_Keyboard = inlineMarkup;
 
@@ -106,92 +109,77 @@ namespace FluxGuard.Core
             var inlineMarkup = new InlineKeyboardMarkup();
             foreach (var apps in Services.GetAllWindowHandleNames())
             {
-                inlineMarkup.AddButton(apps,"Mapp*"+apps);
+                inlineMarkup.AddButton(apps, "Mapp*" + apps);
                 inlineMarkup.AddNewRow();
             }
             App_List = inlineMarkup;
         }
-
-
-        public void GetDashboard()
+        public static void DriveList()
         {
-            Get_Keyboard = new ReplyKeyboardMarkup("");
-            KeyboardButton[] row1 =
+            var inlineMarkup = new InlineKeyboardMarkup();
+            foreach (var drive in Services.GetDrives())
             {
-                                    new KeyboardButton("اسکرین شات")
-                                };
-            KeyboardButton[] row2 =
-            {
-                                    new KeyboardButton("Record keylogger"),new KeyboardButton("Send keylogger")
-                                };
-            KeyboardButton[] row3 =
-            {
-                                    new KeyboardButton("ZIP file"),new KeyboardButton("Delete ZIP file")
-                                };
-            KeyboardButton[] row4 =
-            {
-                                    new KeyboardButton("Back")
-                                };
-            Get_Keyboard.Keyboard = new KeyboardButton[][]
-            {
-                                    row1,row2,row3,row4
-            };
+                inlineMarkup.AddButton(drive, "drive*" + drive);
+                inlineMarkup.AddNewRow();
+            }
+            Drive_List = inlineMarkup;
         }
-        public void DriveKeyboard()
+        public static void ShowDirectoryContents(string path)
         {
-            Drive_Keyboard = new ReplyKeyboardMarkup("");
-            KeyboardButton[] row01 =
+            string lastFolder = Path.GetFileName(path);
+            var inlineMarkup = new InlineKeyboardMarkup();
+            foreach (var folder in Services.GetDirectories(path))
             {
-                                    new KeyboardButton("C:/"),new KeyboardButton("D:/")
-                                };
-            KeyboardButton[] row02 =
+                inlineMarkup.AddButton("📁 " + Services.ShortenName(folder.Name), "dir*" + Services.ShortenName(folder.Name));
+                inlineMarkup.AddNewRow();
+            }
+            foreach (var file in Services.GetFiles(path))
             {
-                                    new KeyboardButton("E:/"),new KeyboardButton("F:/")
-                                };
-            KeyboardButton[] row03 =
-           {
-                                    new KeyboardButton("Main folders"),new KeyboardButton("Open folder,file")
-                                };
-            KeyboardButton[] row04 =
-           {
-                                    new KeyboardButton("Delete file") , new KeyboardButton("Delete folder")
-                                };
-            KeyboardButton[] row05 =
-            {
-                                    new KeyboardButton("Send file"),new KeyboardButton("File info")
-                                };
-            KeyboardButton[] row06 =
-            {
-                                    new KeyboardButton("Back")
-                                };
-            Drive_Keyboard.Keyboard = new KeyboardButton[][]
-            {
-                 row01,row02,row03,row04,row05,row06
-            };
+                inlineMarkup.AddButton("📄 " + Services.ShortenName(file.Name), "file*" + Services.ShortenName(file.Name));
+                inlineMarkup.AddNewRow();
+            }
+            bool isRootDrive = DriveInfo.GetDrives().Any(d => d.Name.TrimEnd('\\') == path.TrimEnd('\\'));
+
+            if (isRootDrive)
+                inlineMarkup.AddButton("⬅️ " + Languages.Translate("replykeyboards", "back", "back"), $"backDrive");
+            else
+                inlineMarkup.AddButton("⬅️ " + Languages.Translate("replykeyboards", "back", "back"), $"backDir");
+            Dir_List = inlineMarkup;
         }
-        public void MainFolder()
+        public static void FileExplorerKeyboard()
         {
-            MainFolder_Keyboard = new ReplyKeyboardMarkup("");
-            KeyboardButton[] row001 =
+            try
             {
-                                    new KeyboardButton("Downloads"),new KeyboardButton("Desktop")
+                FileExplorer_Keyboard = new ReplyKeyboardMarkup("");
+                KeyboardButton[] row01 =
+                {
+                                    new KeyboardButton(Languages.Translate("replykeyboards","file_explorer","drive"))
                                 };
-            KeyboardButton[] row002 =
+                KeyboardButton[] row02 =
+                {
+                                    new KeyboardButton(Languages.Translate("replykeyboards","file_explorer","desktop")),new KeyboardButton(Languages.Translate("replykeyboards","file_explorer","download"))
+                                };
+                KeyboardButton[] row03 =
+               {
+                                    new KeyboardButton(Languages.Translate("replykeyboards","file_explorer","musics")),new KeyboardButton(Languages.Translate("replykeyboards","file_explorer","document"))
+                                };
+                KeyboardButton[] row04 =
+               {
+                                    new KeyboardButton(Languages.Translate("replykeyboards","file_explorer","pictures")) , new KeyboardButton(Languages.Translate("replykeyboards","file_explorer","videos"))
+                                };
+                KeyboardButton[] row05 =
+                {
+                                    new KeyboardButton(Languages.Translate("replykeyboards","back","back"))
+                                };
+                FileExplorer_Keyboard.Keyboard = new KeyboardButton[][]
+                {
+                 row01,row02,row03,row04,row05
+                };
+            }
+            catch (Exception ex)
             {
-                                    new KeyboardButton("Document"),new KeyboardButton("Music")
-                                };
-            KeyboardButton[] row003 =
-           {
-                                    new KeyboardButton("Picture"),new KeyboardButton("Video")
-                                };
-            KeyboardButton[] row004 =
-            {
-                                    new KeyboardButton("Back")
-                                };
-            MainFolder_Keyboard.Keyboard = new KeyboardButton[][]
-            {
-                                    row001,row002,row003,row004
-            };
+                AnsiConsole.Markup(ex.Message);
+            }
         }
 
     }
