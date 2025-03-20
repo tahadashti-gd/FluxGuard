@@ -1,4 +1,4 @@
 {
-  "telegram_bot_language": "fa",
-  "automatic_start": true
+  "telegram_bot_language": "en",
+  "automatic_start": false
 }

@@ -7,7 +7,6 @@ namespace FluxGuard.Core
 {
     public class Languages
     {
-        public static string languageCode;
         public static Dictionary<string, dynamic> language = new Dictionary<string, dynamic>();
 
         public static void Initialize()
@@ -16,15 +15,23 @@ namespace FluxGuard.Core
             {
                 LoadLanguage(DataManager.Setting.TelegramBotLanguage);
             }
-            catch(Exception ex) 
+            catch (Exception ex)
             {
                 LoggerService.LogError(ex, "Initializing language");
             }
         }
+
         public static void LoadLanguage(string langCode)
         {
             try
             {
+                // Check if the requested language is already loaded
+                if (DataManager.Setting.TelegramBotLanguage == langCode && language.Count > 0)
+                {
+                    LoggerService.LogInformation($"Language '{langCode}' is already loaded. Skipping reload.");
+                    return;
+                }
+
                 string filePath = $"lan/{langCode}.json";
                 if (!File.Exists(filePath))
                     throw new FileNotFoundException($"Language file not found: {filePath}");
@@ -32,7 +39,6 @@ namespace FluxGuard.Core
                 string jsonContent = File.ReadAllText(filePath);
                 LoggerService.LogInformation($"{langCode} Language was successfully loaded.");
                 language = JsonConvert.DeserializeObject<Dictionary<string, dynamic>>(jsonContent);
-                languageCode = langCode;
                 MainCore.LoadLanguagesCommand();
             }
             catch (Exception ex)
@@ -40,6 +46,7 @@ namespace FluxGuard.Core
                 LoggerService.LogError(ex, "Load language");
             }
         }
+
         public static string Translate(string Category, string MainKey, string SubsetKey)
         {
             string result;
@@ -57,12 +64,11 @@ namespace FluxGuard.Core
                     return "???";
                 }
             }
-            catch( Exception ex )
+            catch (Exception ex)
             {
                 LoggerService.LogError(ex, "Translate");
                 return "???";
             }
-            
         }
     }
 }

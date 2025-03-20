@@ -1,6 +1,7 @@
 ﻿using Spectre.Console;
 using System.Text.Json;
 using System.Text.Json.Serialization;
+using FluxGuard.GUI;
 
 namespace FluxGuard.Core
 {
@@ -18,40 +19,69 @@ namespace FluxGuard.Core
         public class SettingModel
         {
             [JsonPropertyName("telegram_bot_language")]
-            public string? TelegramBotLanguage { get; set; }
+            public string? TelegramBotLanguage { get; set; } = "en";
 
             [JsonPropertyName("automatic_start")]
-            public bool AutomaticStart { get; set; }
+            public bool AutomaticStart { get; set; } = false;
         }
 
         // Model for configuration
         public class ConfigModel
         {
             [JsonPropertyName("telegram_bot_token")]
-            public string? TelegramBotToken { get; set; }
+            public string? TelegramBotToken { get; set; } = "";
 
             [JsonPropertyName("user_chat_id")]
-            public string? UserChatId { get; set; }
+            public string? UserChatId { get; set; } = "";
+        }
+
+        // Ensure config file exists, otherwise create one with default values
+        private static void EnsureConfigFile()
+        {
+            if (!File.Exists(configFilePath))
+            {
+                Config = new ConfigModel();
+                string jsonString = JsonSerializer.Serialize(Config, new JsonSerializerOptions { WriteIndented = true });
+                File.WriteAllText(configFilePath, jsonString);
+                LoggerService.LogInformation("Config file created with default values.");
+            }
+        }
+
+        // Ensure setting file exists, otherwise create one with default values
+        private static void EnsureSettingFile()
+        {
+            if (!File.Exists(settingFilePath))
+            {
+                Setting = new SettingModel();
+                string jsonString = JsonSerializer.Serialize(Setting, new JsonSerializerOptions { WriteIndented = true });
+                File.WriteAllText(settingFilePath, jsonString);
+                LoggerService.LogInformation("Setting file created with default values.");
+            }
         }
 
         // Load config file
         public static void LoadConfig()
         {
+            EnsureConfigFile();
             try
             {
                 string jsonContent = File.ReadAllText(configFilePath);
                 Config = JsonSerializer.Deserialize<ConfigModel>(jsonContent);
+                Form1.userChatId = Config.UserChatId;
+                Form1.telegramBotToken = Config.TelegramBotToken;
                 LoggerService.LogInformation("Config loaded.");
             }
             catch (Exception ex)
             {
                 Config = null;
+                LoggerService.LogError(ex, "Error loading config");
             }
         }
 
         // Load setting file
         public static void LoadSetting()
         {
+            EnsureSettingFile();
             try
             {
                 string jsonContent = File.ReadAllText(settingFilePath);
@@ -60,7 +90,7 @@ namespace FluxGuard.Core
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
+                LoggerService.LogError(ex, "Error loading settings");
             }
         }
 
@@ -69,7 +99,6 @@ namespace FluxGuard.Core
         {
             LoadConfig();
             LoadSetting();
-            MainCore.Initialize();
         }
 
         // Display current configuration
@@ -107,6 +136,13 @@ namespace FluxGuard.Core
                     configData = new Dictionary<string, dynamic>();
                 }
 
+                // Check if the value is the same as the existing one
+                if (configData.ContainsKey(key) && ConvertJsonElement(configData[key]) == value)
+                {
+                    LoggerService.LogInformation($"No change detected for '{key}', skipping update.");
+                    return;
+                }
+
                 // Update key value
                 configData[key] = value;
 
@@ -140,6 +176,13 @@ namespace FluxGuard.Core
                     settingData = new Dictionary<string, dynamic>();
                 }
 
+                // Check if the value is the same as the existing one
+                if (settingData.ContainsKey(key) && ConvertJsonElement(settingData[key]) == value)
+                {
+                    LoggerService.LogInformation($"No change detected for '{key}', skipping update.");
+                    return;
+                }
+
                 // Update key value
                 settingData[key] = value;
 
@@ -153,6 +196,23 @@ namespace FluxGuard.Core
             {
                 LoggerService.LogError(ex, "Error in set data setting");
             }
+        }
+
+        // Convert JsonElement to appropriate type
+        private static dynamic ConvertJsonElement(dynamic element)
+        {
+            if (element is JsonElement jsonElement)
+            {
+                return jsonElement.ValueKind switch
+                {
+                    JsonValueKind.String => jsonElement.GetString(),
+                    JsonValueKind.Number => jsonElement.GetDouble(),
+                    JsonValueKind.True => true,
+                    JsonValueKind.False => false,
+                    _ => element // Return as is for unsupported types
+                };
+            }
+            return element;
         }
     }
 }

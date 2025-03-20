@@ -1,5 +1,5 @@
-﻿using FluxGuard.Core;      // Importing FluxGuard.Core for core functionalities
-using Spectre.Console;     // Importing Spectre.Console for enhanced console output
+﻿using System.Diagnostics;
+using FluxGuard.Core;      // Importing FluxGuard.Core for core functionalities
 
 class Program
 {
@@ -7,6 +7,8 @@ class Program
     {
         try
         {
+            Process.Start("FluxGuard-GUI", "FluxGuard-GUI.exe");
+
             // Initialize the logging system
             Logger.Initialize();
 
@@ -22,6 +24,8 @@ class Program
 
             // Start the command-line interface for user interaction
             CLI.StartCLI();
+
+
         }
         catch (Exception ex)
         {

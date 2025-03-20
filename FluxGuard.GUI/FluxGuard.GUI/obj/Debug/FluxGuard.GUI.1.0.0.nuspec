@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>FluxGuard.GUI</id>
+    <version>1.0.0</version>
+    <authors>FluxGuard.GUI</authors>
+    <description>Package Description</description>
+    <repository type="git" commit="ad6feafc076557b5d73da578661b079c47ca7efe" />
+    <dependencies>
+      <group targetFramework="net8.0-windows7.0">
+        <dependency id="Newtonsoft.Json" version="13.0.3" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+    <frameworkReferences>
+      <group targetFramework="net8.0-windows7.0">
+        <frameworkReference name="Microsoft.WindowsDesktop.App.WindowsForms" />
+      </group>
+    </frameworkReferences>
+  </metadata>
+  <files>
+    <file src="E:\C#\FluxGuard\FluxGuard.GUI\FluxGuard.GUI\bin\Debug\net8.0-windows\FluxGuard.GUI.runtimeconfig.json" target="lib\net8.0-windows7.0\FluxGuard.GUI.runtimeconfig.json" />
+    <file src="E:\C#\FluxGuard\FluxGuard.GUI\FluxGuard.GUI\bin\Debug\net8.0-windows\FluxGuard.GUI.dll" target="lib\net8.0-windows7.0\FluxGuard.GUI.dll" />
+  </files>
+</package>

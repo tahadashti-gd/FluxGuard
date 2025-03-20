@@ -1,26 +1,23 @@
 ﻿using ScreenshotDemo;
 using System.Drawing.Imaging;
-using System.Drawing;
+
 
 namespace FluxGuard.GUI
 {
     public partial class Form1 : Form
     {
         public static string RootPath = AppContext.BaseDirectory;
-        string Window = "";
+        public static string userChatId;
+        public static string  telegramBotToken;
 
         public Form1()
         {
             InitializeComponent();
-            this.Hide();
-            notifyIcon1.Visible = true;
+            //this.Hide();
+            notifyIcon.Visible = true;
         }
 
         private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-        private void Form1_Shown(object sender, EventArgs e)
         {
 
         }
@@ -69,6 +66,19 @@ namespace FluxGuard.GUI
         public static void CloseGUI()
         {
             Application.Exit();
+        }
+
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -6,7 +6,12 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <StartupObject>Program</StartupObject>
+    <ApplicationIcon>logo.ico</ApplicationIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="logo.ico" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Figgle" Version="0.5.1" />
@@ -21,8 +26,8 @@
     <PackageReference Include="Telegram.Bot" Version="22.3.0" />
   </ItemGroup>
 
-	<ItemGroup>
-    <ProjectReference Include="..\..\FluxGuard.GUI\FluxGuard.GUI\FluxGuard.GUI.csproj" />
+    <ItemGroup>
+		<ProjectReference Include="..\..\FluxGuard.GUI\FluxGuard.GUI\FluxGuard.GUI.csproj" />
   </ItemGroup>
 
 

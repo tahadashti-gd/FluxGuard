@@ -27,10 +27,10 @@ namespace FluxGuard.Core
                 // Handle user commands
                 switch (parts[0].ToLower())
                 {
-                    case "bot-start":
+                    case "flux-s":
                         StartBot();
                         break;
-                    case "bot-stop":
+                    case "flux-x":
                         StopBot();
                         break;
                     case "status":
@@ -136,8 +136,8 @@ namespace FluxGuard.Core
             table.AddColumn("[bold cyan]Command[/]");
             table.AddColumn("[bold yellow]Description[/]");
 
-            table.AddRow("bot-start", "Starts the FluxGuard bot and GUI.");
-            table.AddRow("bot-stop", "Stops the running bot.");
+            table.AddRow("flux-s", "Starts the FluxGuard bot and GUI.");
+            table.AddRow("flux-x", "Stops the running bot.");
             table.AddRow("status", "Displays the current status of the bot.");
             table.AddRow("logs hours", "Displays recent logs from the last hours.");
             table.AddRow("config", "Manage bot configurations such as API tokens and Chat IDs.");
@@ -178,7 +178,6 @@ namespace FluxGuard.Core
         {
             MainCore botCore = new MainCore();
             botCore.StartBot();
-            Process.Start("FluxGuard-GUI", "FluxGuard-GUI.exe");
             LoggerService.LogInformation($"FluxGuard started at {DateTime.UtcNow}");
             AnsiConsole.MarkupLine("[green]Bot is running...[/]");
         }

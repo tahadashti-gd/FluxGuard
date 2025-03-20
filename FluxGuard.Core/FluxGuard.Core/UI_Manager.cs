@@ -130,12 +130,12 @@ namespace FluxGuard.Core
             var inlineMarkup = new InlineKeyboardMarkup();
             foreach (var folder in Services.GetDirectories(path))
             {
-                inlineMarkup.AddButton("📁 " + Services.ShortenName(folder.Name), "dir*" + Services.ShortenName(folder.Name));
+                inlineMarkup.AddButton("📁 " + Services.ShortenName(folder.Name), "d*" + Services.ShortenName(folder.Name));
                 inlineMarkup.AddNewRow();
             }
             foreach (var file in Services.GetFiles(path))
             {
-                inlineMarkup.AddButton("📄 " + Services.ShortenName(file.Name), "file*" + Services.ShortenName(file.Name));
+                inlineMarkup.AddButton("📄 " + Services.ShortenName(file.Name), "f*" + Services.ShortenName(file.Name));
                 inlineMarkup.AddNewRow();
             }
             bool isRootDrive = DriveInfo.GetDrives().Any(d => d.Name.TrimEnd('\\') == path.TrimEnd('\\'));

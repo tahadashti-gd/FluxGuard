@@ -5,8 +5,12 @@ using System.Runtime.InteropServices;
 using System.Text;
 using FluxGuard.Core;
 using FluxGuard.GUI;
-using Microsoft.Win32;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System;
+using System.Diagnostics;
+using System.Runtime.InteropServices;
+using System.Text;
+using System.Net.Http;
+using System.Threading.Tasks;
 
 namespace Service
 {
@@ -86,7 +90,7 @@ namespace Service
             out uint lpNumberOfBytesWritten,
             IntPtr lpOverlapped);
 
-        #endregion 
+        #endregion
 
         #region Power
         public static void ShutDown()

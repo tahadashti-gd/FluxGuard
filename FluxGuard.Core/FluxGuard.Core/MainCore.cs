@@ -1,15 +1,11 @@
-﻿using Microsoft.Extensions.DependencyInjection;
-using Newtonsoft.Json.Linq;
+﻿using Newtonsoft.Json.Linq;
 using Service;
-using Spectre.Console;
-using System.IO;
 using System.Text;
 using Telegram.Bot;
 using Telegram.Bot.Polling;
 using Telegram.Bot.Types;
 using Telegram.Bot.Types.Enums;
 using Telegram.Bot.Types.ReplyMarkups;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace FluxGuard.Core
 {
@@ -44,6 +40,7 @@ namespace FluxGuard.Core
         {
             try
             {
+                Initialize();
                 bot = new TelegramBotClient(BotToken);
                 bot.OnError += OnError;
                 bot.OnMessage += OnMessage;
@@ -136,28 +133,32 @@ namespace FluxGuard.Core
                 case 17:
                     LivePath = $@"C:\Users\{systemUserName}\Desktop";
                     await MainFolder(userChatID,UserName, LivePath);
-                    MessageId = msg.MessageId;
 
                     break;
                 //download
                 case 18:
-                    await MainFolder(userChatID, UserName, $@"C:\Users\{systemUserName}\downloads");
+                    LivePath = $@"C:\Users\{systemUserName}\downloads";
+                    await MainFolder(userChatID, UserName,LivePath);
                     break;
                 //document
                 case 19:
-                    await MainFolder(userChatID, UserName, $@"C:\Users\{systemUserName}\documents");
+                    LivePath = $@"C:\Users\{systemUserName}\documents";
+                    await MainFolder(userChatID, UserName,LivePath);
                     break;
                 //pictures
                 case 20:
-                    await MainFolder(userChatID, UserName, $@"C:\Users\{systemUserName}\pictures");
+                    LivePath = $@"C:\Users\{systemUserName}\pictures";
+                    await MainFolder(userChatID, UserName, LivePath);
                     break;
                 //videos
                 case 21:
-                    await MainFolder(userChatID, UserName, $@"C:\Users\{systemUserName}\videos");
+                    LivePath = $@"C:\Users\{systemUserName}\videos";
+                    await MainFolder(userChatID, UserName,LivePath);
                     break;
                 //musics
                 case 22:
-                    await MainFolder(userChatID, UserName, $@"C:\Users\{systemUserName}\music");
+                    LivePath = $@"C:\Users\{systemUserName}\music";
+                    await MainFolder(userChatID, UserName, LivePath);
                     break;
                 #endregion
                 //security
@@ -221,6 +222,7 @@ namespace FluxGuard.Core
             MessageId = MessageId + 1;
             LoggerService.LogCommand(UserID, UserName, "drive");
             UI_Manager.DriveList();
+            LivePath = "";
             await bot.SendMessage(UserID, Languages.Translate("replykeyboards", "file_explorer", "drive"), replyMarkup: UI_Manager.Drive_List);
         }
         private async Task AppsCommand(long UserID, string UserName)
@@ -268,7 +270,6 @@ namespace FluxGuard.Core
                 switch (query.Data)
                 {
                     case "shutdown":
-                        {
                             await bot.AnswerCallbackQuery(query.Id);
                             await bot.DeleteMessage(query.Message!.Chat, MessageId + 1);
                             await bot.SendMessage(query.Message!.Chat, "سیستم خاموش شد.");
@@ -276,9 +277,7 @@ namespace FluxGuard.Core
                             Thread.Sleep(1000);
                             Services.ShutDown();
                             break;
-                        }
                     case "sleep":
-                        {
                             await bot.AnswerCallbackQuery(query.Id);
                             await bot.DeleteMessage(query.Message!.Chat, MessageId + 1);
                             await bot.SendMessage(query.Message!.Chat, "سیستم به خواب رفت.");
@@ -286,9 +285,7 @@ namespace FluxGuard.Core
                             Thread.Sleep(1000);
                             Services.Sleep();
                             break;
-                        }
                     case "restart":
-                        {
                             await bot.AnswerCallbackQuery(query.Id);
                             await bot.DeleteMessage(query.Message!.Chat, MessageId + 1);
                             await bot.SendMessage(query.Message!.Chat, "سیستم رستارت خواهد شد..");
@@ -296,9 +293,7 @@ namespace FluxGuard.Core
                             Thread.Sleep(1000);
                             Services.Sleep();
                             break;
-                        }
                     case "AppsList":
-                        {
                             await bot.AnswerCallbackQuery(query.Id);
                             await bot.DeleteMessage(query.Message!.Chat, MessageId + 1);
                             UI_Manager.AppList();
@@ -307,21 +302,22 @@ namespace FluxGuard.Core
                             Thread.Sleep(1000);
                             MessageId = MessageId + 1;
                             break;
-                        }
                     case "backDir":
                         await bot.AnswerCallbackQuery(query.Id);
                         DirectoryInfo dirInfo = new DirectoryInfo(LivePath);
                         DirectoryInfo parentDir = dirInfo.Parent;
                         LivePath = parentDir.FullName;
-                        LoadDir(userChatID, "", LivePath);
+                        await LoadDir(userChatID, "", LivePath);
+                        Console.WriteLine(LivePath);
                         break;
                     case "backDrive":
                         await bot.AnswerCallbackQuery(query.Id);
                         await bot.DeleteMessage(userChatID, MessageId + 1);
                         await Drive(userChatID, "UserName");
+
                         break;
                     case "back_file":
-                        LoadDir(userChatID, "", LivePath);
+                        await LoadDir(userChatID, "", LivePath);
                         break;
 
                 }
@@ -355,16 +351,15 @@ namespace FluxGuard.Core
                     await bot.AnswerCallbackQuery(query.Id);
                     string[] lan = query.Data.Split("*");
                     BotLanguages = lan[1];
-                    Languages.languageCode = BotLanguages;
+                    Languages.LoadLanguage(BotLanguages);
                     DataManager.SetSettingValue("telegram_bot_language", BotLanguages);
                     await bot.DeleteMessage(query.Message!.Chat, MessageId + 1);
                     UI_Manager.MainDashboard();
                     var mes = await bot.SendMessage(query.Message!.Chat, Languages.Translate("answers", "welcome", "welcome"),
                     replyMarkup: UI_Manager.Main_Keyboard);
                     MessageId = MessageId + 1;
-                    LoadLanguagesCommand();
                 }
-                if (query.Data.StartsWith("dir*"))
+                if (query.Data.StartsWith("d*"))
                 {
                     await bot.AnswerCallbackQuery(query.Id);
                     string[] lan = query.Data.Split("*");
@@ -378,7 +373,7 @@ namespace FluxGuard.Core
                     LivePath = lan[1];
                     await LoadDir(userChatID, "hgjhg", LivePath);
                 }
-                if (query.Data.StartsWith("file*"))
+                if (query.Data.StartsWith("f*"))
                 {
                     await bot.AnswerCallbackQuery(query.Id);
                     string[] lan = query.Data.Split("*");

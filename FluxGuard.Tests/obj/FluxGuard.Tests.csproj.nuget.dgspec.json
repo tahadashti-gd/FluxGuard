@@ -1,0 +1,284 @@
+{
+  "format": 1,
+  "restore": {
+    "E:\\C#\\FluxGuard\\FluxGuard.Tests\\FluxGuard.Tests.csproj": {}
+  },
+  "projects": {
+    "E:\\C#\\FluxGuard\\FluxGuard.Core\\FluxGuard.Core\\FluxGuard.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\C#\\FluxGuard\\FluxGuard.Core\\FluxGuard.Core\\FluxGuard.Core.csproj",
+        "projectName": "FluxGuard.Core",
+        "projectPath": "E:\\C#\\FluxGuard\\FluxGuard.Core\\FluxGuard.Core\\FluxGuard.Core.csproj",
+        "packagesPath": "C:\\Users\\TahaDashti\\.nuget\\packages\\",
+        "outputPath": "E:\\C#\\FluxGuard\\FluxGuard.Core\\FluxGuard.Core\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\TahaDashti\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0-windows"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0-windows7.0": {
+            "targetAlias": "net8.0-windows",
+            "projectReferences": {
+              "E:\\C#\\FluxGuard\\FluxGuard.GUI\\FluxGuard.GUI\\FluxGuard.GUI.csproj": {
+                "projectPath": "E:\\C#\\FluxGuard\\FluxGuard.GUI\\FluxGuard.GUI\\FluxGuard.GUI.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net8.0-windows7.0": {
+          "targetAlias": "net8.0-windows",
+          "dependencies": {
+            "Figgle": {
+              "target": "Package",
+              "version": "[0.5.1, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            },
+            "Serilog": {
+              "target": "Package",
+              "version": "[4.2.0, )"
+            },
+            "Serilog.Sinks.Console": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Serilog.Sinks.File": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Serilog.Sinks.SQLite": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Spectre.Console": {
+              "target": "Package",
+              "version": "[0.49.1, )"
+            },
+            "System.Diagnostics.PerformanceCounter": {
+              "target": "Package",
+              "version": "[9.0.1, )"
+            },
+            "System.Management": {
+              "target": "Package",
+              "version": "[9.0.1, )"
+            },
+            "Telegram.Bot": {
+              "target": "Package",
+              "version": "[22.3.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\C#\\FluxGuard\\FluxGuard.GUI\\FluxGuard.GUI\\FluxGuard.GUI.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\C#\\FluxGuard\\FluxGuard.GUI\\FluxGuard.GUI\\FluxGuard.GUI.csproj",
+        "projectName": "FluxGuard.GUI",
+        "projectPath": "E:\\C#\\FluxGuard\\FluxGuard.GUI\\FluxGuard.GUI\\FluxGuard.GUI.csproj",
+        "packagesPath": "C:\\Users\\TahaDashti\\.nuget\\packages\\",
+        "outputPath": "E:\\C#\\FluxGuard\\FluxGuard.GUI\\FluxGuard.GUI\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\TahaDashti\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0-windows"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0-windows7.0": {
+            "targetAlias": "net8.0-windows",
+            "projectReferences": {
+              "E:\\C#\\FluxGuard\\FluxGuard.Core\\FluxGuard.Core\\FluxGuard.Core.csproj": {
+                "projectPath": "E:\\C#\\FluxGuard\\FluxGuard.Core\\FluxGuard.Core\\FluxGuard.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net8.0-windows7.0": {
+          "targetAlias": "net8.0-windows",
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WindowsForms": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\C#\\FluxGuard\\FluxGuard.Tests\\FluxGuard.Tests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\C#\\FluxGuard\\FluxGuard.Tests\\FluxGuard.Tests.csproj",
+        "projectName": "FluxGuard.Tests",
+        "projectPath": "E:\\C#\\FluxGuard\\FluxGuard.Tests\\FluxGuard.Tests.csproj",
+        "packagesPath": "C:\\Users\\TahaDashti\\.nuget\\packages\\",
+        "outputPath": "E:\\C#\\FluxGuard\\FluxGuard.Tests\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\TahaDashti\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0-windows"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0-windows7.0": {
+            "targetAlias": "net8.0-windows",
+            "projectReferences": {
+              "E:\\C#\\FluxGuard\\FluxGuard.Core\\FluxGuard.Core\\FluxGuard.Core.csproj": {
+                "projectPath": "E:\\C#\\FluxGuard\\FluxGuard.Core\\FluxGuard.Core\\FluxGuard.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net8.0-windows7.0": {
+          "targetAlias": "net8.0-windows",
+          "dependencies": {
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[17.6.0, )"
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.18.4, )"
+            },
+            "NUnit": {
+              "target": "Package",
+              "version": "[3.13.3, )"
+            },
+            "NUnit3TestAdapter": {
+              "target": "Package",
+              "version": "[4.5.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
