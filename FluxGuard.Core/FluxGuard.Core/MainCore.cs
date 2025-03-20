@@ -17,6 +17,7 @@ namespace FluxGuard.Core
         string systemUserName = Environment.UserName;
         public static string? BotLanguages;
         public static string? BotToken;
+        public static string? telegramUserName;
         public static long userChatID;
         private static Dictionary<string, int> commands = new Dictionary<string, int>();
         private TelegramBotClient bot;
@@ -60,7 +61,7 @@ namespace FluxGuard.Core
         }
         async Task OnMessage(Message msg, UpdateType type)
         {
-            string? UserName = msg.Chat.Username;
+            telegramUserName = msg.Chat.Username;
             MessageId = msg.MessageId;
 
             var stringBuilder = new StringBuilder();
@@ -68,27 +69,27 @@ namespace FluxGuard.Core
             {
                 //start
                 case 0:
-                    await StartCommand(userChatID, UserName, stringBuilder);
+                    await StartCommand(userChatID, telegramUserName, stringBuilder);
                     break;
                 //back
                 case 1:
-                    await BackCommand(userChatID, UserName);
+                    await BackCommand(userChatID, telegramUserName);
                     break;
                 //power
                 case 2:
-                    await PowerCommand(userChatID, UserName);
+                    await PowerCommand(userChatID, telegramUserName);
                     break;
                 //status
                 case 3:
-                    await StatusCommand(userChatID, UserName);
+                    await StatusCommand(userChatID, telegramUserName);
                     break;
                 //resource_report
                 case 4:
-                    await ResourceReportCommand(userChatID, UserName);
+                    await ResourceReportCommand(userChatID, telegramUserName);
                     break;
                 //uptime
                 case 5:
-                    await UpTimeCommand(userChatID, UserName);
+                    await UpTimeCommand(userChatID, telegramUserName);
                     break;
                 //driver_control
                 case 6:
@@ -98,11 +99,11 @@ namespace FluxGuard.Core
                     break;
                 //apps
                 case 8:
-                    await AppsCommand(userChatID, UserName);
+                    await AppsCommand(userChatID, telegramUserName);
                     break;
                 //manage_apps
                 case 9:
-                    await ManageApps(userChatID,UserName);
+                    await ManageApps(userChatID, telegramUserName);
                     break;
                 //open_app
                 case 10:
@@ -122,43 +123,43 @@ namespace FluxGuard.Core
                 #region file_explorer
                 //file_explorer
                 case 15:
-                    await FileExplorerCommand(userChatID,UserName);
+                    await FileExplorerCommand(userChatID, telegramUserName);
                     break;
                 //drive
                 case 16:
-                    await Drive(userChatID,UserName);
+                    await Drive(userChatID, telegramUserName);
                     MessageId = msg.MessageId;
                     break;
                 //desktop
                 case 17:
                     LivePath = $@"C:\Users\{systemUserName}\Desktop";
-                    await MainFolder(userChatID,UserName, LivePath);
+                    await MainFolder(userChatID, telegramUserName, LivePath);
 
                     break;
                 //download
                 case 18:
                     LivePath = $@"C:\Users\{systemUserName}\downloads";
-                    await MainFolder(userChatID, UserName,LivePath);
+                    await MainFolder(userChatID, telegramUserName, LivePath);
                     break;
                 //document
                 case 19:
                     LivePath = $@"C:\Users\{systemUserName}\documents";
-                    await MainFolder(userChatID, UserName,LivePath);
+                    await MainFolder(userChatID, telegramUserName, LivePath);
                     break;
                 //pictures
                 case 20:
                     LivePath = $@"C:\Users\{systemUserName}\pictures";
-                    await MainFolder(userChatID, UserName, LivePath);
+                    await MainFolder(userChatID, telegramUserName, LivePath);
                     break;
                 //videos
                 case 21:
                     LivePath = $@"C:\Users\{systemUserName}\videos";
-                    await MainFolder(userChatID, UserName,LivePath);
+                    await MainFolder(userChatID, telegramUserName, LivePath);
                     break;
                 //musics
                 case 22:
                     LivePath = $@"C:\Users\{systemUserName}\music";
-                    await MainFolder(userChatID, UserName, LivePath);
+                    await MainFolder(userChatID, telegramUserName, LivePath);
                     break;
                 #endregion
                 //security
@@ -307,7 +308,7 @@ namespace FluxGuard.Core
                         DirectoryInfo dirInfo = new DirectoryInfo(LivePath);
                         DirectoryInfo parentDir = dirInfo.Parent;
                         LivePath = parentDir.FullName;
-                        await LoadDir(userChatID, "", LivePath);
+                        await LoadDir(userChatID, telegramUserName, LivePath);
                         Console.WriteLine(LivePath);
                         break;
                     case "backDrive":
@@ -317,7 +318,7 @@ namespace FluxGuard.Core
 
                         break;
                     case "back_file":
-                        await LoadDir(userChatID, "", LivePath);
+                        await LoadDir(userChatID, telegramUserName, LivePath);
                         break;
 
                 }
@@ -364,14 +365,14 @@ namespace FluxGuard.Core
                     await bot.AnswerCallbackQuery(query.Id);
                     string[] lan = query.Data.Split("*");
                     LivePath = @$"{LivePath}\{lan[1]}";
-                    await LoadDir(userChatID, "hgjhg", LivePath);
+                    await LoadDir(userChatID, telegramUserName, LivePath);
                 }
                 if (query.Data.StartsWith("drive*"))
                 {
                     await bot.AnswerCallbackQuery(query.Id);
                     string[] lan = query.Data.Split("*");
                     LivePath = lan[1];
-                    await LoadDir(userChatID, "hgjhg", LivePath);
+                    await LoadDir(userChatID, telegramUserName, LivePath);
                 }
                 if (query.Data.StartsWith("f*"))
                 {

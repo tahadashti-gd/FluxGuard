@@ -142,6 +142,7 @@
             AutoStart.TabIndex = 4;
             AutoStart.Text = "Auto Start";
             AutoStart.UseVisualStyleBackColor = true;
+            AutoStart.CheckedChanged += AutoStart_CheckedChanged;
             // 
             // ChatIdbox
             // 

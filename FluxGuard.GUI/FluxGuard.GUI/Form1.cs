@@ -1,5 +1,7 @@
 ﻿using ScreenshotDemo;
 using System.Drawing.Imaging;
+using System.Runtime.CompilerServices;
+using System.Security.Cryptography;
 
 
 namespace FluxGuard.GUI
@@ -8,7 +10,7 @@ namespace FluxGuard.GUI
     {
         public static string RootPath = AppContext.BaseDirectory;
         public static string userChatId;
-        public static string  telegramBotToken;
+        public static string telegramBotToken;
 
         public Form1()
         {
@@ -53,6 +55,11 @@ namespace FluxGuard.GUI
             }
         }
 
+        public static void CloseGUI()
+        {
+             Application.Exit();
+        }
+
         private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             Show();
@@ -61,11 +68,6 @@ namespace FluxGuard.GUI
         private void Form1_Shown_1(object sender, EventArgs e)
         {
             Hide();
-        }
-
-        public static void CloseGUI()
-        {
-            Application.Exit();
         }
 
         private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
@@ -77,6 +79,11 @@ namespace FluxGuard.GUI
         }
 
         private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AutoStart_CheckedChanged(object sender, EventArgs e)
         {
 
         }

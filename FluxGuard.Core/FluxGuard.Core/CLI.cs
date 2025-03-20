@@ -164,7 +164,7 @@ namespace FluxGuard.Core
         // Displays bot status
         private static void BotStatus()
         {
-            AnsiConsole.MarkupLine("[green]Bot is running...[/]");
+            //AnsiConsole.MarkupLine("[green]Bot is running...[/]");
         }
 
         // Stops the bot

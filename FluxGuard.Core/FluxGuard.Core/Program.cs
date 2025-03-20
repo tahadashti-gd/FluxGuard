@@ -1,5 +1,6 @@
 ﻿using System.Diagnostics;
 using FluxGuard.Core;      // Importing FluxGuard.Core for core functionalities
+using FluxGuard.GUI;
 
 class Program
 {
@@ -7,7 +8,9 @@ class Program
     {
         try
         {
-            Process.Start("FluxGuard-GUI", "FluxGuard-GUI.exe");
+            AppDomain.CurrentDomain.ProcessExit += OnProcessExit;
+
+            Process.Start(AppContext.BaseDirectory+"/FluxGuard.GUI.exe");
 
             // Initialize the logging system
             Logger.Initialize();
@@ -32,5 +35,10 @@ class Program
             // Log the error with details for debugging
             LoggerService.LogError(ex, "Initializing program");
         }
+    }
+    static void OnProcessExit(object sender, EventArgs e)
+    {
+        Form1.CloseGUI();
+        LoggerService.LogInformation("sfds");
     }
 }
