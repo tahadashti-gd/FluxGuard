@@ -131,8 +131,17 @@ Based on the existing code, FluxGuard enables the following capabilities:
 
 ---
 
-## 🔮 **[Future Plans](https://github.com/tahadashti-gd/FluxGuard/issues)**  
+## 🔗 Dependencies & Architecture  
 
+### FluxGuard follows a modular structure where core components interact through defined dependencies.  
+
+![fluxguard_graph_clean](https://github.com/user-attachments/assets/e190ea67-a48b-492e-a1a1-9bce08c100bc)
+
+---
+
+## 🔮 **[Future Plans](https://github.com/tahadashti-gd/FluxGuard/issues)** 
+
+### Visit issues page.
 ---
 
 ## 🙌 **Contributions & Support**  
