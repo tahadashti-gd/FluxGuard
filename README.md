@@ -131,14 +131,7 @@ Based on the existing code, FluxGuard enables the following capabilities:
 
 ---
 
-## 🔮 **Future Plans**  
-
-Planned features for upcoming versions:  
-- **🖥️ Execute CLI Commands:** Run remote commands.  
-- **🤖 Script Execution:** Auto-run scripts via Telegram.  
-- **📦 File Compression:** Before sending files.  
-- **📥 Download/Upload Manager:** Enhanced file transfer.  
-- **⏰ Task Scheduler:** Automate tasks and alerts.  
+## 🔮 **[Future Plans](https://github.com/tahadashti-gd/FluxGuard/issues)**  
 
 ---
 
