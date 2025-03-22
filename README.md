@@ -152,3 +152,8 @@ Help improve FluxGuard by reporting issues, suggesting new features, or contribu
 ## 📜 **License**  
 
 📝 This project is licensed under **[GPL v3](https://www.gnu.org/licenses/gpl-3.0.en.html)**.  
+
+---
+
+## [Buy me a cafe](https://daramet.com/TahaDashti)
+
