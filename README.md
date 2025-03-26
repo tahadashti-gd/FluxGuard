@@ -65,7 +65,7 @@ Based on the existing code, FluxGuard enables the following capabilities:
   dotnet build  
   ```  
 - **Start the Program:**  
-  - Run `FluxGuard.GUI.exe` for GUI-based interaction.  
+  - Run `GUI.exe` for GUI-based interaction.  
   - Use the CLI for manual bot control.  
 
 ---
