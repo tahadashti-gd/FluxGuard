@@ -12,6 +12,7 @@ obj/
 *.suo
 *.vs/
 .vscode/
+.vs
 
 # ایگنور کردن پوشه‌های مربوط به NuGet
 packages/
