@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35707.178 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluxGuard", "FluxGuard\FluxGuard.csproj", "{F4A17DFA-7C94-45E4-A5F8-2A34428A7727}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GUI", "GUI\GUI.csproj", "{0694FE28-B97F-405E-A121-AFE51DC5AED8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F4A17DFA-7C94-45E4-A5F8-2A34428A7727}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4A17DFA-7C94-45E4-A5F8-2A34428A7727}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4A17DFA-7C94-45E4-A5F8-2A34428A7727}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4A17DFA-7C94-45E4-A5F8-2A34428A7727}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0694FE28-B97F-405E-A121-AFE51DC5AED8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0694FE28-B97F-405E-A121-AFE51DC5AED8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0694FE28-B97F-405E-A121-AFE51DC5AED8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0694FE28-B97F-405E-A121-AFE51DC5AED8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
