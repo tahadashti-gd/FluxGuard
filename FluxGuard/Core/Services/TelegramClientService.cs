@@ -38,8 +38,9 @@ namespace FluxGuard.Core.Services
 
         private static async Task OnMessage(Message msg, UpdateType type)
         {
-            LogService.LogInformation($"Message received: {msg.Text}");
-            await CommandHandler.HandelOnMessage(msg, type);
+            LogService.LogInformation($"Message received: {msg.Text} , From: {msg.Chat.Username}");
+            if(msg.Chat.Id == ConfigModel.Config.UserChatId)
+                await CommandHandler.HandelOnMessage(msg, type);
         }
 
         private static async Task OnUpdate(Update update)
@@ -48,7 +49,7 @@ namespace FluxGuard.Core.Services
             await CommandHandler.HandleOnUpdate(update);
         }
 
-        public static async Task<Message> SendMessage(object content, ReplyKeyboardMarkup? replyKeyboard, InlineKeyboardMarkup? inlineKeyboard)
+        public static async Task<Message> SendMessage(object content,string? caption, ReplyKeyboardMarkup? replyKeyboard, InlineKeyboardMarkup? inlineKeyboard)
         {
             Message message;
             try
@@ -63,17 +64,17 @@ namespace FluxGuard.Core.Services
                         break;
 
                     case byte[] fileBytes:
-                        message = await Client.SendPhoto(chatId, new InputFileStream(new MemoryStream(fileBytes)), replyMarkup: markup);
+                        message = await Client.SendPhoto(chatId, new InputFileStream(new MemoryStream(fileBytes)),caption, replyMarkup: markup);
                         LogService.LogBotResponse("Photo sent", chatId);
                         break;
 
                     case Stream fileStream:
-                        message = await Client.SendDocument(chatId, new InputFileStream(fileStream), replyMarkup: markup);
-                        LogService.LogBotResponse("Document sent", chatId);
+                        message = await Client.SendVoice(chatId, new InputFileStream(fileStream),caption, replyMarkup: markup);
+                        LogService.LogBotResponse("Voice sent", chatId);
                         break;
 
                     case InputFile inputFile:
-                        message = await Client.SendPhoto(chatId, inputFile, replyMarkup: markup);
+                        message = await Client.SendPhoto(chatId, inputFile,caption, replyMarkup: markup);
                         LogService.LogBotResponse("File sent", chatId);
                         break;
 

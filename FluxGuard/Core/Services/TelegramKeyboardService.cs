@@ -119,6 +119,16 @@ namespace FluxGuard.Core.Services
             }
         }
 
+        public static InlineKeyboardMarkup InitializeWebcamMicrophoneInlineKeyboard()
+        {
+            var inlineMarkup = new InlineKeyboardMarkup()
+                .AddButton("📸 " + LanguageService.Translate("inlinekeyboards", "webcam_microphone", "capture_webcam"), "capture_webcam")
+                .AddNewRow()
+                .AddButton("🎙️ " + LanguageService.Translate("inlinekeyboards", "webcam_microphone", "record_microphone"), "record_microphone");
+            LogService.LogUI("Webcam and microphone inline keyboard initialized");
+            return inlineMarkup;
+        }
+
         private static string ShortenName(string name) => name.Length > 20 ? name.Substring(0, 17) + "..." : name;
     }
 }

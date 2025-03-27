@@ -68,5 +68,13 @@ namespace FluxGuard.Core.Models
         {
             get { return TelegramKeyboardService.InitializeFileExplorerMenuKeyboard(); }
         }
+
+        /// <summary>
+        /// Inline keyboard with options to capture webcam image and record microphone audio.
+        /// </summary>
+        public static InlineKeyboardMarkup WebcamMicrophoneInlineKeyboard
+        {
+            get { return TelegramKeyboardService.InitializeWebcamMicrophoneInlineKeyboard(); }
+        }
     }
 }
