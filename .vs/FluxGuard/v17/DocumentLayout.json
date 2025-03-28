@@ -3,24 +3,51 @@
   "WorkspaceRootPath": "E:\\C#\\FluxGuard\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F4A17DFA-7C94-45E4-A5F8-2A34428A7727}|FluxGuard\\FluxGuard.csproj|e:\\c#\\fluxguard\\fluxguard\\core\\fluxmodules\\powermodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F4A17DFA-7C94-45E4-A5F8-2A34428A7727}|FluxGuard\\FluxGuard.csproj|solutionrelative:fluxguard\\core\\fluxmodules\\powermodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\C#\\FluxGuard\\FluxGuard\\bin\\Debug\\net9.0-windows\\Languages\\Friendly Persian.Json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:FluxGuard\\bin\\Debug\\net9.0-windows\\Languages\\Friendly Persian.Json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F4A17DFA-7C94-45E4-A5F8-2A34428A7727}|FluxGuard\\FluxGuard.csproj|e:\\c#\\fluxguard\\fluxguard\\core\\services\\telegramclientservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F4A17DFA-7C94-45E4-A5F8-2A34428A7727}|FluxGuard\\FluxGuard.csproj|solutionrelative:fluxguard\\core\\services\\telegramclientservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F4A17DFA-7C94-45E4-A5F8-2A34428A7727}|FluxGuard\\FluxGuard.csproj|e:\\c#\\fluxguard\\fluxguard\\core\\services\\languageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F4A17DFA-7C94-45E4-A5F8-2A34428A7727}|FluxGuard\\FluxGuard.csproj|solutionrelative:fluxguard\\core\\services\\languageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\C#\\FluxGuard\\FluxGuard\\bin\\Debug\\net9.0-windows\\Languages\\Old Persian.Json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:FluxGuard\\bin\\Debug\\net9.0-windows\\Languages\\Old Persian.Json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F4A17DFA-7C94-45E4-A5F8-2A34428A7727}|FluxGuard\\FluxGuard.csproj|e:\\c#\\fluxguard\\fluxguard\\core\\services\\commandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F4A17DFA-7C94-45E4-A5F8-2A34428A7727}|FluxGuard\\FluxGuard.csproj|solutionrelative:fluxguard\\core\\services\\commandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F4A17DFA-7C94-45E4-A5F8-2A34428A7727}|FluxGuard\\FluxGuard.csproj|e:\\c#\\fluxguard\\fluxguard\\core\\fluxmodules\\statusmodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F4A17DFA-7C94-45E4-A5F8-2A34428A7727}|FluxGuard\\FluxGuard.csproj|solutionrelative:fluxguard\\core\\fluxmodules\\statusmodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\C#\\FluxGuard\\FluxGuard\\bin\\Debug\\net9.0-windows\\setting.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:FluxGuard\\bin\\Debug\\net9.0-windows\\setting.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F4A17DFA-7C94-45E4-A5F8-2A34428A7727}|FluxGuard\\FluxGuard.csproj|e:\\c#\\fluxguard\\fluxguard\\cli\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F4A17DFA-7C94-45E4-A5F8-2A34428A7727}|FluxGuard\\FluxGuard.csproj|solutionrelative:fluxguard\\cli\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F4A17DFA-7C94-45E4-A5F8-2A34428A7727}|FluxGuard\\FluxGuard.csproj|e:\\c#\\fluxguard\\fluxguard\\core\\services\\settingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F4A17DFA-7C94-45E4-A5F8-2A34428A7727}|FluxGuard\\FluxGuard.csproj|solutionrelative:fluxguard\\core\\services\\settingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F4A17DFA-7C94-45E4-A5F8-2A34428A7727}|FluxGuard\\FluxGuard.csproj|e:\\c#\\fluxguard\\fluxguard\\cli\\climanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F4A17DFA-7C94-45E4-A5F8-2A34428A7727}|FluxGuard\\FluxGuard.csproj|solutionrelative:fluxguard\\cli\\climanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F4A17DFA-7C94-45E4-A5F8-2A34428A7727}|FluxGuard\\FluxGuard.csproj|e:\\c#\\fluxguard\\fluxguard\\core\\models\\configmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F4A17DFA-7C94-45E4-A5F8-2A34428A7727}|FluxGuard\\FluxGuard.csproj|solutionrelative:fluxguard\\core\\models\\configmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\C#\\FluxGuard.Old\\FluxGuard.Core\\FluxGuard.Core\\MainCore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F4A17DFA-7C94-45E4-A5F8-2A34428A7727}|FluxGuard\\FluxGuard.csproj|e:\\c#\\fluxguard\\fluxguard\\core\\models\\settingmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F4A17DFA-7C94-45E4-A5F8-2A34428A7727}|FluxGuard\\FluxGuard.csproj|solutionrelative:fluxguard\\core\\models\\settingmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F4A17DFA-7C94-45E4-A5F8-2A34428A7727}|FluxGuard\\FluxGuard.csproj|e:\\c#\\fluxguard\\fluxguard\\core\\services\\telegramclientservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F4A17DFA-7C94-45E4-A5F8-2A34428A7727}|FluxGuard\\FluxGuard.csproj|solutionrelative:fluxguard\\core\\services\\telegramclientservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F4A17DFA-7C94-45E4-A5F8-2A34428A7727}|FluxGuard\\FluxGuard.csproj|e:\\c#\\fluxguard\\fluxguard\\core\\fluxmodules\\manageappsmodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F4A17DFA-7C94-45E4-A5F8-2A34428A7727}|FluxGuard\\FluxGuard.csproj|solutionrelative:fluxguard\\core\\fluxmodules\\manageappsmodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,72 +57,154 @@
       "DocumentGroups": [
         {
           "DockedWidth": 146,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "PowerModule.cs",
-              "DocumentMoniker": "E:\\C#\\FluxGuard\\FluxGuard\\Core\\FLuxModules\\PowerModule.cs",
-              "RelativeDocumentMoniker": "FluxGuard\\Core\\FLuxModules\\PowerModule.cs",
-              "ToolTip": "E:\\C#\\FluxGuard\\FluxGuard\\Core\\FLuxModules\\PowerModule.cs",
-              "RelativeToolTip": "FluxGuard\\Core\\FLuxModules\\PowerModule.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-27T00:07:37.6Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "StatusModule.cs",
-              "DocumentMoniker": "E:\\C#\\FluxGuard\\FluxGuard\\Core\\FLuxModules\\StatusModule.cs",
-              "RelativeDocumentMoniker": "FluxGuard\\Core\\FLuxModules\\StatusModule.cs",
-              "ToolTip": "E:\\C#\\FluxGuard\\FluxGuard\\Core\\FLuxModules\\StatusModule.cs",
-              "RelativeToolTip": "FluxGuard\\Core\\FLuxModules\\StatusModule.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-26T23:56:26.235Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Program.cs",
-              "DocumentMoniker": "E:\\C#\\FluxGuard\\FluxGuard\\CLI\\Program.cs",
-              "RelativeDocumentMoniker": "FluxGuard\\CLI\\Program.cs",
-              "ToolTip": "E:\\C#\\FluxGuard\\FluxGuard\\CLI\\Program.cs",
-              "RelativeToolTip": "FluxGuard\\CLI\\Program.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAACIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-26T12:57:26.578Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "CommandHandler.cs",
-              "DocumentMoniker": "E:\\C#\\FluxGuard\\FluxGuard\\Core\\Services\\CommandHandler.cs",
-              "RelativeDocumentMoniker": "FluxGuard\\Core\\Services\\CommandHandler.cs",
-              "ToolTip": "E:\\C#\\FluxGuard\\FluxGuard\\Core\\Services\\CommandHandler.cs",
-              "RelativeToolTip": "FluxGuard\\Core\\Services\\CommandHandler.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAAwBgAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-26T11:17:51.684Z",
+              "Title": "Old Persian.Json",
+              "DocumentMoniker": "E:\\C#\\FluxGuard\\FluxGuard\\bin\\Debug\\net9.0-windows\\Languages\\Old Persian.Json",
+              "RelativeDocumentMoniker": "FluxGuard\\bin\\Debug\\net9.0-windows\\Languages\\Old Persian.Json",
+              "ToolTip": "E:\\C#\\FluxGuard\\FluxGuard\\bin\\Debug\\net9.0-windows\\Languages\\Old Persian.Json",
+              "RelativeToolTip": "FluxGuard\\bin\\Debug\\net9.0-windows\\Languages\\Old Persian.Json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-28T10:17:12.646Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "LanguageService.cs",
+              "DocumentMoniker": "E:\\C#\\FluxGuard\\FluxGuard\\Core\\Services\\LanguageService.cs",
+              "RelativeDocumentMoniker": "FluxGuard\\Core\\Services\\LanguageService.cs",
+              "ToolTip": "E:\\C#\\FluxGuard\\FluxGuard\\Core\\Services\\LanguageService.cs",
+              "RelativeToolTip": "FluxGuard\\Core\\Services\\LanguageService.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAB8AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-28T09:35:08.808Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ConfigModel.cs",
+              "DocumentMoniker": "E:\\C#\\FluxGuard\\FluxGuard\\Core\\Models\\ConfigModel.cs",
+              "RelativeDocumentMoniker": "FluxGuard\\Core\\Models\\ConfigModel.cs",
+              "ToolTip": "E:\\C#\\FluxGuard\\FluxGuard\\Core\\Models\\ConfigModel.cs",
+              "RelativeToolTip": "FluxGuard\\Core\\Models\\ConfigModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-28T09:47:53.826Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CliManager.cs",
+              "DocumentMoniker": "E:\\C#\\FluxGuard\\FluxGuard\\CLI\\CliManager.cs",
+              "RelativeDocumentMoniker": "FluxGuard\\CLI\\CliManager.cs",
+              "ToolTip": "E:\\C#\\FluxGuard\\FluxGuard\\CLI\\CliManager.cs",
+              "RelativeToolTip": "FluxGuard\\CLI\\CliManager.cs",
+              "ViewState": "AgIAAGEAAAAAAAAAAAASwHwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-28T09:35:53.543Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CommandHandler.cs",
+              "DocumentMoniker": "E:\\C#\\FluxGuard\\FluxGuard\\Core\\Services\\CommandHandler.cs",
+              "RelativeDocumentMoniker": "FluxGuard\\Core\\Services\\CommandHandler.cs",
+              "ToolTip": "E:\\C#\\FluxGuard\\FluxGuard\\Core\\Services\\CommandHandler.cs",
+              "RelativeToolTip": "FluxGuard\\Core\\Services\\CommandHandler.cs",
+              "ViewState": "AgIAAG8AAAAAAAAAAAAYwIMAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T11:17:51.684Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "SettingService.cs",
+              "DocumentMoniker": "E:\\C#\\FluxGuard\\FluxGuard\\Core\\Services\\SettingService.cs",
+              "RelativeDocumentMoniker": "FluxGuard\\Core\\Services\\SettingService.cs",
+              "ToolTip": "E:\\C#\\FluxGuard\\FluxGuard\\Core\\Services\\SettingService.cs",
+              "RelativeToolTip": "FluxGuard\\Core\\Services\\SettingService.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAYwC0AAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-28T09:54:39.604Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Friendly Persian.Json",
+              "DocumentMoniker": "E:\\C#\\FluxGuard\\FluxGuard\\bin\\Debug\\net9.0-windows\\Languages\\Friendly Persian.Json",
+              "RelativeDocumentMoniker": "FluxGuard\\bin\\Debug\\net9.0-windows\\Languages\\Friendly Persian.Json",
+              "ToolTip": "E:\\C#\\FluxGuard\\FluxGuard\\bin\\Debug\\net9.0-windows\\Languages\\Friendly Persian.Json",
+              "RelativeToolTip": "FluxGuard\\bin\\Debug\\net9.0-windows\\Languages\\Friendly Persian.Json",
+              "ViewState": "AgIAAEwAAAAAAAAAAAAwwH0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-28T10:17:17.955Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "SettingModel.cs",
+              "DocumentMoniker": "E:\\C#\\FluxGuard\\FluxGuard\\Core\\Models\\SettingModel.cs",
+              "RelativeDocumentMoniker": "FluxGuard\\Core\\Models\\SettingModel.cs",
+              "ToolTip": "E:\\C#\\FluxGuard\\FluxGuard\\Core\\Models\\SettingModel.cs",
+              "RelativeToolTip": "FluxGuard\\Core\\Models\\SettingModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-28T09:47:58.963Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "setting.json",
+              "DocumentMoniker": "E:\\C#\\FluxGuard\\FluxGuard\\bin\\Debug\\net9.0-windows\\setting.json",
+              "RelativeDocumentMoniker": "FluxGuard\\bin\\Debug\\net9.0-windows\\setting.json",
+              "ToolTip": "E:\\C#\\FluxGuard\\FluxGuard\\bin\\Debug\\net9.0-windows\\setting.json",
+              "RelativeToolTip": "FluxGuard\\bin\\Debug\\net9.0-windows\\setting.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-28T09:48:13.008Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ManageAppsModule.cs",
+              "DocumentMoniker": "E:\\C#\\FluxGuard\\FluxGuard\\Core\\FLuxModules\\ManageAppsModule.cs",
+              "RelativeDocumentMoniker": "FluxGuard\\Core\\FLuxModules\\ManageAppsModule.cs",
+              "ToolTip": "E:\\C#\\FluxGuard\\FluxGuard\\Core\\FLuxModules\\ManageAppsModule.cs",
+              "RelativeToolTip": "FluxGuard\\Core\\FLuxModules\\ManageAppsModule.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-28T09:04:40.929Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "TelegramClientService.cs",
               "DocumentMoniker": "E:\\C#\\FluxGuard\\FluxGuard\\Core\\Services\\TelegramClientService.cs",
               "RelativeDocumentMoniker": "FluxGuard\\Core\\Services\\TelegramClientService.cs",
               "ToolTip": "E:\\C#\\FluxGuard\\FluxGuard\\Core\\Services\\TelegramClientService.cs",
               "RelativeToolTip": "FluxGuard\\Core\\Services\\TelegramClientService.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAQwC0AAAA2AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIQAAABMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-26T12:41:24.398Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-26T12:41:24.398Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "MainCore.cs",
+              "DocumentMoniker": "E:\\C#\\FluxGuard.Old\\FluxGuard.Core\\FluxGuard.Core\\MainCore.cs",
+              "RelativeDocumentMoniker": "..\\FluxGuard.Old\\FluxGuard.Core\\FluxGuard.Core\\MainCore.cs",
+              "ToolTip": "E:\\C#\\FluxGuard.Old\\FluxGuard.Core\\FluxGuard.Core\\MainCore.cs",
+              "RelativeToolTip": "..\\FluxGuard.Old\\FluxGuard.Core\\FluxGuard.Core\\MainCore.cs",
+              "ViewState": "AgIAAO8AAAAAAAAAAAAAAAABAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T11:02:30.585Z"
             }
           ]
         }

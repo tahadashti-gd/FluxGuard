@@ -115,16 +115,21 @@ namespace FluxGuard.CLI
                 switch (settingChoice)
                 {
                     case "Telegram Bot Language":
-                        string lang = AnsiConsole.Ask<string>("[bold blue]Enter new value[/]:");
-                        SettingService.SetValue("telegram_bot_language", lang);
+                        List<string> languages = LanguageService.GetAvailableLanguages();
+                        string selectedLanguage = AnsiConsole.Prompt(
+                            new SelectionPrompt<string>()
+                                .Title("[bold blue]Select a language:[/]")
+                                .PageSize(10)
+                                .AddChoices(languages)); 
+                        SettingService.SetValue("telegram_bot_language", selectedLanguage);
                         AnsiConsole.MarkupLine($"[green]Updated to:[/] [bold]{SettingModel.Setting.BotLanguage}[/]");
                         LanguageService.Initialize();
                         break;
                     case "Automatic Start":
-                        bool autoStart = AnsiConsole.Prompt(
-                            new SelectionPrompt<bool>()
-                                .Title("[bold blue]True/False?[/]")
-                                .AddChoices(true, false));
+                            bool autoStart = AnsiConsole.Prompt(
+                                new SelectionPrompt<bool>()
+                                    .Title("[bold blue]True/False?[/]")
+                                    .AddChoices(true, false));
                         SettingService.SetValue("automatic_start", autoStart);
                         AnsiConsole.MarkupLine($"[green]Updated to:[/] [bold]{SettingModel.Setting.AutomaticStart}[/]");
                         break;

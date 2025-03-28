@@ -45,26 +45,26 @@ namespace FluxGuard.Core.Services
         {
             try
             {
-                Dictionary<string, dynamic> configData;
+                Dictionary<string, dynamic> settingData;
 
                 if (File.Exists(SettingModel.FilePath))
                 {
                     string existingJson = File.ReadAllText(SettingModel.FilePath);
-                    configData = JsonSerializer.Deserialize<Dictionary<string, dynamic>>(existingJson) ?? new Dictionary<string, dynamic>();
+                    settingData = JsonSerializer.Deserialize<Dictionary<string, dynamic>>(existingJson) ?? new Dictionary<string, dynamic>();
                 }
                 else
                 {
-                    configData = new Dictionary<string, dynamic>();
+                    settingData = new Dictionary<string, dynamic>();
                 }
 
-                if (configData.ContainsKey(key) && ConvertJsonElement.Convert(configData[key]) == value)
+                if (settingData.ContainsKey(key) && ConvertJsonElement.Convert(settingData[key]) == value)
                 {
                     LogService.LogInformation($"No change detected for '{key}', skipping update.");
                     return;
                 }
 
-                configData[key] = value;
-                string jsonString = JsonSerializer.Serialize(configData, new JsonSerializerOptions { WriteIndented = true });
+                settingData[key] = value;
+                string jsonString = JsonSerializer.Serialize(settingData, new JsonSerializerOptions { WriteIndented = true });
                 File.WriteAllText(SettingModel.FilePath, jsonString);
                 LogService.LogSecurity($"Set {key} to {value} in settings.");
                 Load();

@@ -19,7 +19,7 @@ namespace FluxGuard.Core.Models
         public class Model
         {
             [JsonPropertyName("telegram_bot_language")]
-            public string? BotLanguage { get; set; } = "en";
+            public string? BotLanguage { get; set; } = "English";
 
             [JsonPropertyName("automatic_start")]
             public bool AutomaticStart { get; set; } = false;

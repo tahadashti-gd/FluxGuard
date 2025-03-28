@@ -2,6 +2,7 @@
 using FluxGuard.Core.Models;
 using Spectre.Console;
 using System.Collections.Generic;
+using Telegram.Bot.Types.ReplyMarkups;
 
 namespace FluxGuard.Core.Services
 {
@@ -29,12 +30,11 @@ namespace FluxGuard.Core.Services
         {
             try
             {
-                // اگر زبان قبلاً لود شده و همان زبان درخواست شده، از لود دوباره جلوگیری کن
-                if (isLanguageLoaded && SettingModel.Setting.BotLanguage == langCode && language.Count > 0)
-                {
-                    LogService.LogInformation($"Language '{langCode}' is already loaded. Skipping reload.");
-                    return;
-                }
+                //if (isLanguageLoaded && SettingModel.Setting.BotLanguage == langCode && language.Count > 0)
+                //{
+                //    LogService.LogInformation($"Language '{langCode}' is already loaded. Skipping reload.");
+                //    return;
+                //}
 
                 string filePath = $"Languages/{langCode}.json";
                 if (!File.Exists(filePath))
@@ -42,16 +42,31 @@ namespace FluxGuard.Core.Services
 
                 string jsonContent = File.ReadAllText(filePath);
                 language = JsonConvert.DeserializeObject<Dictionary<string, dynamic>>(jsonContent);
-                isLanguageLoaded = true; // علامت‌گذاری به‌عنوان لود شده
+                isLanguageLoaded = true;
                 LogService.LogInformation($"{langCode} Language was successfully loaded.");
-
-                // بعد از لود زبان، دستورات را به‌روزرسانی کنیم
-                LoadLanguagesCommand();
             }
             catch (Exception ex)
             {
                 LogService.LogError(ex, "Load language");
                 isLanguageLoaded = false;
+            }
+        }
+
+        public static List<string> GetAvailableLanguages()
+        {
+            if (Directory.Exists("Languages"))
+            {
+                List<string> languages = new List<string>();
+                languages = new List<string>(Directory.GetFiles("Languages", "*.json"));
+                for (int i = 0; i < languages.Count; i++)
+                {
+                    languages[i] = Path.GetFileNameWithoutExtension(languages[i]);
+                }
+                return languages;
+            }
+            else
+            {
+                return null;
             }
         }
 

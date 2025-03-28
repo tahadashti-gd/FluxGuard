@@ -65,6 +65,18 @@ namespace FluxGuard.Core.Services
             return inlineMarkup;
         }
 
+        public static InlineKeyboardMarkup InitializeAppLaunchInlineKeyboard() // اضافه شده
+        {
+            var inlineMarkup = new InlineKeyboardMarkup();
+            foreach (var app in ManageAppsModule.GetAvailableApps())
+            {
+                inlineMarkup.AddButton($"▶️ {app}", $"launch*{app}");
+                inlineMarkup.AddNewRow();
+            }
+            LogService.LogUI("App launch inline keyboard initialized");
+            return inlineMarkup;
+        }
+
         public static InlineKeyboardMarkup InitializeDriveListInlineKeyboard()
         {
             var inlineMarkup = new InlineKeyboardMarkup();

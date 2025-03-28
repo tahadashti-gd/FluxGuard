@@ -1,0 +1,134 @@
+{
+    "replykeyboards": {
+        "back": {
+            "back": "Back"
+        },
+        "power": {
+            "power": "Power"
+        },
+        "status": {
+            "status": "Status",
+            "resource_report": "Resource Report",
+            "uptime": "Uptime",
+            "driver_control": "Driver Management",
+            "webcam_and_microphone": "Webcam & Microphone Status"
+        },
+        "apps": {
+            "apps": "Apps",
+            "manage_apps": "Manage Running Apps",
+            "open_app": "Launch New App"
+        },
+        "send": {
+            "send": "Send",
+            "send_file": "Send File",
+            "send_voice": "Play Voice Message on System",
+            "send_media_and_show": "Display Media on System"
+        },
+        "file_explorer": {
+            "file_explorer": "File Explorer",
+            "drive": "Drives",
+            "desktop": "Desktop",
+            "download": "Downloads",
+            "document": "Documents",
+            "pictures": "Pictures",
+            "videos": "Videos",
+            "musics": "Music"
+        },
+        "security": {
+            "security": "Security",
+            "monitoring_and_reporting": "Monitoring & Reporting",
+            "change_password": "Change Password"
+        },
+        "settings": {
+            "settings": "Settings"
+        }
+    },
+    "inlinekeyboards": {
+        "power": {
+            "shutdown": "Shutdown",
+            "sleep": "Sleep",
+            "restart": "Restart"
+        },
+        "apps": {
+            "close": "Close",
+            "launch": "Launch"
+        },
+        "file_explorer": {
+            "send": "Send",
+            "delete": "Delete",
+            "name": "Name",
+            "path": "Path",
+            "length": "Size",
+            "last_edit": "Last Modified"
+        },
+        "webcam_microphone": {
+            "capture_webcam": "Capture Webcam Photo",
+            "record_microphone": "Record 5-Second Audio"
+        }
+    },
+    "answers": {
+        "welcome": {
+            "welcome": " 🎉 You've made a great choice! We're ready! 🚀 FluxGuard is fully charged and at your service! ⚡ Just tell me what you need, and I’ll handle it like a pro! 💼✨ From shutting down your system to sneaky screen monitoring 👀 or compressing files like a ninja 🥷—I'm here! 🙌 What's our first mission, boss? 😎"
+        },
+        "back": {
+            "back": "I'm back"
+        },
+        "status": {
+            "status": "📊 Status dashboard is here! Time to check your system’s health. I promise to be honest! 🤓",
+            "driver_report": "📡 Driver & Device Status Report:",
+            "usb_devices": "🔌 USB Devices:",
+            "input_devices": "⌨️ Input Devices (Mouse & Keyboard):",
+            "network_adapters": "🌐 Network Adapters (Wi-Fi & Bluetooth):",
+            "error_usb": "❌ Error checking USB devices",
+            "error_input": "❌ Error checking input devices",
+            "error_network": "❌ Error checking network adapters",
+            "connected": "Connected",
+            "has_issue": "Not Connected",
+            "no_usb_storage_found": "No USB storage devices found.",
+            "drive_label": "Drive:",
+            "keyboard_label": "Keyboard:",
+            "mouse_label": "Mouse:",
+            "webcam_label": "Webcam:",
+            "microphone_label": "Microphone:",
+            "not_connected": "Not connected",
+            "error_webcam_capture": "Error: Could not capture from webcam.",
+            "error_webcam": "Error checking webcam",
+            "error_microphone": "Error checking microphone",
+            "webcam_not_found": "Webcam not found.",
+            "microphone_not_found": "Microphone not found.",
+            "recording": "Recording",
+            "webcam_and_microphone": "🎥 Webcam & Microphone Status:"
+        },
+        "apps": {
+            "apps": "📂 Apps dashboard is ready! Tell me which app to manage or launch a new one. Just don’t make it too hard for me! 😜",
+            "opened_app": "📋 Here’s a list of open and controllable apps 👇 Tell me what to do, boss! 😎",
+            "launching": "Launching the app...",
+            "no_apps": "No apps found in the apps folder. Please add shortcuts!",
+            "screenshot_caption": "Screenshot from {0}",
+            "app_closed": "The app {0} has been closed.",
+            "launch_error": "Error launching {0}: {1}"
+        },
+        "send": {
+            "send": "📤 Send dashboard is ready! Want to send a file, play a voice message, or display media? I got it covered! 🎯"
+        },
+        "file_explorer": {
+            "file_explorer": "📁 File Explorer dashboard is open! Let’s investigate folders like a pro detective. Maybe we’ll even find some treasure! 🕵️‍",
+            "delete": "Deleted"
+        },
+        "security": {
+            "security": "🛡️ Security dashboard activated! I’m ready to monitor everything and report any threats. Like a ninja in the shadows! 🥷"
+        },
+        "resource": {
+            "report": "📊 System Status Report:",
+            "cpu": "🖥️ CPU: ",
+            "ram": "💾 RAM: ",
+            "gpu": "🎮 GPU: ",
+            "net": "🌐 Internet Speed: "
+        },
+        "power": {
+            "shutdown": "System has been shut down.",
+            "sleep": "System is in sleep mode.",
+            "restart": "System has been restarted."
+        }
+    }
+}

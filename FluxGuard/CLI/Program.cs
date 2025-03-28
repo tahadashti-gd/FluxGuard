@@ -42,7 +42,16 @@ namespace FluxGuard.CLI
                 // Run CliManager
                 await CliManager.RunAsync(args);
 
-
+                // Check if running in interactive mode
+                if (Environment.UserInteractive)
+                {
+                    Console.WriteLine("\nPress any key to exit...");
+                    Console.ReadKey();
+                }
+                else
+                {
+                    Console.WriteLine("Running in non-interactive mode. Exiting...");
+                }
             }
             catch (Exception ex)
             {

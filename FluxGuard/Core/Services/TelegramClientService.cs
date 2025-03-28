@@ -97,5 +97,47 @@ namespace FluxGuard.Core.Services
         {
             await Client.DeleteMessage(ConfigModel.Config.UserChatId,message.Id);
         }
+        public static async Task EditMessage(object content, string? caption, ReplyKeyboardMarkup? replyKeyboard, InlineKeyboardMarkup? inlineKeyboard)
+        {
+            Message message;
+            try
+            {
+                ReplyMarkup? markup = replyKeyboard != null ? replyKeyboard : inlineKeyboard;
+
+                switch (content)
+                {
+                    case string text:
+                        message = await Client.SendMessage(chatId, text, replyMarkup: markup);
+                        LogService.LogBotResponse(text, chatId);
+                        break;
+
+                    case byte[] fileBytes:
+                        message = await Client.SendPhoto(chatId, new InputFileStream(new MemoryStream(fileBytes)), caption, replyMarkup: markup);
+                        LogService.LogBotResponse("Photo sent", chatId);
+                        break;
+
+                    case Stream fileStream:
+                        message = await Client.SendVoice(chatId, new InputFileStream(fileStream), caption, replyMarkup: markup);
+                        LogService.LogBotResponse("Voice sent", chatId);
+                        break;
+
+                    case InputFile inputFile:
+                        message = await Client.SendPhoto(chatId, inputFile, caption, replyMarkup: markup);
+                        LogService.LogBotResponse("File sent", chatId);
+                        break;
+
+                    default:
+                        LogService.LogWarning("SendMessage", $"Unsupported content type: {content.GetType().Name}");
+                        throw new ArgumentException("Unsupported content type");
+                }
+                LogService.LogInformation($"Content sent to chat {chatId}");
+            }
+            catch (Exception ex)
+            {
+                LogService.LogError(ex, $"Failed to send content to chat {chatId}");
+                throw;
+            }
+        }
+
     }
 }
