@@ -157,5 +157,5 @@ Help improve FluxGuard by reporting issues, suggesting new features, or contribu
 
 ---
 
-## [Buy me a cafe](https://daramet.com/TahaDashti)
+## [Buy me a coffee](https://daramet.com/TahaDashti)
 
