@@ -120,37 +120,6 @@ Based on the existing code, FluxGuard enables the following capabilities:
 - View logs from the last 2 hours: `logs 2`  
 - Change language to Persian: `settings` → Select "Telegram Bot Language" → Enter `fa`  
 
----
-
-## 🗂️ **Project Structure**  
-
-- **`FluxGuard.Core`:** Core logic, bot, CLI, data handling, and services.  
-- **`FluxGuard.GUI`:** GUI components (such as screenshot capture).  
-- **`lan/`:** Language files (`en.json`, `fa.json`).  
-- **`logs/`:** Log files.  
-
----
-
-## 🔗 Dependencies & Architecture  
-
-### FluxGuard follows a modular structure where core components interact through defined dependencies.  
-
-![fluxguard_graph_clean](https://github.com/user-attachments/assets/e190ea67-a48b-492e-a1a1-9bce08c100bc)
-
----
-
-## 🔮 **[Future Plans](https://github.com/tahadashti-gd/FluxGuard/issues)** 
-
-### Visit issues page.
----
-
-## 🙌 **Contributions & Support**  
-
-💬 **Your feedback matters!**  
-Help improve FluxGuard by reporting issues, suggesting new features, or contributing to the development! 🚀  
-
----
-
 ## 📜 **License**  
 
 📝 This project is licensed under **[GPL v3](https://www.gnu.org/licenses/gpl-3.0.en.html)**.  
