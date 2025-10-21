@@ -15,25 +15,8 @@ Based on the existing code, FluxGuard enables the following capabilities:
 
 ### ⚙️ **Monitoring & Reports**  
 - **System Resources:** 📊 Receive text-based reports on CPU, RAM, GPU, and network status.  
-- **Uptime Tracking:** ⏱️ View system uptime.  
-
-### 🔐 **Security & Customization**  
-- **Multi-language Support:** 🌍 Choose between English and Persian.  
-- **Secure Communication:** 🔒 Uses Telegram's secure HTTPS API for data exchange.  
-- **Configurable Settings:** 🛠️ Modify bot token, chat ID, language, and auto-start settings via JSON files.  
-
-### 🖥️ **User Interfaces**  
-- **Telegram Bot:** 🤖 Interactive menus with inline and reply buttons for easy management.  
-- **Command Line Interface (CLI):** 🖱️ Enables manual bot control via terminal.  
-- **Graphical User Interface (GUI) (Upcoming):** 🖼️ A visual interface for enhanced control.  
-
----
-
-## 💡 **Why Choose FluxGuard?**  
-✅ **🌐 Remote Access:** Manage your system from anywhere with an internet connection.  
-✅ **🔐 High Security:** Secure, encrypted communication via Telegram's platform.  
-✅ **🤩 User-Friendly Design:** Simple, intuitive, and easy to use.  
-
+- **Uptime Tracking:** ⏱️ View system uptime.
+- 
 ---
 
 ## 🛠️ **Installation Guide**  
